@@ -1,0 +1,321 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>教你做一篇不一样的微信公众号推送 | MIJJJ‘s Blog</title>
+<meta name="description" content="" />
+<link rel="shortcut icon" href="https://mijjj.github.io/favicon.ico?v=1578832549838">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://mijjj.github.io/styles/main.css">
+
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id= UA-130395938-1 "></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', ' UA-130395938-1 ');
+</script>
+
+
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://mijjj.github.io">
+  <img class="avatar" src="https://mijjj.github.io/images/avatar.png?v=1578832549838" alt="">
+  </a>
+  <h1 class="site-title">
+    MIJJJ‘s Blog
+  </h1>
+  <p class="site-description">
+    
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          关于
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+        <a href="https://weibo.com/dadadamijie" target="_blank">
+          <i class="fab fa-weibo"></i>
+        </a>
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              教你做一篇不一样的微信公众号推送
+            </h2>
+            <div class="post-info">
+              <span>
+                2018-06-10
+              </span>
+              <span>
+                12 min read
+              </span>
+              
+                <a href="https://mijjj.github.io/tag/3-8qImkrsy" class="post-tag">
+                  # 工具
+                </a>
+              
+            </div>
+            
+            <div class="post-content-wrapper">
+              <div class="post-content">
+                <h1 id="引言">引言</h1>
+<p>最近由于实在挺忙的，就没有时间写东西，憋了好几个题材，打算在接下来的复习周学得无聊的时候就写写，这是第一个。（然而现在并没到复习周呵呵呵</p>
+<p>最初这些效果都是我从其他推送看来的，至于是哪篇推送我也忘记了哈哈哈哈哈哈哈… 先看效果： <a href="https://mp.weixin.qq.com/s/cKFbdOSN3QKjV8XMl0mXow">【群星闪耀】第五届SKY之星评选开始接受报名</a> <a href="https://mp.weixin.qq.com/s/bSc3LEdaMyy0VPAj2pwOGg">『迎接我们的18』2017-2018跨年留言征集活动</a></p>
+<p>你可以看到，在里头是包含两种效果的： 1. 图文渐显 2. 弹幕效果</p>
+<p>由于第二种效果已经看到有的编辑器（<a href="http://ipaiban.com/bianji.jsp">i排版</a>，在他的互动样式里头）已经玩出花来了，并且它的实现比较简单，就不教了，具体可以参考这篇文章：<a href="https://mp.weixin.qq.com/s/mxGjBttmj627qa4DwePenQ">弹幕还可以点击显示！？你需要了解的弹幕排版都在这里了</a></p>
+<p>这里主要介绍第一种效果（图文渐显）的实现。 # 正文 ## 准备</p>
+<ol>
+<li>看懂本文需要一些基本的HTML知识，可以从<a href="http://www.w3school.com.cn/html/">w3school的HTML教程</a>中<strong>基础、属性、元素</strong>的篇章中获得。</li>
+<li>你或许需要一个称手的文本编辑器：<a href="https://notepad-plus-plus.org/download/">Notepad++</a> 在编辑时将语言设置为HTML即可获得良好的阅读体验👍 在使用时请把自动换行关掉</li>
+<li>鉴于易用性以及广告骚扰等原因，这里我们用<a href="https://www.135editor.com/#">135编辑器</a>，而非 i 排版</li>
+<li>善于使用<code>Ctlr + A</code></li>
+<li>HTML源码 你可以轻松地从网页中获取它的全套源码，<s>如果你懒的话</s>在这里我也单独给出：</li>
+</ol>
+<p><em>这里你会理解我为啥叫你用Notepad++而不是记事本</em> 文字渐显：</p>
+<pre><code>&lt;section style=&quot;border-width: initial; border-color: initial; border-style: none; margin: 0rem auto;&quot;&gt;
+    &lt;section style=&quot;overflow: hidden; text-align: center;&quot;&gt;
+        &lt;section style=&quot;width: 100%; padding: 0rem 1rem; font-size: 0.875rem; line-height: 1.5; height: auto; overflow: hidden;&quot; data-width=&quot;100%&quot;&gt;
+            &lt;p class=&quot;&quot; data-brushtype=&quot;text&quot; style=&quot;text-align: center;&quot;&gt;
+                &lt;span style=&quot;font-size: 16px; font-family: 微软雅黑;&quot;&gt;你！的！文！本！你！的！文！本！&lt;/span&gt;
+            &lt;/p&gt;
+        &lt;/section&gt;
+        &lt;svg width=&quot;100%&quot; class=&quot;hiddenIn135&quot; style=&quot;width:100%;height:40rem;margin-top:-40rem&quot; data-width=&quot;100%&quot;&gt;
+            &lt;rect style=&quot;width:100%;height:40rem;opacity:1;fill: #fff;&quot; data-width=&quot;100%&quot;&gt;
+                &lt;animate attributename=&quot;opacity&quot; begin=&quot;2000ms&quot; dur=&quot;1s&quot; from=&quot;1&quot; to=&quot;0&quot; fill=&quot;freeze&quot;&gt;&lt;/animate&gt;
+            &lt;/rect&gt;
+        &lt;/svg&gt;
+    &lt;/section&gt;
+&lt;/section&gt;
+</code></pre>
+<p>图片渐显：</p>
+<pre><code>&lt;section style=&quot;border-width: initial; border-color: initial; border-style: none; margin: 0rem auto;&quot;&gt;
+    &lt;section style=&quot;overflow: hidden; text-align: center;&quot;&gt;
+        &lt;section style=&quot;width: 100%; padding: 0rem 1rem; font-size: 0.875rem; line-height: 1.5; height: auto; overflow: hidden;&quot; data-width=&quot;100%&quot;&gt;
+            &lt;p class=&quot;135brush&quot; data-brushtype=&quot;text&quot; style=&quot;text-align: center;&quot;&gt;
+                &lt;img data-src=&quot;http://你的图片链接你的图片链接&quot; style=&quot;z-index: -1; cursor: pointer; text-align: center; white-space: pre-wrap; width: auto !important; height: auto !important; visibility: visible !important;&quot; class=&quot; &quot; data-ratio=&quot;0.32669616519174044&quot; data-w=&quot;1356&quot; data-type=&quot;gif&quot; src=&quot;http://你的图片链接你的图片链接&quot; data-fail=&quot;0&quot;/&gt;
+            &lt;/p&gt;
+        &lt;/section&gt;
+        &lt;svg width=&quot;100%&quot; class=&quot;hiddenIn135&quot; style=&quot;width:100%;height:40rem;margin-top:-40rem&quot; data-width=&quot;100%&quot;&gt;
+            &lt;rect style=&quot;width:100%;height:40rem;opacity:1;fill: #fff;&quot; data-width=&quot;100%&quot;&gt;
+                &lt;animate attributename=&quot;opacity&quot; begin=&quot;2000ms&quot; dur=&quot;1s&quot; from=&quot;1&quot; to=&quot;0&quot; fill=&quot;freeze&quot;&gt;&lt;/animate&gt;
+            &lt;/rect&gt;
+        &lt;/svg&gt;
+    &lt;/section&gt;
+&lt;/section&gt;
+</code></pre>
+<h2 id="文字渐显">文字渐显</h2>
+<p>文字的效果编辑我们分为两个部分：</p>
+<ol>
+<li>文本、出现时序、效果持续时间的编辑——在文本编辑器中完成</li>
+<li>文字排版的编辑——在135编辑器中完成</li>
+</ol>
+<h3 id="文本编辑器中的编辑">文本编辑器中的编辑</h3>
+<p>首先是文本，你有多少段文字就要有多少段上面<strong>文字渐显</strong>的代码块，将你每段的文本填入代码中<code>你！的！文！本！你！的！文！本！</code>的位置中即可。 例如你有两段文字要顺序显示：</p>
+<pre><code>我是第一段
+我是第二段
+</code></pre>
+<p>那么你的代码：</p>
+<pre><code>&lt;section style=&quot;border-width: initial; border-color: initial; border-style: none; margin: 0rem auto;&quot;&gt;
+    &lt;section style=&quot;overflow: hidden; text-align: center;&quot;&gt;
+        &lt;section style=&quot;width: 100%; padding: 0rem 1rem; font-size: 0.875rem; line-height: 1.5; height: auto; overflow: hidden;&quot; data-width=&quot;100%&quot;&gt;
+            &lt;p class=&quot;&quot; data-brushtype=&quot;text&quot; style=&quot;text-align: center;&quot;&gt;
+                &lt;span style=&quot;font-size: 16px; font-family: 微软雅黑;&quot;&gt;我是第一段&lt;/span&gt;
+            &lt;/p&gt;
+        &lt;/section&gt;
+        &lt;svg width=&quot;100%&quot; class=&quot;hiddenIn135&quot; style=&quot;width:100%;height:40rem;margin-top:-40rem&quot; data-width=&quot;100%&quot;&gt;
+            &lt;rect style=&quot;width:100%;height:40rem;opacity:1;fill: #fff;&quot; data-width=&quot;100%&quot;&gt;
+                &lt;animate attributename=&quot;opacity&quot; begin=&quot;2000ms&quot; dur=&quot;1s&quot; from=&quot;1&quot; to=&quot;0&quot; fill=&quot;freeze&quot;&gt;&lt;/animate&gt;
+            &lt;/rect&gt;
+        &lt;/svg&gt;
+    &lt;/section&gt;
+&lt;/section&gt;
+
+&lt;section style=&quot;border-width: initial; border-color: initial; border-style: none; margin: 0rem auto;&quot;&gt;
+    &lt;section style=&quot;overflow: hidden; text-align: center;&quot;&gt;
+        &lt;section style=&quot;width: 100%; padding: 0rem 1rem; font-size: 0.875rem; line-height: 1.5; height: auto; overflow: hidden;&quot; data-width=&quot;100%&quot;&gt;
+            &lt;p class=&quot;&quot; data-brushtype=&quot;text&quot; style=&quot;text-align: center;&quot;&gt;
+                &lt;span style=&quot;font-size: 16px; font-family: 微软雅黑;&quot;&gt;我是第二段&lt;/span&gt;
+            &lt;/p&gt;
+        &lt;/section&gt;
+        &lt;svg width=&quot;100%&quot; class=&quot;hiddenIn135&quot; style=&quot;width:100%;height:40rem;margin-top:-40rem&quot; data-width=&quot;100%&quot;&gt;
+            &lt;rect style=&quot;width:100%;height:40rem;opacity:1;fill: #fff;&quot; data-width=&quot;100%&quot;&gt;
+                &lt;animate attributename=&quot;opacity&quot; begin=&quot;4000ms&quot; dur=&quot;1s&quot; from=&quot;1&quot; to=&quot;0&quot; fill=&quot;freeze&quot;&gt;&lt;/animate&gt;
+            &lt;/rect&gt;
+        &lt;/svg&gt;
+    &lt;/section&gt;
+&lt;/section&gt;
+</code></pre>
+<p>编辑好了文本之后，我们就要对出现时序进行编辑。方法是编辑每段文字的代码里<code>animate</code>标签中<code>begin</code>属性的值。通常上一段与下一段的时间间隔为<code>1500~2000ms</code>，并且第一段的值一般为<code>1000-2000ms</code>。这里的修改我是没有想到有什么方便的方法，只能一个个按顺序修改咯，具体的例子可以在上面看到。</p>
+<p>另外，你可以看到<code>animate</code>标签中还有其他的属性： &gt; - dur - 动画持续时间，在这里可以理解为文字显示过程需要的时间 &gt; - from/to - 这里的<code>1</code>和<code>0</code>代表文字从透明(1)到不透明(0)的过程，即文字透明度的变化初状态与末状态，这里你可以将<code>0</code>和<code>1</code>换过来并配合其他属性的修改来玩出其他的效果。 &gt; - fill - 我也不知道是啥… &gt; - 更多其他属性请参考：https://developer.mozilla.org/zh-CN/docs/Web/SVG/Attribute#ConditionalProccessing</p>
+<p>其他的玩法请搜索：svg animate stml</p>
+<h2 id="135编辑器中的编辑">135编辑器中的编辑</h2>
+<p>编辑好了代码之后，打开<a href="https://www.135editor.com/">135编辑器</a>，点击编辑页面左上角 <strong>HTML</strong> 字样的按钮，把你的代码全复制进去，再点一次那个按钮就可以看到你的文本了，需要注意，在这个界面你看到的是不带动画效果的，需要查看效果请点击右边的 <strong>手机预览</strong>。</p>
+<p>在这里进行文字的排版，你可以进行你熟悉的 左右对齐/居中、文字大小、加粗斜体下划线、文字颜色、阴影等等等等等等你熟悉的编辑，你也可以对段落中的文字进行删改，但应尽量避免段落的增减以及段落位序改变，不然就会出现奇奇怪怪的效果（如果要进行修改请回到文本编辑器中修改）。</p>
+<h2 id="图片渐显">图片渐显</h2>
+<p>具体操作和文字渐显差不多，具体就是怎么放上你的图片，这里我们需要一个叫 <strong>图床</strong> 的东西，它的作用相当于帮你存储图片，并给你一个可以直接获取图片的链接<s>巴拉巴拉巴拉</s>…</p>
+<p>你可以自建，比如利用七牛云的10g免费空间配合极简图床使用。 也可以用一些国内的公共图床比如：https://imgchr.com/ 另：国外的公共图床大多在微信中不能访问，或访问速度偏慢。微博图床也是一个目前来说不错选择，不过很久很久之后你的直链还能不能访问取决于微博</p>
+<p>获取到图片的直链后，替换掉代码中的<strong>两个</strong><code>http://你的图片链接你的图片链接</code>即可，图片可以是静态的jpg/png等，也可以是动态的gif。</p>
+<p>替换完成之后你也可以插入文本的HTML代码中进行时间的排序，同样是编辑<code>animate</code>中<code>begin</code>的值。</p>
+<p>135编辑器中对图片的编辑除了边框、大小调整、左右对齐/居中外都是收费的。它还有一个换图的功能，我不知道换过后渐显效果还在不，你们自己去试吧🙃</p>
+<h2 id="与其他编辑器素材的结合">与其他编辑器素材的结合</h2>
+<p>有时候你想用用这个编辑器的素材，然后那个编辑器你也有一些素材想用，怎么怎么办呢？</p>
+<p>这里有一个办法，先统计你有多少块素材，然后按素材的块数在微信公众号的编辑器中打入相应数量的换行（就是回车，最好再多几个）。然后按顺序在各自的行中粘贴素材就行。</p>
+<p>举个例子，我有一个135编辑器的素材，一个秀米的素材，以及两个自己需要在微信编辑器中插入的素材（一段文字、一个投票窗）。 1. 在微信编辑器中打入五或六个换行 2. 插入投票窗，并调整投票窗所在的位置（行） 3. 在相应位置写下自己需要的文字 4. 在相应位置将粘贴素材 5. 将多出来的行视情况删除</p>
+<p>注：在微信编辑器中就尽量不要对素材进行额外的编辑了，很多时候会出现一些奇奇怪怪的现象，对素材的编辑请回到相应的编辑器中进行。</p>
+<p>最后请不要忘记发到自己手机上预览一下效果，毕竟一天只有一次推。 # 最后 这些效果似乎都可以在 i排版 中实现，不过我看了看它的界面呵呵呵立马不想用了。可以这么说，所有的效果也都是建立在HTML上的，既然是HTML，那么代码也必然会暴露给别人，你也就可以很轻易地从中学习它效果的实现方法，看到感兴趣的，<code>右键-检查/查看源代码</code> 就行了。</p>
+<p>话说回来，大一里一年的院会干事时光就要结束了，可以说<s>被逼得</s>学到很多东西了，也过得很开心，不过说回来，大二的夜宵估计是没着落了呵呵呵呵呵呵呵呵…</p>
+
+              </div>
+              <div class="toc-container">
+                <ul class="markdownIt-TOC">
+<li><a href="#%E5%BC%95%E8%A8%80">引言</a>
+<ul>
+<li><a href="#%E6%96%87%E5%AD%97%E6%B8%90%E6%98%BE">文字渐显</a>
+<ul>
+<li><a href="#%E6%96%87%E6%9C%AC%E7%BC%96%E8%BE%91%E5%99%A8%E4%B8%AD%E7%9A%84%E7%BC%96%E8%BE%91">文本编辑器中的编辑</a></li>
+</ul>
+</li>
+<li><a href="#135%E7%BC%96%E8%BE%91%E5%99%A8%E4%B8%AD%E7%9A%84%E7%BC%96%E8%BE%91">135编辑器中的编辑</a></li>
+<li><a href="#%E5%9B%BE%E7%89%87%E6%B8%90%E6%98%BE">图片渐显</a></li>
+<li><a href="#%E4%B8%8E%E5%85%B6%E4%BB%96%E7%BC%96%E8%BE%91%E5%99%A8%E7%B4%A0%E6%9D%90%E7%9A%84%E7%BB%93%E5%90%88">与其他编辑器素材的结合</a></li>
+</ul>
+</li>
+</ul>
+
+              </div>
+            </div>
+          </article>
+        </div>
+
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://mijjj.github.io/post/li-yong-xue-xiao-de-edu-you-xiang-mian-fei-zhu-ce-jiao-yu-ban-office365">
+              <h3 class="post-title">
+                利用学校的edu邮箱免费注册教育版Office365
+              </h3>
+            </a>
+          </div>
+        
+
+        
+          
+
+          
+            <link rel="stylesheet" href="https://unpkg.com/disqusjs@1.1/dist/disqusjs.css">
+<script src="https://unpkg.com/disqusjs@1.1/dist/disqus.js"></script>
+
+<div id="disqus_thread"></div>
+
+<script>
+
+var options = {
+  shortname: 'Mijjj',
+  apikey: 's09QRCm15TiGSFKyQPBo6I90CO1OqVz5OQod7JolAEHg3BBMahgCKqukxSRnN3Pt',
+}
+if ('') {
+  options.api = ''
+}
+var dsqjs = new DisqusJS(options)
+
+</script>
+
+          
+        
+
+        <div class="site-footer">
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | 
+  <a class="rss" href="https://mijjj.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+
+  let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+  // This should probably be throttled.
+  // Especially because it triggers during smooth scrolling.
+  // https://lodash.com/docs/4.17.10#throttle
+  // You could do like...
+  // window.addEventListener("scroll", () => {
+  //    _.throttle(doThatStuff, 100);
+  // });
+  // Only not doing it here to keep this Pen dependency-free.
+
+  window.addEventListener("scroll", event => {
+    let fromTop = window.scrollY;
+
+    mainNavLinks.forEach((link, index) => {
+      let section = document.getElementById(decodeURI(link.hash).substring(1));
+      let nextSection = null
+      if (mainNavLinks[index + 1]) {
+        nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+      }
+      if (section.offsetTop <= fromTop) {
+        if (nextSection) {
+          if (nextSection.offsetTop > fromTop) {
+            link.classList.add("current");
+          } else {
+            link.classList.remove("current");    
+          }
+        } else {
+          link.classList.add("current");
+        }
+      } else {
+        link.classList.remove("current");
+      }
+    });
+  });
+
+</script>
+
+      </div>
+    </div>
+  </body>
+</html>

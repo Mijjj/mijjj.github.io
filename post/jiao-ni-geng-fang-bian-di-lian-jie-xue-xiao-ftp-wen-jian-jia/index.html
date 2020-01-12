@@ -1,0 +1,258 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>教你更方便地连接学校FTP文件夹 | MIJJJ‘s Blog</title>
+<meta name="description" content="" />
+<link rel="shortcut icon" href="https://mijjj.github.io/favicon.ico?v=1578832549838">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://mijjj.github.io/styles/main.css">
+
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id= UA-130395938-1 "></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', ' UA-130395938-1 ');
+</script>
+
+
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://mijjj.github.io">
+  <img class="avatar" src="https://mijjj.github.io/images/avatar.png?v=1578832549838" alt="">
+  </a>
+  <h1 class="site-title">
+    MIJJJ‘s Blog
+  </h1>
+  <p class="site-description">
+    
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          关于
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+        <a href="https://weibo.com/dadadamijie" target="_blank">
+          <i class="fab fa-weibo"></i>
+        </a>
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              教你更方便地连接学校FTP文件夹
+            </h2>
+            <div class="post-info">
+              <span>
+                2017-09-21
+              </span>
+              <span>
+                3 min read
+              </span>
+              
+                <a href="https://mijjj.github.io/tag/h3yG-2A6h3" class="post-tag">
+                  # 日常
+                </a>
+              
+                <a href="https://mijjj.github.io/tag/-WESQYAZy" class="post-tag">
+                  # 网络
+                </a>
+              
+                <a href="https://mijjj.github.io/tag/3-8qImkrsy" class="post-tag">
+                  # 工具
+                </a>
+              
+            </div>
+            
+            <div class="post-content-wrapper">
+              <div class="post-content">
+                <h1 id="起因">起因</h1>
+<p>今天上了大学的第一节大学计算机课，（<s>简称大机呵呵呵</s>）课中谈论到我们学校内网自建有各种FTP服务器以方便同学们更便捷地获取到上课所需的文件等内容。但是每次都要在地址栏打上FTP服务器的地址，不单止要记住地址，还要一个个输入，<s>你不觉得麻烦我还觉得麻烦</s>，因此我想起了我以往在 Windows 上访问我树莓派文件系统的方法。</p>
+<h1 id="正文">正文</h1>
+<h2 id="效果展示">效果展示</h2>
+<blockquote>
+<p>现在的大部分电脑都是 Win 7 或 Win 10 ，经过我的测试都是适用于我的方法的，至于 xp 我就没试过了。</p>
+</blockquote>
+<p>以下是最终的效果图，我们能在“我的电脑”中如进入本地硬盘一样直接访问FTP服务器。</p>
+<figure data-type="image" tabindex="1"><img src="http://upload-images.jianshu.io/upload_images/3463179-23cc71fe1d4b0368.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="http://upload-images.jianshu.io/upload_images/3463179-23cc71fe1d4b0368.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" loading="lazy"></figure>
+<figure data-type="image" tabindex="2"><img src="http://upload-images.jianshu.io/upload_images/3463179-8207ee410bffb59f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="http://upload-images.jianshu.io/upload_images/3463179-8207ee410bffb59f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" loading="lazy"></figure>
+<p>效果图2</p>
+<h2 id="第一步">第一步</h2>
+<p>获取FTP服务器地址</p>
+<p>我们都知道学校给予我们的FTP文件夹地址： &gt; ftp://share.jnu.edu.cn &gt; ftp://202.116.6.197</p>
+<p>这两个都是暨南大学FTP的两个地址，应该只有暨大的校园网能访问（可以匿名访问不需要用户名＆密码），第一个是普通的分享文件夹，第二个是我们大机的教学文件夹。</p>
+<h2 id="第二步">第二步</h2>
+<p>相信大家的老师都说过直接在地址栏输入就可以访问了，而我们的目的是不用输入就能访问文件系统。简单来说就是在“我的电脑”中创建一个FTP服务器的快捷方式。</p>
+<p>首先打开“我的电脑”界面，点击上方的“添加一个网络位置”</p>
+<figure data-type="image" tabindex="3"><img src="http://upload-images.jianshu.io/upload_images/3463179-4267cf521e5e803a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="http://upload-images.jianshu.io/upload_images/3463179-4267cf521e5e803a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" loading="lazy"></figure>
+<p>添加一个网络位置</p>
+<p>下一步 — 选择“自定义网络位置” — 下一步 — 填入FTP服务器的地址 — 下一步。。。</p>
+<figure data-type="image" tabindex="4"><img src="http://upload-images.jianshu.io/upload_images/3463179-486e02859d8f4e5a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="http://upload-images.jianshu.io/upload_images/3463179-486e02859d8f4e5a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" loading="lazy"></figure>
+<p>教程到此完成，最终的效果就是像文章开始的图一样。</p>
+<h2 id="btw">BTW</h2>
+<ol>
+<li>课上老师说的FlashFXP是一款FTP服务器管理软件，第三方代理商<a href="https://item.taobao.com/item.htm?id=535713940889">购买链接</a>，请支持正版软件。</li>
+<li>手机也可以直接访问FTP服务器，方法就是直接在浏览器地址栏上打链接就行了。手机上也有一些App可以<s>更美观地</s>访问FTP服务器，iOS 上有<a href="https://itunes.apple.com/us/app/documents-6-file-manager-pdf-reader-and-browser/id364901807?mt=8">Documents</a>，安卓上有<a href="https://www.coolapk.com/apk/com.estrongs.android.pop">ES文件浏览器</a>。也有能在线播放FTP服务器中视频的App，iOS上有 nplayer，infuse，avplayer，aceplayer等，安卓的我没接触过就不推介了。</li>
+</ol>
+<figure data-type="image" tabindex="5"><img src="http://upload-images.jianshu.io/upload_images/3463179-f38be07d53d81690.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="http://upload-images.jianshu.io/upload_images/3463179-f38be07d53d81690.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" loading="lazy"></figure>
+<p>nplayer在线播放1</p>
+<figure data-type="image" tabindex="6"><img src="http://upload-images.jianshu.io/upload_images/3463179-216dc1b49cad0c8e.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="http://upload-images.jianshu.io/upload_images/3463179-216dc1b49cad0c8e.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" loading="lazy"></figure>
+<p>nplayer在线播放2</p>
+<ol>
+<li>有的人想问，为什么FTP服务器上的文件要完全下载到本地上才能运行，是因为需要保持本地计算机的安全。</li>
+</ol>
+<h1 id="最后">最后</h1>
+<p>上面推荐的软件大多都是付费的，有的人或许会对付费软件厌恶，但我想说，只有付费才能让你喜爱的软件一直活下去，还有，不给钱人家喝西北风去啊？ ## 相关阅读 <a href="https://sspai.com/post/39514">有那么多免费盗版，你为什么还要花钱买正版？</a></p>
+
+              </div>
+              <div class="toc-container">
+                <ul class="markdownIt-TOC">
+<li><a href="#%E8%B5%B7%E5%9B%A0">起因</a></li>
+<li><a href="#%E6%AD%A3%E6%96%87">正文</a>
+<ul>
+<li><a href="#%E6%95%88%E6%9E%9C%E5%B1%95%E7%A4%BA">效果展示</a></li>
+<li><a href="#%E7%AC%AC%E4%B8%80%E6%AD%A5">第一步</a></li>
+<li><a href="#%E7%AC%AC%E4%BA%8C%E6%AD%A5">第二步</a></li>
+<li><a href="#btw">BTW</a></li>
+</ul>
+</li>
+<li><a href="#%E6%9C%80%E5%90%8E">最后</a></li>
+</ul>
+
+              </div>
+            </div>
+          </article>
+        </div>
+
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://mijjj.github.io/post/jiao-ni-jiang-ios-ri-li-zhong-de-shi-jian-zu-dao-chu">
+              <h3 class="post-title">
+                教你将 iOS 日历中的事件组导出
+              </h3>
+            </a>
+          </div>
+        
+
+        
+          
+
+          
+            <link rel="stylesheet" href="https://unpkg.com/disqusjs@1.1/dist/disqusjs.css">
+<script src="https://unpkg.com/disqusjs@1.1/dist/disqus.js"></script>
+
+<div id="disqus_thread"></div>
+
+<script>
+
+var options = {
+  shortname: 'Mijjj',
+  apikey: 's09QRCm15TiGSFKyQPBo6I90CO1OqVz5OQod7JolAEHg3BBMahgCKqukxSRnN3Pt',
+}
+if ('') {
+  options.api = ''
+}
+var dsqjs = new DisqusJS(options)
+
+</script>
+
+          
+        
+
+        <div class="site-footer">
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | 
+  <a class="rss" href="https://mijjj.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+
+  let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+  // This should probably be throttled.
+  // Especially because it triggers during smooth scrolling.
+  // https://lodash.com/docs/4.17.10#throttle
+  // You could do like...
+  // window.addEventListener("scroll", () => {
+  //    _.throttle(doThatStuff, 100);
+  // });
+  // Only not doing it here to keep this Pen dependency-free.
+
+  window.addEventListener("scroll", event => {
+    let fromTop = window.scrollY;
+
+    mainNavLinks.forEach((link, index) => {
+      let section = document.getElementById(decodeURI(link.hash).substring(1));
+      let nextSection = null
+      if (mainNavLinks[index + 1]) {
+        nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+      }
+      if (section.offsetTop <= fromTop) {
+        if (nextSection) {
+          if (nextSection.offsetTop > fromTop) {
+            link.classList.add("current");
+          } else {
+            link.classList.remove("current");    
+          }
+        } else {
+          link.classList.add("current");
+        }
+      } else {
+        link.classList.remove("current");
+      }
+    });
+  });
+
+</script>
+
+      </div>
+    </div>
+  </body>
+</html>

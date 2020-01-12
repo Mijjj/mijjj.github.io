@@ -1,0 +1,312 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>对一篇扫描文本进行粗翻译的流程 | MIJJJ‘s Blog</title>
+<meta name="description" content="" />
+<link rel="shortcut icon" href="https://mijjj.github.io/favicon.ico?v=1578832549838">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://mijjj.github.io/styles/main.css">
+
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id= UA-130395938-1 "></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', ' UA-130395938-1 ');
+</script>
+
+
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://mijjj.github.io">
+  <img class="avatar" src="https://mijjj.github.io/images/avatar.png?v=1578832549838" alt="">
+  </a>
+  <h1 class="site-title">
+    MIJJJ‘s Blog
+  </h1>
+  <p class="site-description">
+    
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          关于
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+        <a href="https://weibo.com/dadadamijie" target="_blank">
+          <i class="fab fa-weibo"></i>
+        </a>
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              对一篇扫描文本进行粗翻译的流程
+            </h2>
+            <div class="post-info">
+              <span>
+                2019-06-07
+              </span>
+              <span>
+                8 min read
+              </span>
+              
+                <a href="https://mijjj.github.io/tag/h3yG-2A6h3" class="post-tag">
+                  # 日常
+                </a>
+              
+                <a href="https://mijjj.github.io/tag/3-8qImkrsy" class="post-tag">
+                  # 工具
+                </a>
+              
+            </div>
+            
+            <div class="post-content-wrapper">
+              <div class="post-content">
+                <h1 id="引">引</h1>
+<p>前些天司机（学姐）让我粗略地翻译一篇扫描文档，在此将我粗略的过程写下，为了记录，也为了抛砖引玉。</p>
+<h1 id="正文">正文</h1>
+<p>我得到的材料是一篇图片扫描的 PDF 文档（纯图片，无法选中文字），语言为英语（夹杂西语字符）。现在的目的是转为大概能让人看得懂的中文文本。</p>
+<p>例如：</p>
+<figure data-type="image" tabindex="1"><img src="https://mijjj.github.io/post-images/1578831904675.gif" alt="" loading="lazy"></figure>
+<h2 id="我这次用到的软件服务有">我这次用到的软件/服务有：</h2>
+<ul>
+<li>
+<p>Office Word🔵</p>
+</li>
+<li>
+<p><a href="https://www.ilovepdf.com/zh-cn">iLovePDF</a> ❤️</p>
+<p>这是一个功能十分强大且专注于 PDF 处理的在线服务</p>
+</li>
+<li>
+<p><a href="https://fanyi.sogou.com/">搜狗翻译</a>🔸</p>
+<p>在我之前的经验里，相较于百度翻译和谷歌翻译，我更偏向于搜狗翻译的结果，你可以使用<a href="https://www.crimx.com/ext-saladict/">沙拉查词</a> 浏览器插件方便地对三者进行对比。（有道翻译长句子就是一坨💩）</p>
+</li>
+<li>
+<p>（可选）推荐的 PDF 浏览软件🔴：</p>
+<ul>
+<li>
+<p><s>Mircosoft Edge🔷（没错就是 Win10 自带浏览器）</s></p>
+</li>
+<li>
+<p><a href="https://www.crimx.com/ext-saladict/">沙拉查词</a> 浏览器插件🌟</p>
+<p>并不是说这个内置 PDF 浏览器有多牛逼，而是这个划词翻译插件太<s>牛逼</s>，也是我最喜欢的划词翻译插件</p>
+</li>
+<li>
+<p>Adobe Acrobat Reader DC</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Windows 自带的笔记本</p>
+<p>用来将 Word 中的富文本转换为纯文本，以及简单的分段处理。</p>
+</li>
+</ul>
+<h2 id="大致步骤">大致步骤</h2>
+<ol>
+<li>用 iLovePDF 服务将 PDF 转为 Word 文件</li>
+<li>在 Word 中校对单词</li>
+<li>将文章以一段一段的形式储存在记事本中</li>
+<li>将记事本中的文段粘贴到 Word 中</li>
+<li>使用搜狗翻译中的上传文档服务，将 Word 上传，获得翻译后的文段</li>
+<li>将翻译后的文段在 Word 中，以  「中-英-中-英...」 的方式排列</li>
+<li>导出 PDF 或 Word 文件（建议导出 PDF 便于在不同的设备、软件中都有相同的排版）</li>
+</ol>
+<p>最后的效果：</p>
+<figure data-type="image" tabindex="2"><img src="https://mijjj.github.io/post-images/1578832054477.png" alt="" loading="lazy"></figure>
+<h2 id="详细">详细</h2>
+<h3 id="ilovepdf">iLovePDF</h3>
+<p>在这里我们主要用到 iLovePDF 中的<a href="https://www.ilovepdf.com/zh-cn/pdf_to_word">「PDF 转为 Doc」服务。</a>在点击「转换至 Word」前，请点击网页右上方的「➕」，点选「OCR」。这里虽然他会提示需要「高级账户」，但只要你能够点选，就可以进行转换了。但这种操作是有次数限制的，似乎一段时间只能用一次（&gt;=1天）。当然如果你觉得好用而且日常经常需要的话开个会员也是很划算的：6USD/M or 48USD/Y （价格会根据 IP 所在地区稍有变动）</p>
+<p>iLovePDF 的 OCR 转换会保留页面尺寸和排版，但文段的格式十分的奇怪，这会直接影响接下来的校对步骤，你必须十分小心才能够维持原来的排版。可是由于排版保留了，你能更快的找到对应的位置，校对工作会相对方便。</p>
+<figure data-type="image" tabindex="3"><img src="https://mijjj.github.io/post-images/1578832067721.png" alt="" loading="lazy"></figure>
+<h3 id="单词校对">单词校对</h3>
+<p>鉴于扫描的质量，我们需要对扫描后获得的文档进行校对。（用心感受一下）</p>
+<p>OCR的效果对比（前/后）：</p>
+<figure data-type="image" tabindex="4"><img src="https://mijjj.github.io/post-images/1578832072639.png" alt="" loading="lazy"></figure>
+<p>单词校对的工作应该是整个流程里<strong>花费时间最多</strong>的步骤了，它需要你的耐心与眼力，这里我会使用 <a href="https://support.office.com/zh-cn/article/%e9%92%88%e5%af%b9%e5%a4%a7%e5%86%99%e3%80%81%e6%8b%bc%e5%86%99%e5%92%8c%e7%ac%a6%e5%8f%b7%e9%80%89%e6%8b%a9-%e8%87%aa%e5%8a%a8%e6%9b%b4%e6%ad%a3-%e9%80%89%e9%a1%b9-e7433b94-f3de-4532-9dc8-b29063a96e1f?omkt=zh-CN&amp;ui=zh-CN&amp;rs=zh-CN&amp;ad=CN">Word 自带的单词校正</a>，通常单词错误会以红色波浪线标出，语法错误会以蓝色波浪线标出，右键点击相应位置可以查看修改建议。当然，如果修改建议与原文不符的话还是建议遵从原文。</p>
+<p>这里有一款 Chrome 插件「Grammarly」，用来进行单词校正也是极好的，不过它并没有提供 Office 插件，你可以在 Google Doc 中使用它。</p>
+<h3 id="搜狗翻译">搜狗翻译</h3>
+<p>搜狗翻译、谷歌翻译和百度翻译的对比：</p>
+<p>（这里我用到<a href="https://saladict.crimx.com/">沙拉划词</a>进行三者的快速对比）</p>
+<p>原文：</p>
+<blockquote>
+<p>More recently, I went to a Fundamentalist bookstore on my annual visit to see what was new on contemporary fears of the Final Enemy. When I asked about books on Antichrist, I was politely shown to the theology area, but the real action was in fiction. As the book industry knows, one of the hottest genres in publishing is Christian fiction about the end times. The six-volume series concerning the last days written by Tim LaHaye and Jerry B. Jenkins has sold millions of copies. The turgid and repetitive accounts of the standard Fundamentalist view of Antichrist that I found under theology could all have been written in 1980 or before (and most were), but Antichrist’s breakthrough into the world of drugstore popular fiction (the kind that features endless descriptions of clothes and gadgets and colorful action, but little plot and no characterization) has become a gold mine.</p>
+</blockquote>
+<p>搜狗翻译：</p>
+<blockquote>
+<p>最近，我每年去一次原教旨主义书店，看看当代对最终敌人的恐惧有何新发现。当我问到关于反基督的书时，我被礼貌地带到神学领域，但真正的行动是在小说中。正如图书行业所知，出版界最热门的流派之一是关于末日的基督教小说。蒂姆·莱希和杰瑞·B·詹金斯写的关于最后几天的六卷本系列已经卖出了数百万册。我在神学中发现的对反基督者的标准原教旨主义观点的浮夸和重复的描述可能都是在1980年或之前写的(大多数都是)，但是反基督者对药店流行小说世界的突破(这种小说以对衣服、小玩意和丰富多彩的动作的无止境的描述为特征，但情节很少，没有人物刻画)已经成为一座金矿。</p>
+</blockquote>
+<p>谷歌翻译：</p>
+<blockquote>
+<p>最近，我在一年一度的访问中去了一个原教旨主义书店，看看当代对最终敌人的恐惧是什么新东西。 当我询问关于敌基督者的书籍时，我被礼貌地展示给了神学领域，但真正的行动却是虚构的。 正如图书行业所知，出版中最热门的类型之一是关于末日的基督教小说。 关于Tim LaHaye和Jerry B. Jenkins撰写的最后几天的六卷系列已售出数百万份。“我在神学中发现的标准原教旨主义观点的反复论述可能都是在1980年写成的 之前 （和大多数人），但敌基督的突破进入药店流行小说的世界（那种具有无穷无尽的描述衣服和小工具和丰富多彩的动作，但很少的情节和没有表征）已成为一个金矿。</p>
+</blockquote>
+<p>百度翻译：</p>
+<blockquote>
+<p>最近，我去了一家原教旨主义书店，参加了我的年度访问，了解了当代对最终敌人的恐惧的新情况。当我询问有关反基督的书籍时，我被礼貌地带到神学领域，但真正的行动是在小说中。正如图书业所知，出版界最热门的一种类型是关于末日的基督教小说。由提姆·拉哈伊和杰里·B·詹金斯写的关于最后几天的六卷丛书已经卖出了数百万册。“我在神学中发现的反基督的标准原教旨主义观点的冗长和重复的叙述可能都是在1980年或之前（大多数是）写的，但是伦奇里斯特在药店流行小说领域的突破（这种小说以对衣服和小玩意的无休止的描述和丰富多彩的动作为特色，但情节很少，没有人物塑造）已经成为一个金矿。</p>
+</blockquote>
+<p>我更喜欢搜狗的翻译，因此我选择搜狗，与此同时百度也是不错的，相较之下谷歌应该是最差的。</p>
+<p>在搜狗翻译的界面中，点击上传文档来上传以段落分好的纯文字 Word 文件，然后进入以下界面。在这里我们可以方便地将原文以及译文相对比（但不知为何不能手动调整）。</p>
+<figure data-type="image" tabindex="5"><img src="https://mijjj.github.io/post-images/1578832079603.png" alt="" loading="lazy"></figure>
+<h3 id="后">后</h3>
+<p>如果你只有自己阅读的需求，到上面应该就可以结束了，如果你还有给别人阅读的需求的话，点击下载译文（右上角）就可以下载到 Word 或 PDF 文档了，一般我分享给他人会以段落为界用「中-英-中-英...」的格式排版，这样在阅读译文遇到困惑时，更利于随时与原文进行比对，毕竟是机翻的中文，难免会碰到人类读不懂的行文。在与他人分享时建议分享 PDF 格式的文件，当然，也应该附上 Word 文件，便于他人（自己）进行更改。</p>
+<h1 id="最后">最后</h1>
+<p>最近心情不太好，不屑后面了。</p>
+<p>6.7.19</p>
+
+              </div>
+              <div class="toc-container">
+                <ul class="markdownIt-TOC">
+<li><a href="#%E5%BC%95">引</a></li>
+<li><a href="#%E6%AD%A3%E6%96%87">正文</a>
+<ul>
+<li><a href="#%E6%88%91%E8%BF%99%E6%AC%A1%E7%94%A8%E5%88%B0%E7%9A%84%E8%BD%AF%E4%BB%B6%E6%9C%8D%E5%8A%A1%E6%9C%89">我这次用到的软件/服务有：</a></li>
+<li><a href="#%E5%A4%A7%E8%87%B4%E6%AD%A5%E9%AA%A4">大致步骤</a></li>
+<li><a href="#%E8%AF%A6%E7%BB%86">详细</a>
+<ul>
+<li><a href="#ilovepdf">iLovePDF</a></li>
+<li><a href="#%E5%8D%95%E8%AF%8D%E6%A0%A1%E5%AF%B9">单词校对</a></li>
+<li><a href="#%E6%90%9C%E7%8B%97%E7%BF%BB%E8%AF%91">搜狗翻译</a></li>
+<li><a href="#%E5%90%8E">后</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#%E6%9C%80%E5%90%8E">最后</a></li>
+</ul>
+
+              </div>
+            </div>
+          </article>
+        </div>
+
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://mijjj.github.io/post/transmission-caddy-chuang-jian-qing-liang-hua-webdav-fu-wu-qi">
+              <h3 class="post-title">
+                Transmission + Caddy 创建轻量化WebDAV服务器📺
+              </h3>
+            </a>
+          </div>
+        
+
+        
+          
+
+          
+            <link rel="stylesheet" href="https://unpkg.com/disqusjs@1.1/dist/disqusjs.css">
+<script src="https://unpkg.com/disqusjs@1.1/dist/disqus.js"></script>
+
+<div id="disqus_thread"></div>
+
+<script>
+
+var options = {
+  shortname: 'Mijjj',
+  apikey: 's09QRCm15TiGSFKyQPBo6I90CO1OqVz5OQod7JolAEHg3BBMahgCKqukxSRnN3Pt',
+}
+if ('') {
+  options.api = ''
+}
+var dsqjs = new DisqusJS(options)
+
+</script>
+
+          
+        
+
+        <div class="site-footer">
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | 
+  <a class="rss" href="https://mijjj.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+
+  let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+  // This should probably be throttled.
+  // Especially because it triggers during smooth scrolling.
+  // https://lodash.com/docs/4.17.10#throttle
+  // You could do like...
+  // window.addEventListener("scroll", () => {
+  //    _.throttle(doThatStuff, 100);
+  // });
+  // Only not doing it here to keep this Pen dependency-free.
+
+  window.addEventListener("scroll", event => {
+    let fromTop = window.scrollY;
+
+    mainNavLinks.forEach((link, index) => {
+      let section = document.getElementById(decodeURI(link.hash).substring(1));
+      let nextSection = null
+      if (mainNavLinks[index + 1]) {
+        nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+      }
+      if (section.offsetTop <= fromTop) {
+        if (nextSection) {
+          if (nextSection.offsetTop > fromTop) {
+            link.classList.add("current");
+          } else {
+            link.classList.remove("current");    
+          }
+        } else {
+          link.classList.add("current");
+        }
+      } else {
+        link.classList.remove("current");
+      }
+    });
+  });
+
+</script>
+
+      </div>
+    </div>
+  </body>
+</html>

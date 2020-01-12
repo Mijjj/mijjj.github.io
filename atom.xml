@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://mijjj.github.io</id>
     <title>MIJJJ‘s Blog</title>
-    <updated>2020-01-12T11:16:32.827Z</updated>
+    <updated>2020-01-12T12:35:53.856Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://mijjj.github.io"/>
     <link rel="self" href="https://mijjj.github.io/atom.xml"/>
@@ -10,35 +10,1138 @@
     <icon>https://mijjj.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, MIJJJ‘s Blog</rights>
     <entry>
-        <title type="html"><![CDATA[Hello Gridea]]></title>
-        <id>https://mijjj.github.io/post/hello-gridea</id>
-        <link href="https://mijjj.github.io/post/hello-gridea">
+        <title type="html"><![CDATA[教你利用MentoHUST在路由器上挂锐捷认证]]></title>
+        <id>https://mijjj.github.io/post/jiao-ni-li-yong-mentohust-zai-lu-you-qi-shang-gua-rui-jie-ren-zheng</id>
+        <link href="https://mijjj.github.io/post/jiao-ni-li-yong-mentohust-zai-lu-you-qi-shang-gua-rui-jie-ren-zheng">
         </link>
-        <updated>2018-12-11T16:00:00.000Z</updated>
-        <summary type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
-✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
-✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
-<!-- more -->
-<p><a href="https://github.com/getgridea/gridea">Github</a><br>
-<a href="https://gridea.dev/">Gridea 主页</a><br>
-<a href="http://fehey.com/">示例网站</a></p>
-<h2 id="特性">特性👇</h2>
-<p>📝  你可以使用最酷的 <strong>Markdown</strong> 语法，进行快速创作</p>
-<p>🌉  你可以给文章配上精美的封面图和在文章任意位置插入图片</p>
-<p>🏷️  你可以对文章进行标签分组</p>
-<p>📋  你可以自定义菜单，甚至可以创建外部链接菜单</p>
-<p>💻  你可以在 <strong>Windows</strong>，<strong>MacOS</strong> 或 <strong>Linux</strong> 设备上使用此客户端</p>
-<p>🌎  你可以使用 <strong>𝖦𝗂𝗍𝗁𝗎𝖻 𝖯𝖺𝗀𝖾𝗌</strong> 或 <strong>Coding Pages</strong> 向世界展示，未来将支持更多平台</p>
-<p>💬  你可以进行简单的配置，接入 <a href="https://github.com/gitalk/gitalk">Gitalk</a> 或 <a href="https://github.com/SukkaW/DisqusJS">DisqusJS</a> 评论系统</p>
-<p>🇬🇧  你可以使用<strong>中文简体</strong>或<strong>英语</strong></p>
-<p>🌁  你可以任意使用应用内默认主题或任意第三方主题，强大的主题自定义能力</p>
-<p>🖥  你可以自定义源文件夹，利用 OneDrive、百度网盘、iCloud、Dropbox 等进行多设备同步</p>
-<p>🌱 当然 <strong>Gridea</strong> 还很年轻，有很多不足，但请相信，它会不停向前 🏃</p>
-<p>未来，它一定会成为你离不开的伙伴</p>
-<p>尽情发挥你的才华吧！</p>
-<p>😘 Enjoy~</p>
+        <updated>2020-01-12T11:30:39.000Z</updated>
+        <content type="html"><![CDATA[<p>2020.1.12<br>
+找到了一个新的固件，十分简单，集成了 MentoHUST ，而且支持型号众多，而且添加了<strong>路由代理伪装</strong>功能，隐藏代理的多个设备<strong>避免因为代理检测断网</strong>，经测试下来，确实不会因检测而封号了（多台iOS、PC和Android同时使用），但是我的K2时不时会断网重启...频率大概三四天一次，每次断开大概20s左右...感觉是因为设备数或者请求数多了的问题...<br>
+<a href="https://dl.x-wrt.com:4443/rom/sch_index.html">https://dl.x-wrt.com:4443/rom/sch_index.html</a></p>
+<h1 id="起因">起因</h1>
+<p>在开学之前我就早早地听闻过校园网恶劣的名声，但正真到了大学，使用它的时候，发现它并没有之前自己想象中的不堪。（我们学校的是鹏博士…）我最喜欢的便是校园网会分配 IPv6 地址，满足了我的好奇心（但也仅仅是好奇心而已），还有ping 8.8.8.8 的时间能达到稳定20ms左右，上传下载100M对等…当然已有不尽人意的地方，比如它居然连不上Onedrive！！！还有电脑认证需要下载一个认证软件，需要在后台打开才能保持联网，这个我还能忍受，但它对于电脑是否开启共享热点的判断居然是简单粗暴地检查电脑中是否同时开启了一个以上的网卡（虚拟网卡也包含其中），这便与我常用的游戏加速器SStap（用来吃鸡的）起了冲突，因此我也要每月划出至少￥30来买另外的加速器，本着能省一点是一点的精神，我走上了“歪路”。</p>
+<p><em>我本来想过隐藏网卡这一条路子，但由于技术不精，干不成，其实别的加速器应该都是有通过安装隐藏虚拟网卡来进行代理，然而我不会。</em> # 正文 我的方法就是让认证挂在路由器上，然后电脑就不需要开启认证软件，从而规避其检测我的网卡。</p>
+<p><em>本教程 MentoHUST的参数设置仅适用于暨南大学校本部，理论上南校区也适用，其他学校请自行摸索（其实都差不多的）。</em></p>
+<p>我们下面会需要获取网关、子网掩码，所以先用正常的认证方法，然后把这两个东西记下来，具体的方法自己Google（或百度）。</p>
+<p>本教程的刷机过程参考： <a href="http://www.cnblogs.com/xuliangxing/p/6486560.html">http://www.cnblogs.com/xuliangxing/p/6486560.html</a> 下文我只是粗略的点出步骤，若途中碰到困难，请自己动手Google（或百度），当然如果你留言我也会出来解答，前提是我心情好。</p>
+<p>首先需要一台空闲的路由器，而并不是什么路由器都能用，因为我们要给路由器刷固件<br>
+<s>大家可以参考这个链接中的支持设备列表： http://www.right.com.cn/forum/thread-161324-1-1.html</s>（已经删帖，型号可以参考下面的文件列表）</p>
+<p>在以下链接中找到自己路由型号的固件文件，并下载到电脑上： <a href="http://opt.cn2qq.com/padavan/">http://opt.cn2qq.com/padavan/</a></p>
+<p>老毛子固件更新channel（仍在频繁更新，需要过墙）：<a href="https://t.me/s/pdcn1">https://t.me/s/pdcn1</a></p>
+<p>其中我比较建议 斐讯K2、newifi、小米路由器mini，这三个路由器可刷固件比较多即可玩性高，价格比较便宜（K2之前可以免费撸，现在不知道活动还有没有，你们也可以上闲鱼淘个二手的）。我手上只有K2，所以只给出它的示例，其实过程都大同小异。</p>
+<p>为了避免你的麻烦，建议完整仔细地看完以下步骤并把需要的文件都下载好，再进行操作。</p>
+<h2 id="一-给路由器刷入breed">一、给路由器刷入Breed</h2>
+<p>这个是以后刷路由固件的基础，详细的教程链接： <a href="http://www.right.com.cn/forum/thread-161906-1-1.html">http://www.right.com.cn/forum/thread-161906-1-1.html</a> 帖中的内容很详细，大家跟着自己的路由型号操作即可</p>
+<h2 id="二-刷入固件">二、刷入固件</h2>
+<p>这里我们用到老毛子的 Padavan固件。</p>
+<ol>
+<li>刷完后用网线连接电脑和路由 （其实你刷 Breed 的时候网线与电脑就得连在一起，不建议用无线的方式操作）</li>
+<li>拔出路由电源线，一直按住还原按钮（大多数是路由身上的小按钮，凹进去的机子需要用到尖细物捅），然后插入电源线，等待8~10秒后松开还原按钮，此时路由器会启动 Breed控制台。</li>
+<li>电脑浏览器访问 192.168.1.1 ，进入 Breed控制台。</li>
+<li>点击固件更新，勾选“固件”，文件选择你之前下载的固件文件，点击上传等进度条走完，然后等待一两分钟，电脑浏览器访问 192.168.2.1 就可以进入新的路由管理界面了，若提示输入账号密码，则账号密码都为 admin。</li>
+</ol>
+<p>ps：上述过程不需要拔出电源</p>
+<figure data-type="image" tabindex="1"><img src="http://upload-images.jianshu.io/upload_images/3463179-aa71c4e4c0864151.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="http://upload-images.jianshu.io/upload_images/3463179-aa71c4e4c0864151.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" loading="lazy"></figure>
+<h2 id="三-mentohust的设置">三、MentoHUST的设置</h2>
+<p>MentoHUST是我们在路由器上进行校园网认证的工具。</p>
+<p>还有其他的工具就是minieap，<strong>但这个我没测试</strong>，项目地址： https://github.com/updateing/minieap minieap需要用到交叉编译，这里有一个同学交叉编译好了适用于K2的文件： <a href="http://www.right.com.cn/forum/forum.php%EF%BC%9Fmod=viewthread&amp;tid=214234">http://www.right.com.cn/forum/forum.php？mod=viewthread&amp;tid=214234</a></p>
+<h2 id="mentohust设置">MentoHUST设置</h2>
+<ol>
+<li>将路由器的wan口连上交换机</li>
+<li>进入路由管理界面 依次点击 左侧菜单“配置扩展环境”==》锐捷认证</li>
+<li>参数设置</li>
+</ol>
+<p>打开开关 用户名以及密码和你用来正常网络认证的相同 子网掩码和网关则填入文章开头你记下的ip地址 心跳间隔 2 失败等待 4 组播地址 1 锐捷 DHCP方式 2 认证后 是否后台运行 否 客户端版本号 4.98</p>
+<p>其他未提及的参数不要修改或按默认的来，最后点击页面末的“应用本页设置”，如果顺利的话，等待一段时间，点击左侧菜单栏中的网络地图，右边第一个图标会显示绿色的勾勾，此时应该就认证完成可以上网了。(不行就点一下首页的重新连接)</p>
+<h1 id="注意事项">注意事项⚠</h1>
+<h2 id="不看被网管拉黑名单就不要怪我了">不看被网管拉黑名单就不要怪我了！</h2>
+<p>我用路由认证主要目的是规避虚拟网卡的检测，通过此方法也可以让无线路由器共享出WiFi让手机连接上网。<strong>需要注意的是，不要让iOS和Android的手机都连接这个WiFi</strong>，多个iOS系统的手机<strong>应该、大概</strong>是可以的，我在被拉黑名单之前就是只有让拿iPhone的同学连，经过一天的测试，没有发现异常。等我让一个拿Android手机的同学连上之后，当天中午就被系统拉黑名单了，网络中心的同学来我这里登陆后台管理后，我瞄到一眼，发现系统识别到的终端只有两个，而我同时连接的手机数量在当时并不止两个，再看到备注，写到“Android与iOS同时在线”，我就略知一二了。在此特意提醒，希望大家不要走我的老路…最后还是建议如果你一定要共享WiFi（<s>校园的WiFi真的屎…要不是我还用着小5s…呵呵呵…</s>），那么还是留着自己一台手机用吧，毕竟“<s>闷声发大财</s>”不是吗？</p>
+<p>ps：当你被拉黑名单后，通过正常软件认证是认证不了的，他会提示“FOUND”字样。这种情况，普通打电话到网络中心或到科学楼202室刷新账号是解决不了问题的，需要到207室（工程系）找到更高一级的“工程师”才能帮你移除黑名单，而且他们还会问这问那，详细的就不说了…都是泪啊…</p>
+<figure data-type="image" tabindex="2"><img src="http://upload-images.jianshu.io/upload_images/3463179-428aa3bed3629ec1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="http://upload-images.jianshu.io/upload_images/3463179-428aa3bed3629ec1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" loading="lazy"></figure>
+<h1 id="最后">最后</h1>
+<p>三句话</p>
+<blockquote>
+<p>“且用且珍惜”</p>
+</blockquote>
+<blockquote>
+<p>“闷声发大财”</p>
+</blockquote>
+<blockquote>
+<p>“自己动手 丰衣足食”</p>
+</blockquote>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[通过代理实现在校园外使用校园网内的服务]]></title>
+        <id>https://mijjj.github.io/post/tong-guo-dai-li-shi-xian-zai-xiao-yuan-wai-shi-yong-xiao-yuan-wang-nei-de-fu-wu</id>
+        <link href="https://mijjj.github.io/post/tong-guo-dai-li-shi-xian-zai-xiao-yuan-wai-shi-yong-xiao-yuan-wang-nei-de-fu-wu">
+        </link>
+        <updated>2020-01-12T01:46:17.000Z</updated>
+        <content type="html"><![CDATA[<p>2020.1.12<br>
+这篇里头部分命令有一些错误，自己运行错误的时候自己带脑子看看命令自己改改就行。<br>
+还有最近发现一个新的内网穿透工具—— nps，比frp好用，因为可以访问服务端网页来配置客户端，而不用手动再去改客户端的配置文件<br>
+2018-10-02<br>
+修正树莓派错误使用64位客户端的问题 - 更新使用<a href="https://github.com/fatedier/frp/releases/tag/v0.17.0">frp v0.17.0</a>；当然你也可以使用其他更新版本的 frp。</p>
+<h1 id="引言">引言</h1>
+<p>上了大学后，开始逐渐了解到校园网内有许多资源以及页面是外网访问不到的，例如教务系统（只有特定时期才能从外网访问）、特殊管理页面、校内ftp服务器以及图书馆资源（由于<a href="https://libgp.jnu.edu.cn/help/HelpInfo.action?id=33">版权问题</a>，强烈不建议通过代理获取图书馆资源）等。但有我们经常会有这么一种情况：身处外网，却又对内网的访问有所需求。比如教务系统、ftp访问以及特殊管理页面登陆等。此时就需要架设代理服务器，通过代理进行内网的访问。</p>
+<h1 id="正文">正文</h1>
+<h2 id="准备">准备</h2>
+<ul>
+<li>内网主机：可以是你的win电脑(十分不推荐)，也可以是其他的“不关机”的主机，建议使用Linux系统的主机，在这里我使用树莓派，系统为Raspbian（关键功耗低，10w左右）</li>
+<li>公网主机：因为各种原因，有的校园网不分配公网IP，或者你的内网主机前连接着路由器等，即存在以下情况：无法直接通过内网主机分配到的ip从外网进行访问，此时就需要公网主机。（若使用路由器，也可以免除公网主机，通过路由器内的DMZ（以及DDNS）来实现，不过本文主要来实践<strong>frp内网穿透</strong>）</li>
+</ul>
+<h2 id="原理">原理</h2>
+<p>本文使用frp进行内网穿透，使用*SR进行代理架设。</p>
+<p><s>有很多人会问，为什么R都已经停止维护了，还要用它。相较于其他代理方式，无论是服务端的配置难度还是客户端的易用性、兼容性，S和R都是做得比较好的。而相较于S，R的客户端的易用性最好，所以在此只写R。实际上我还是建议使用S-libev+obfs，不过这样win端就不能开http代理，因此使用情况上具有局限性；而R可以。</s></p>
+<h2 id="步骤">步骤</h2>
+<h2 id="服务端配置">服务端配置</h2>
+<pre><code>#切换到root用户，你也可以不切换，不过需要在下面的命令前加上sudo
+sudo su
+
+#下载程序
+wget https://github.com/fatedier/frp/releases/download/v0.17.0/frp_0.17.0_linux_amd64.tar.gz
+
+#解压
+tar -zxvf frp_0.17.0_linux_amd64.tar.gz
+
+#切换目录
+cd frp_0.17.0_linux_amd64
+
+# 编辑frps.ini
+sudo nano frps.ini
+</code></pre>
+<p>frps.ini 内容 - <code>bind_port</code> 为验证的端口，一般不作改动 - <code>token</code> 为自定义的值（数字如：1234567890），需要记下，并与后面配置的 frpc.ini 中的值相同</p>
+<pre><code>[common]
+bind_port = 7000
+token = token_value
+</code></pre>
+<p>最后启动frp服务端</p>
+<pre><code>#请确保在 frp_0.13.0_linux_arm64 目录下运行
+screen ./frps -c ./frps.ini
+</code></pre>
+<h2 id="客户端配置">客户端配置</h2>
+<pre><code>#切换到root用户，你也可以不切换，不过需要在下面的命令前加上sudo
+sudo su
+
+#下载程序
+wget https://github.com/fatedier/frp/releases/download/v0.17.0/frp_0.17.0_linux_arm.tar.gz
+
+#解压
+tar -zxvf frp_0.17.0_linux_arm.tar.gz
+
+#切换目录
+cd frp_0.17.0_linux_arm
+
+# 编辑frps.ini
+sudo nano frpc.ini
+</code></pre>
+<p>frpc.ini 内容</p>
+<p>[common]</p>
+<ul>
+<li><code>server_addr</code> 为公网服务器IP</li>
+<li><code>bind_port</code> 为验证的端口，一般不作改动</li>
+<li><code>token_value</code> 与前面配置的frps.ini中的值相同</li>
+</ul>
+<p>[ssr] - <code>local_port</code> ssr的端口 - <code>remote_port</code> 你连接公网主机的端口</p>
+<pre><code>[common]
+server_addr = your_server_ip
+server_port = 7000
+token = token_value
+
+[ssr]
+type = tcp
+local_ip = 127.0.0.1
+local_port = ssr_port_number
+remote_port = remote_port_number
+
+#以下可选
+[ssh]
+type = tcp
+local_ip = 127.0.0.1
+local_port = 22
+remote_port = remote_port_number
+</code></pre>
+<p>最后启动frp客户端</p>
+<pre><code>#请确保在 frp_0.13.0_linux_arm 目录下运行
+screen ./frpc -c ./frpc.ini
+</code></pre>
+<h2 id="树莓派上r的安装这里使用了错误的方法"><s>树莓派上R的安装</s>（这里使用了错误的方法）</h2>
+<p>由于我这里用的 raspberry debian 系统会被一些一键脚本识别错误，可实际运行是没问题的。因此我们需要通过修改文件来使脚本运行。</p>
+<pre><code>#编辑/etc/issue，将 Raspbian 改成 Debian
+nano /etc/issue
+</code></pre>
+<p>执行一键安装脚本 来源：https://github.com/ToyoDAdoubi/doubi</p>
+<pre><code>wget -N --no-check-certificate https://raw.githubusercontent.com/ToyoDAdoubi/doubi/master/ssr.sh &amp;&amp; chmod +x ssr.sh &amp;&amp; bash ssr.sh
+</code></pre>
+<p>安装过程不赘述</p>
+<h2 id="可能遇到的错误">可能遇到的错误</h2>
+<ul>
+<li>
+<p>未安装 screen 的请运行<code>sudo apt-get install screen</code> 更多有关 screen 的使用方法请访问 <a href="http://www.runoob.com/linux/linux-comm-screen.html">Linux screen命令| 菜鸟教程</a></p>
+</li>
+<li>
+<p>启动 frpc 时遇到黄字 <code>connect failed: No route to host</code> 这有可能是防火墙的问题，请检查你的树莓派以及VPS的防火墙设置，开放相应ip以及端口的访问权限，请自行搜索 iptables 相关命令。 #使用 与你们熟知的R的使用方法一致，只不过不具备「科学」的效果，因为你的树莓派在国内。R客户端的服务器IP填公网服务器IP，端口填写frpc.ini文件中[ssr]的 remote_port_number 即可。 另外说明，你的网站访问数据都是需要经过公网主机以及内网主机的，是需要消耗vps流量的。 #最终效果</p>
+<figure data-type="image" tabindex="1"><img src="https://upload-images.jianshu.io/upload_images/3463179-702800d6949ea257.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="https://upload-images.jianshu.io/upload_images/3463179-702800d6949ea257.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" loading="lazy"></figure>
+</li>
+</ul>
+<figure data-type="image" tabindex="2"><img src="https://upload-images.jianshu.io/upload_images/3463179-3e43d3917696308d.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="https://upload-images.jianshu.io/upload_images/3463179-3e43d3917696308d.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" loading="lazy"></figure>
+<h2 id="参考资料">参考资料</h2>
+<p><a href="https://segmentfault.com/a/1190000012004693">借助 frp 随时随地访问自己的树莓派</a> <a href="https://medium.com/@moreless/%E5%9C%A8-raspberry-pi-%E4%B8%8A%E5%AE%89%E8%A3%85shadowsocks-f008b15991b0">在 Raspberry Pi 上安装s*</a> <a href="https://www.chuantou.org/49.html">【frp配置教程】frp内网穿透服务端frps.ini各配置参数详解</a> <a href="https://www.chuantou.org/47.html">【frp配置教程】frp内网穿透客户端frpc.ini各配置参数详解</a></p>
+<h1 id="后记">后记</h1>
+<p>或许有的人觉得我写得太详细了，或许还是有些小细节没能覆盖完全，但看得懂的人自然看得懂。在我看来，写文章的主要目的还是记录我的操作以及思考过程，用作教程分享还只是次要目的，给后来者指指路罢了。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[在 Debian x64 上搭建 Teamspeak Server]]></title>
+        <id>https://mijjj.github.io/post/zai-debian-x64-shang-da-jian-teamspeak-server</id>
+        <link href="https://mijjj.github.io/post/zai-debian-x64-shang-da-jian-teamspeak-server">
+        </link>
+        <updated>2019-06-07T12:34:21.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="引">引</h1>
+<p>又到了一年一度的暑假，多人游戏想必是内容之一，多年来受够了 YY 的摧残，想寻找一个新的团队语音软件。本来想着用 Discord ，但在去年还是今年初就被墙了我也是无语（不受审查的服务都有极大的被封锁风险），不过 Discord 也没有大陆服务器，连接不稳定也是料想之中，所以弃用之。还有，我是在 Discord 首页上发现 Teamspeak 的。</p>
+<figure data-type="image" tabindex="1"><img src="https://mijjj.github.io/post-images/1578832504680.png" alt="" loading="lazy"></figure>
+<h1 id="正文">正文</h1>
+<p>为什么我会选择 Teamspeak，最大的原因还是他没有被国内封锁（可自搭建服务器保证了这一点），而且功能强大，UI 简洁</p>
+<h2 id="大概流程">大概流程</h2>
+<p>购买服务器 → 安装服务端</p>
+<h3 id="购买服务器">购买服务器</h3>
+<p>这里强烈建议使用国内机子（保证低延时与低丢包），即使是学生1M 1G机子都可以，这里我选择<a href="https://promotion.aliyun.com/ntms/act/campus2018.html">阿里云的轻量应用服务器</a>10块钱一个月，还可以用来内网穿透（先选择：系统镜像 → CentOS；之后可以在控制台重装为 Debian9 x64）</p>
+<p>有的同学或许会担心1M带宽不够用，事实上是完全够用的，设置Teamspeak 传输最高音质 10，每人占用的带宽才<code>7.71KiB/s</code>，1M对于4个人吃鸡是完全够用的。</p>
+<h3 id="安装服务端">安装服务端</h3>
+<ol>
+<li>
+<p>因为 Teamspeak 不允许在root用户下运行，因此我们需要创建一个名为 Teamspeak 的新用户</p>
+<pre><code>adduser teamspeak
+#这里你或许会遇到一些需要你输入的内容，如果你看不懂的话，一直回车和 Y 就行
+</code></pre>
+</li>
+<li>
+<p>切换新用户，移动到所属的用户文件夹</p>
+<pre><code>su teamspeak
+cd
+</code></pre>
+</li>
+<li>
+<p>下载，解压软件包</p>
+<pre><code>#wget 后面的网址是会变化的，你可以去 [Teamspeak 官网](https://www.teamspeak.com/en/downloads/#server)查询最新的 Server 
+wget https://files.teamspeak-services.com/releases/server/3.9.1/teamspeak3-server_linux_amd64-3.9.1.tar.bz2
+#解压
+tar -xjvf teamspeak3-server_linux_amd64-3.9.1.tar.bz2
+#删除压缩包
+rm -r teamspeak3-server_linux_amd64-3.9.1.tar.bz2
+</code></pre>
+</li>
+<li>
+<p>同意服务条款、运行</p>
+<pre><code>#切换到目录
+cd teamspeak3-server_linux_amd64
+#同意服务条款
+touch .ts3server_license_accepted
+#运行
+./ts3server_startscript.sh start
+</code></pre>
+</li>
+<li>
+<p>记录token</p>
+<pre><code>------------------------------------------------------------------
+               Server Query Admin Account created                 
+         loginname= &quot;XXX&quot;, password= &quot;XXXX&quot;
+------------------------------------------------------------------
+               token=XXXXX
+------------------------------------------------------------------
+</code></pre>
+</li>
+<li>
+<p>打开端口</p>
+<p>阿里云可以在控制台开启端口（在防火墙里），当然你也可以使用命令</p>
+<pre><code>#token页面再按一次回车就可以回到命令输入状态了
+#如果无法运行sudo，请使用root用户运行以下命令（命令去除sudo）
+9987 / 10011 / 30033
+sudo iptables -A INPUT -p 类型 --dport 端口 --jump ACCEPT
+sudo iptables-save
+</code></pre>
+<p><a href="https://www.notion.so/e99fd927fdb142eba5b95afb03bc65fb">Teamspeak 端口</a></p>
+</li>
+<li>
+<p>客户端使用</p>
+<p>简略说一下，官网客户端下载页面是：<a href="https://www.teamspeak.com/zh-CN/downloads/">https://www.teamspeak.com/zh-CN/downloads/</a></p>
+<p>汉化在软件内插件页面有：按 <code>Alt+P</code> 进入选项页面，安装繁体中文包，重启软件即可</p>
+<p>服务器第一次被连接需要输入token，确定频道拥有人</p>
+</li>
+</ol>
+<figure data-type="image" tabindex="2"><img src="https://mijjj.github.io/post-images/1578832514877.png" alt="" loading="lazy"></figure>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[对一篇扫描文本进行粗翻译的流程]]></title>
+        <id>https://mijjj.github.io/post/dui-yi-pian-sao-miao-wen-ben-jin-xing-cu-fan-yi-de-liu-cheng</id>
+        <link href="https://mijjj.github.io/post/dui-yi-pian-sao-miao-wen-ben-jin-xing-cu-fan-yi-de-liu-cheng">
+        </link>
+        <updated>2019-06-07T12:05:11.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="引">引</h1>
+<p>前些天司机（学姐）让我粗略地翻译一篇扫描文档，在此将我粗略的过程写下，为了记录，也为了抛砖引玉。</p>
+<h1 id="正文">正文</h1>
+<p>我得到的材料是一篇图片扫描的 PDF 文档（纯图片，无法选中文字），语言为英语（夹杂西语字符）。现在的目的是转为大概能让人看得懂的中文文本。</p>
+<p>例如：</p>
+<figure data-type="image" tabindex="1"><img src="https://mijjj.github.io/post-images/1578831904675.gif" alt="" loading="lazy"></figure>
+<h2 id="我这次用到的软件服务有">我这次用到的软件/服务有：</h2>
+<ul>
+<li>
+<p>Office Word🔵</p>
+</li>
+<li>
+<p><a href="https://www.ilovepdf.com/zh-cn">iLovePDF</a> ❤️</p>
+<p>这是一个功能十分强大且专注于 PDF 处理的在线服务</p>
+</li>
+<li>
+<p><a href="https://fanyi.sogou.com/">搜狗翻译</a>🔸</p>
+<p>在我之前的经验里，相较于百度翻译和谷歌翻译，我更偏向于搜狗翻译的结果，你可以使用<a href="https://www.crimx.com/ext-saladict/">沙拉查词</a> 浏览器插件方便地对三者进行对比。（有道翻译长句子就是一坨💩）</p>
+</li>
+<li>
+<p>（可选）推荐的 PDF 浏览软件🔴：</p>
+<ul>
+<li>
+<p><s>Mircosoft Edge🔷（没错就是 Win10 自带浏览器）</s></p>
+</li>
+<li>
+<p><a href="https://www.crimx.com/ext-saladict/">沙拉查词</a> 浏览器插件🌟</p>
+<p>并不是说这个内置 PDF 浏览器有多牛逼，而是这个划词翻译插件太<s>牛逼</s>，也是我最喜欢的划词翻译插件</p>
+</li>
+<li>
+<p>Adobe Acrobat Reader DC</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Windows 自带的笔记本</p>
+<p>用来将 Word 中的富文本转换为纯文本，以及简单的分段处理。</p>
+</li>
+</ul>
+<h2 id="大致步骤">大致步骤</h2>
+<ol>
+<li>用 iLovePDF 服务将 PDF 转为 Word 文件</li>
+<li>在 Word 中校对单词</li>
+<li>将文章以一段一段的形式储存在记事本中</li>
+<li>将记事本中的文段粘贴到 Word 中</li>
+<li>使用搜狗翻译中的上传文档服务，将 Word 上传，获得翻译后的文段</li>
+<li>将翻译后的文段在 Word 中，以  「中-英-中-英...」 的方式排列</li>
+<li>导出 PDF 或 Word 文件（建议导出 PDF 便于在不同的设备、软件中都有相同的排版）</li>
+</ol>
+<p>最后的效果：</p>
+<figure data-type="image" tabindex="2"><img src="https://mijjj.github.io/post-images/1578832054477.png" alt="" loading="lazy"></figure>
+<h2 id="详细">详细</h2>
+<h3 id="ilovepdf">iLovePDF</h3>
+<p>在这里我们主要用到 iLovePDF 中的<a href="https://www.ilovepdf.com/zh-cn/pdf_to_word">「PDF 转为 Doc」服务。</a>在点击「转换至 Word」前，请点击网页右上方的「➕」，点选「OCR」。这里虽然他会提示需要「高级账户」，但只要你能够点选，就可以进行转换了。但这种操作是有次数限制的，似乎一段时间只能用一次（&gt;=1天）。当然如果你觉得好用而且日常经常需要的话开个会员也是很划算的：6USD/M or 48USD/Y （价格会根据 IP 所在地区稍有变动）</p>
+<p>iLovePDF 的 OCR 转换会保留页面尺寸和排版，但文段的格式十分的奇怪，这会直接影响接下来的校对步骤，你必须十分小心才能够维持原来的排版。可是由于排版保留了，你能更快的找到对应的位置，校对工作会相对方便。</p>
+<figure data-type="image" tabindex="3"><img src="https://mijjj.github.io/post-images/1578832067721.png" alt="" loading="lazy"></figure>
+<h3 id="单词校对">单词校对</h3>
+<p>鉴于扫描的质量，我们需要对扫描后获得的文档进行校对。（用心感受一下）</p>
+<p>OCR的效果对比（前/后）：</p>
+<figure data-type="image" tabindex="4"><img src="https://mijjj.github.io/post-images/1578832072639.png" alt="" loading="lazy"></figure>
+<p>单词校对的工作应该是整个流程里<strong>花费时间最多</strong>的步骤了，它需要你的耐心与眼力，这里我会使用 <a href="https://support.office.com/zh-cn/article/%e9%92%88%e5%af%b9%e5%a4%a7%e5%86%99%e3%80%81%e6%8b%bc%e5%86%99%e5%92%8c%e7%ac%a6%e5%8f%b7%e9%80%89%e6%8b%a9-%e8%87%aa%e5%8a%a8%e6%9b%b4%e6%ad%a3-%e9%80%89%e9%a1%b9-e7433b94-f3de-4532-9dc8-b29063a96e1f?omkt=zh-CN&amp;ui=zh-CN&amp;rs=zh-CN&amp;ad=CN">Word 自带的单词校正</a>，通常单词错误会以红色波浪线标出，语法错误会以蓝色波浪线标出，右键点击相应位置可以查看修改建议。当然，如果修改建议与原文不符的话还是建议遵从原文。</p>
+<p>这里有一款 Chrome 插件「Grammarly」，用来进行单词校正也是极好的，不过它并没有提供 Office 插件，你可以在 Google Doc 中使用它。</p>
+<h3 id="搜狗翻译">搜狗翻译</h3>
+<p>搜狗翻译、谷歌翻译和百度翻译的对比：</p>
+<p>（这里我用到<a href="https://saladict.crimx.com/">沙拉划词</a>进行三者的快速对比）</p>
+<p>原文：</p>
+<blockquote>
+<p>More recently, I went to a Fundamentalist bookstore on my annual visit to see what was new on contemporary fears of the Final Enemy. When I asked about books on Antichrist, I was politely shown to the theology area, but the real action was in fiction. As the book industry knows, one of the hottest genres in publishing is Christian fiction about the end times. The six-volume series concerning the last days written by Tim LaHaye and Jerry B. Jenkins has sold millions of copies. The turgid and repetitive accounts of the standard Fundamentalist view of Antichrist that I found under theology could all have been written in 1980 or before (and most were), but Antichrist’s breakthrough into the world of drugstore popular fiction (the kind that features endless descriptions of clothes and gadgets and colorful action, but little plot and no characterization) has become a gold mine.</p>
+</blockquote>
+<p>搜狗翻译：</p>
+<blockquote>
+<p>最近，我每年去一次原教旨主义书店，看看当代对最终敌人的恐惧有何新发现。当我问到关于反基督的书时，我被礼貌地带到神学领域，但真正的行动是在小说中。正如图书行业所知，出版界最热门的流派之一是关于末日的基督教小说。蒂姆·莱希和杰瑞·B·詹金斯写的关于最后几天的六卷本系列已经卖出了数百万册。我在神学中发现的对反基督者的标准原教旨主义观点的浮夸和重复的描述可能都是在1980年或之前写的(大多数都是)，但是反基督者对药店流行小说世界的突破(这种小说以对衣服、小玩意和丰富多彩的动作的无止境的描述为特征，但情节很少，没有人物刻画)已经成为一座金矿。</p>
+</blockquote>
+<p>谷歌翻译：</p>
+<blockquote>
+<p>最近，我在一年一度的访问中去了一个原教旨主义书店，看看当代对最终敌人的恐惧是什么新东西。 当我询问关于敌基督者的书籍时，我被礼貌地展示给了神学领域，但真正的行动却是虚构的。 正如图书行业所知，出版中最热门的类型之一是关于末日的基督教小说。 关于Tim LaHaye和Jerry B. Jenkins撰写的最后几天的六卷系列已售出数百万份。“我在神学中发现的标准原教旨主义观点的反复论述可能都是在1980年写成的 之前 （和大多数人），但敌基督的突破进入药店流行小说的世界（那种具有无穷无尽的描述衣服和小工具和丰富多彩的动作，但很少的情节和没有表征）已成为一个金矿。</p>
+</blockquote>
+<p>百度翻译：</p>
+<blockquote>
+<p>最近，我去了一家原教旨主义书店，参加了我的年度访问，了解了当代对最终敌人的恐惧的新情况。当我询问有关反基督的书籍时，我被礼貌地带到神学领域，但真正的行动是在小说中。正如图书业所知，出版界最热门的一种类型是关于末日的基督教小说。由提姆·拉哈伊和杰里·B·詹金斯写的关于最后几天的六卷丛书已经卖出了数百万册。“我在神学中发现的反基督的标准原教旨主义观点的冗长和重复的叙述可能都是在1980年或之前（大多数是）写的，但是伦奇里斯特在药店流行小说领域的突破（这种小说以对衣服和小玩意的无休止的描述和丰富多彩的动作为特色，但情节很少，没有人物塑造）已经成为一个金矿。</p>
+</blockquote>
+<p>我更喜欢搜狗的翻译，因此我选择搜狗，与此同时百度也是不错的，相较之下谷歌应该是最差的。</p>
+<p>在搜狗翻译的界面中，点击上传文档来上传以段落分好的纯文字 Word 文件，然后进入以下界面。在这里我们可以方便地将原文以及译文相对比（但不知为何不能手动调整）。</p>
+<figure data-type="image" tabindex="5"><img src="https://mijjj.github.io/post-images/1578832079603.png" alt="" loading="lazy"></figure>
+<h3 id="后">后</h3>
+<p>如果你只有自己阅读的需求，到上面应该就可以结束了，如果你还有给别人阅读的需求的话，点击下载译文（右上角）就可以下载到 Word 或 PDF 文档了，一般我分享给他人会以段落为界用「中-英-中-英...」的格式排版，这样在阅读译文遇到困惑时，更利于随时与原文进行比对，毕竟是机翻的中文，难免会碰到人类读不懂的行文。在与他人分享时建议分享 PDF 格式的文件，当然，也应该附上 Word 文件，便于他人（自己）进行更改。</p>
+<h1 id="最后">最后</h1>
+<p>最近心情不太好，不屑后面了。</p>
+<p>6.7.19</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Transmission + Caddy 创建轻量化WebDAV服务器📺]]></title>
+        <id>https://mijjj.github.io/post/transmission-caddy-chuang-jian-qing-liang-hua-webdav-fu-wu-qi</id>
+        <link href="https://mijjj.github.io/post/transmission-caddy-chuang-jian-qing-liang-hua-webdav-fu-wu-qi">
+        </link>
+        <updated>2019-04-08T11:57:40.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="引">引</h1>
+<p>如果你看到我之前的文章：<a href="https://www.notion.so/mijjj/NextCloud-Transmission-PT-bc66d31061df472f8b3fedcee461445f">NextCloud☁+ Transmission▶ 实现 PT下载机以及在线播放</a>，就会知道我之前用 Nextcloud 来进行网盘文件管理以及搭建 WebDAV 服务。但在某一天它突然失灵了，缺乏后端经验的我感到无从下手，遂决定放弃 Nextcloud 。</p>
+<figure data-type="image" tabindex="1"><img src="https://mijjj.github.io/post-images/1578830655243.png" alt="" loading="lazy"></figure>
+<p>经过这一段时间的自建网盘使用后，重新审视一番自己的需求，发现自己的主要需求是 WebDAV ，我会用这项功能将网盘挂载到各种软件上，播放通过PT下载的视频。搭建 WebDAV 服务器的方法有很多，传统的有 Nginx ，但我觉得它还是太复杂了，我选择了更为轻量化的 Caddy。</p>
+<h1 id="正文">正文</h1>
+<p>什么是 Caddy？</p>
+<blockquote>
+<p>EVERY site on HTTPS<br>
+Caddy is the HTTP/2 web server with automatic HTTPS.</p>
+</blockquote>
+<h2 id="准备">准备</h2>
+<p>这里我用到的是 HostHatch 家 1T hhd 1G 的 vps，系统是debian 9  ，下面命令都在 root 用户下运行，非 root 用户请在命令前方加 <code>sudo</code> 。</p>
+<h2 id="开启-debian9-中的-bbr">开启 Debian9 中的 BBR</h2>
+<p>参考页面：<a href="https://www.moerats.com/archives/297/">Debian 9快速开启Google BBR的方法，实现高效单边加速</a></p>
+<ol>
+<li>
+<p>修改系统变量</p>
+<pre><code>echo &quot;net.core.default_qdisc=fq&quot; &gt;&gt; /etc/sysctl.conf
+echo &quot;net.ipv4.tcp_congestion_control=bbr&quot; &gt;&gt; /etc/sysctl.conf
+</code></pre>
+</li>
+<li>
+<p>保存生效</p>
+<pre><code>sysctl -p
+</code></pre>
+</li>
+<li>
+<p>查看内核是否已开启BBR</p>
+<pre><code>sysctl net.ipv4.tcp_available_congestion_control
+
+#显示以下即已开启：
+net.ipv4.tcp_available_congestion_control = bbr cubic reno
+</code></pre>
+</li>
+<li>
+<p>查看BBR是否启动</p>
+<pre><code>lsmod | grep bbr
+
+#显示与下方类似即启动成功
+tcp_bbr 20480 00
+</code></pre>
+</li>
+</ol>
+<h2 id="安装transmission">安装Transmission</h2>
+<p>参考页面：</p>
+<p><a href="https://www.moerats.com/archives/186/">https://www.moerats.com/archives/186/</a></p>
+<p><a href="https://wiki.debian.org/BitTorrent/Transmission">https://wiki.debian.org/BitTorrent/Transmission</a></p>
+<ol>
+<li>
+<p>安装 Server 端</p>
+<pre><code>#这里安装时间较长，约30-50min
+apt install transmission-daemon –install-suggests
+</code></pre>
+</li>
+<li>
+<p>保存生效</p>
+<pre><code>#停止服务
+service transmission-daemon stop 
+
+#打开配置文件配置 
+nano /etc/transmission-daemon/settings.json
+
+#更改以下参数的值
+#替换为远程连接的密码
+“rpc-password”:“yourpassword”,
+#远程管理访问端口
+“rpc-port”: 9999,
+#登陆用户名
+“rpc-username”: “username”,
+#关闭远程连接白名单
+“rpc-whitelist-enabled”: false,
+#nano 如何保存修改及退出请自行查询
+
+#启动服务
+service transmission-daemon start
+</code></pre>
+</li>
+</ol>
+<p>默认下载位置：<code>/var/lib/transmission-daemon/downloads</code></p>
+<p>Web管理地址：<code>ip地址:端口</code></p>
+<p>Client管理端下载地址：<a href="https://github.com/transmission-remote-gui/transgui/releases">https://github.com/transmission-remote-gui/transgui/releases</a></p>
+<h2 id="安装-caddy">安装 Caddy</h2>
+<p>参考页面：</p>
+<p><a href="https://caddyserver.com/docs/http-caddyfile">https://caddyserver.com/docs/http-caddyfile</a></p>
+<p><a href="https://huaien.me/article/technology/use-caddy-to-build-webdav-server/">https://huaien.me/article/technology/use-caddy-to-build-webdav-server/</a></p>
+<ol>
+<li>
+<p>安装</p>
+<pre><code>#安装Caddy并安装 http.webdav,http.cors 
+curl https://getcaddy.com | bash -s personal http.webdav,http.cors
+
+wget -N --no-check-certificate https://raw.githubusercontent.com/ToyoDAdoubiBackup/doubi/master/caddy_install.sh &amp;&amp; chmod +x caddy_install.sh &amp;&amp; bash caddy_install.sh install http.webdav,http.cors
+</code></pre>
+</li>
+<li>
+<p>编辑配置文件</p>
+<pre><code>nano /usr/local/caddy/Caddyfile
+#若上面提示无法保存文件，应该是缺少这个路径，请自行创建
+</code></pre>
+<p>如果你<strong>没有域名</strong>，写入以下内容</p>
+<pre><code>:80 {
+ #根目录
+ root /usr/local/caddy/www/file/dav
+ #给网站目录添加简单的登录机制（账号admin密码password自行修改）
+ basicauth / admin password
+ timeouts none
+ gzip
+#下面是webDAV模块
+webdav / {
+#路径为WebDAV浏览的目录
+ scope /var/lib/transmission-daemon/downloads/
+#是否允许通过WebDAV编辑文件
+ modify true
+ }
+}
+</code></pre>
+<p>如果你<strong>有域名</strong>，请<strong>先将域名指向vps的IP</strong>，再写入以下内容：</p>
+<pre><code>#将下方所有 example.com 替换为你的域名
+
+#将http访问转为https
+http://example.com {
+ timeouts none
+ redir https://example.com{url}
+}
+</code></pre>
+<p>​</p>
+<pre><code>https://example.com {
+ root /usr/local/caddy/www/webdav
+ timeouts none
+#自动获取tls证书
+#下方将 your@email.com 替换为你的邮箱
+ tls your@email.com
+#给网站目录添加简单的登录机制（账号admin密码password自行修改）
+ basicauth / user password
+ webdav / {
+    scope /var/lib/transmission-daemon/downloads/
+    modify true
+ }
+}
+</code></pre>
+</li>
+<li>
+<p>启动 Caddy</p>
+<pre><code>#切换到caddy配置文件目录
+cd /usr/local/caddy/
+
+#使用screen来启动caddy
+screen caddy
+#如果运行错误请运行以下命令安装screen
+#apt-get install screen
+</code></pre>
+</li>
+</ol>
+<p>其他有关 Caddy 的命令</p>
+<pre><code>启动：
+/etc/init.d/caddy start
+停止：
+/etc/init.d/caddy stop
+重启：
+/etc/init.d/caddy restart
+查看状态：
+etc/init.d/caddy status
+查看Caddy启动日志： 
+tail -f /tmp/caddy.log
+安装目录：
+/usr/local/caddy
+Caddy配置文件位置：
+/usr/local/caddy/Caddyfile
+Caddy自动申请SSL证书位置：
+/.caddy/acme/acme-v01.api.letsencrypt.org/sites/xxx.xxx(域名)/
+</code></pre>
+<h2 id="访问你刚搭建的-webdav">访问你刚搭建的 WebDAV</h2>
+<p>在移动端我通常使用 nPlayer，在PC端我使用 Kodi，如果使用 PotPlayer 也行，使用方法大同小异，这里只介绍 PotPlayer 的添加方法，他们最主要的差异在于如何加载字幕。在 nPlayer 和 Kodi 里加载 WebDAV 中的字幕文件更加方便，而 PotPlayer 就比较麻烦，不过 PotPlayer  加载本地字幕文件则较为方便（直接拖到正在播放的视频中）；而我习惯将字幕文件同视频一起保存到 vps 上。</p>
+<figure data-type="image" tabindex="2"><img src="https://mijjj.github.io/post-images/1578830673127.jpg" alt="" loading="lazy"></figure>
+<p>经过主观体验，由于服务器负担减小，进度条和文件列表加载都比 NextCloud 呢！😊</p>
+<h1 id="末">末</h1>
+<p>没有输入就没有输出，最近没有学习东西，也就没有东西好写了。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[NextCloud☁+ Transmission▶ 实现 PT下载机以及在线播放]]></title>
+        <id>https://mijjj.github.io/post/nextcloud-transmissiongreater-shi-xian-pt-xia-zai-ji-yi-ji-zai-xian-bo-fang</id>
+        <link href="https://mijjj.github.io/post/nextcloud-transmissiongreater-shi-xian-pt-xia-zai-ji-yi-ji-zai-xian-bo-fang">
+        </link>
+        <updated>2018-11-01T11:54:01.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="引">引</h1>
+<p>有人问我何时产生了做这种东西的想法，其实很早就产生了，最初是在我刚开始接触入门级路由器（类似网件以及阿苏斯的入门级）的时候，梅林固件上面就有一些离线下载软件类似 Aria2、迅雷离线下载 Xware（已经停止服务），并且当时正值<s>郭佳</s>插手网盘行业引起一大批网盘服务关闭，出于<strong>对个人数据的敏感</strong>，便开始了解 个人/家庭NAS。</p>
+<p>经过一番了解后便止步于价格上呵呵呵……（群晖主流型号 DS218+ 价格2500左右）之后便转向更为经济的 VPS 自建网盘。</p>
+<hr>
+<h1 id="正文">正文</h1>
+<p>这次因为有网盘的作用，所以需要一个大硬盘的VPS，同时也要兼顾与国内的带宽速度，我用的是 Hosthatch 家 1核1G内存1T硬盘1Gbps位于 LA 的 VPS。</p>
+<h1 id="内容简述">内容简述</h1>
+<p>本次教程主要涉及在 Debian9 中安装 NextCloud、Transmission，并为 NextCloud的 访问添加 HTTPS 证书。</p>
+<h2 id="开启-debian9-中的-bbr">开启 Debian9 中的 BBR</h2>
+<p>这里参考自：<a href="https://www.moerats.com/archives/297/">Debian 9快速开启Google BBR的方法，实现高效单边加速</a></p>
+<ol>
+<li>
+<p>修改系统变量</p>
+<pre><code>echo &quot;net.core.default_qdisc=fq&quot; &gt;&gt; /etc/sysctl.conf
+echo &quot;net.ipv4.tcp_congestion_control=bbr&quot; &gt;&gt; /etc/sysctl.conf
+</code></pre>
+</li>
+<li>
+<p>保存生效</p>
+<pre><code>sysctl -p
+</code></pre>
+</li>
+<li>
+<p>查看内核是否已开启BBR</p>
+<pre><code>sysctl net.ipv4.tcp_available_congestion_control
+
+#显示以下即已开启：
+net.ipv4.tcp_available_congestion_control = bbr cubic reno
+</code></pre>
+</li>
+<li>
+<p>查看BBR是否启动</p>
+<pre><code>lsmod | grep bbr
+
+#显示以下即启动成功：
+tcp_bbr 20480 00
+</code></pre>
+</li>
+</ol>
+<h2 id="nextcloud-的安装">NextCloud 的安装</h2>
+<p>参考文章：<a href="https://www.howtoforge.com/tutorial/install-nextcloud-server-and-client-on-debian-9/">How to Install Nextcloud 13 Server on Debian 9</a></p>
+<ol>
+<li>
+<p>系统准备</p>
+<pre><code>apt-get update -y 
+
+#下面这条需要时间较长，可以不运行 
+apt-get upgrade -y
+</code></pre>
+</li>
+<li>
+<p>LAMP服务安装</p>
+</li>
+</ol>
+<p>NextCloud 的运行需要Apache、MySQL和PHP</p>
+<p>安装 Apache 和 MariaDB</p>
+<pre><code>apt-get install apache2 mariadb-server -y
+</code></pre>
+<p>安装完成后运行以下命令来运行 Apache 和MariaDB 并开启开机启动</p>
+<pre><code>systemctl start apache2 systemctl enable apache2 systemctl start mysql systemctl enable mariadb
+</code></pre>
+<p>安装 PHP 以及其他需要的模块</p>
+<pre><code>apt-get install libapache2-mod-php php7.0 php7.0-xml php7.0 php7.0-cgi php7.0-cli php7.0-gd php7.0-curl php7.0-zip php7.0-mysql php7.0-mbstring wget unzip -y
+</code></pre>
+<ol start="3">
+<li>配置 MariaDB</li>
+</ol>
+<p>数据库安全配置</p>
+<pre><code>mysql_secure_installation
+</code></pre>
+<p>配置</p>
+<pre><code>Enter current password for root (enter for none): 设置 mysql 的管理密码 
+
+Change the root password? [Y/n] 输入n 
+
+Remove anonymous users? [Y/n] 输入y 
+
+Disallow root login remotely? [Y/n] 输入y 
+
+Remove test database and access to it? [Y/n] 输入y 
+
+Reload privilege tables now? [Y/n] 输入y
+</code></pre>
+<p>登陆 MariaDB 控制台进行配置</p>
+<pre><code>mysql -u root -p 
+#输入上面设置的密码 
+
+CREATE DATABASE nextclouddb;
+#创建 nextcloud 的数据库，请务必带上分号；运行 
+
+CREATE USER ‘nextcloud’@‘localhost’ IDENTIFIED BY ‘mypassword’;
+#mypassword 字段请替换为数据库密码（非管理密码） 
+
+GRANT ALL PRIVILEGES ON nextclouddb.* TO ‘nextcloud’@‘localhost’;
+#向Nextcloud数据库授予权限 
+
+FLUSH PRIVILEGES;
+#重载privileges table 
+
+\q
+#离开控制台
+</code></pre>
+<ol start="4">
+<li>安装 NextCloud</li>
+</ol>
+<p>获取最新版本的NextCloud</p>
+<pre><code>wget https://download.nextcloud.com/server/releases/latest.zip
+</code></pre>
+<p>解压</p>
+<pre><code>unzip latest.zip
+</code></pre>
+<p>将解压得到的文件夹移到  <code>/var/www/html/</code></p>
+<pre><code>mv nextcloud /var/www/html/
+</code></pre>
+<p>为 nextcloud 文件夹提供适当的权限</p>
+<pre><code>chown -R www-data:www-data /var/www/html/nextcloud
+</code></pre>
+<p>为NextCloud创建一个apache虚拟主机文件</p>
+<pre><code>nano /etc/apache2/sites-available/nextcloud.conf
+</code></pre>
+<p>写入以下内容（不必太过介意其中的参数，后面 HTTPS 的配置还会修改）<br>
+完成后Ctlr+O、回车、Ctlr+X、回车</p>
+<pre><code>&lt;VirtualHost *:80&gt;
+ServerAdmin admin@example.com
+DocumentRoot &quot;/var/www/html/nextcloud&quot;
+ServerName 192.168.0.187
+&lt;Directory &quot;/var/www/html/nextcloud/&quot;&gt;
+Options MultiViews FollowSymlinks
+
+AllowOverride All
+Order allow,deny
+Allow from all
+&lt;/Directory&gt;
+TransferLog /var/log/apache2/nextcloud_access.log
+ErrorLog /var/log/apache2/nextcloud_error.log
+&lt;/VirtualHost&gt;
+</code></pre>
+<p>启用NextCloud虚拟主机文件并禁用默认虚拟主机文件</p>
+<pre><code>a2dissite 000-default
+a2ensite nextcloud
+</code></pre>
+<p>重启 Apache 以应用改变</p>
+<pre><code>systemctl restart apache2
+</code></pre>
+<ol start="5">
+<li>开放防火墙端口</li>
+</ol>
+<p>安装防火墙管理软件（iptable 真尼玛难用hhh）</p>
+<pre><code>apt-get install ufw -y
+</code></pre>
+<p>开启并配置 ufw</p>
+<pre><code>ufw enable ufw allow 80 ufw allow 22
+</code></pre>
+<ol start="6">
+<li>NextCloud 数据库以及管理员账户配置</li>
+</ol>
+<p>在浏览器输入你服务器的公网 ip 地址就可以访问你刚刚搭建好的 NextCloud 了，初次访问需要配置 admin 账号以及数据库访问密码，其他照填就行。<br>
+<img src="https://mijjj.github.io/post-images/1578830129894.jpg" alt="" loading="lazy"></p>
+<h2 id="为-nextcloud-配置-https-证书">为 NextCloud 配置 HTTPS 证书</h2>
+<p>参考文章：<a href="https://www.digitalocean.com/community/tutorials/how-to-secure-apache-with-let-s-encrypt-on-debian-9#step-1-%E2%80%94-installing-certbot">How To Secure Apache with Let's Encrypt on Debian 9</a></p>
+<p>这里你需要有一个自己注册的域名，你可以去 <a href="http://www.name.com">www.name.com</a> 买，或者注册一个免费但需要隔一段时间就要验证的 <a href="http://www.freenom.com/zh/index.html">www.freenom.com</a> ；购买后将域名解析到 VPS 的公网地址。</p>
+<ol>
+<li>安装 Certbot</li>
+</ol>
+<p>这里的认证我们使用 Let's Encrypt 签发的免费证书，第一步是在服务器上安装Certbot软件。默认情况下，Debian软件存储库中不提供Certbot，为了使用apt下载软件，您需要将backports存储库添加到<code>sources.list</code>文件中。</p>
+<p>打开<code>sources.list</code>并在最后一行写入以下内容</p>
+<pre><code>nano /etc/apt/sources.list 
+
+#写入内容 
+deb http://ftp.debian.org/debian stretch-backports main
+</code></pre>
+<p>Save and close the file by pressing CTRL+X, Y, then ENTER, then update your package lists:（其实直接看参考文章就行了，瞧瞧这™简单到爆炸的英语）</p>
+<pre><code>apt update
+</code></pre>
+<p>使用特定的源来安装 Certbot ：</p>
+<pre><code>apt install python-certbot-apache -t stretch-backports
+</code></pre>
+<ol start="2">
+<li>配置 SSL证书</li>
+</ol>
+<p>打开网站虚拟化配置文件，替换<code>ServerName</code>后的值为指向这台vps的域名</p>
+<pre><code>nano /etc/apache2/sites-available/nextcloud.conf
+
+#修改例子 
+…
+ServerName example.com;
+…
+</code></pre>
+<p>保存后运行命令检查配置文件的语法</p>
+<pre><code>apache2ctl configtest
+
+#正常输出的显示 
+Syntax OK
+</code></pre>
+<p>重启 Apache 以加载新配置</p>
+<pre><code>systemctl reload apache2
+</code></pre>
+<p>现在 Certbot 能够读取配置了。</p>
+<ol start="3">
+<li>
+<p>防火墙开放443端口</p>
+<p>ufw allow 443</p>
+</li>
+<li>
+<p>获取 SSL证书</p>
+</li>
+</ol>
+<p>Certbot提供了多种通过插件获取SSL证书的方法。Apache插件将负责重新配置Apache并在必要时重新加载配置。请运行以下命令：</p>
+<pre><code>#其中的 example.com 换成自己的域名
+certbot –apache -d example.com
+</code></pre>
+<p>第一次运行时，他会让你输入你的邮箱来让你同意使用协议并验证你使用的域名是否属于你。然后会让你选择是否重定向 HTTP 流量到 HTTPS 中</p>
+<pre><code>Please choose whether or not to redirect HTTP traffic to HTTPS, removing HTTP access.
+-------------------------------------------------------------------------------
+1: No redirect - Make no further changes to the webserver configuration.
+2: Redirect - Make all requests redirect to secure HTTPS access. Choose this for
+new sites, or if you're confident your site works on HTTPS. You can undo this
+change by editing your web server's configuration.
+-------------------------------------------------------------------------------
+Select the appropriate number [1-2] then [enter] (press 'c' to cancel):
+#输入2并回车
+</code></pre>
+<p>输入选择并回车之后，程序就会进行配置，成功后会告诉你你的证书被放在哪里、证书过期时间以及其他杂七杂八的信息。</p>
+<p>现在你已经可以通过安全的 HTTPS 协议来访问自己的 NextCloud 了。</p>
+<ol start="5">
+<li>Verifying Certbot Auto-Renewal（我懒了）</li>
+</ol>
+<p>Let's Encrypt's certificates are only valid for ninety days. This is to encourage users to automate their certificate renewal process. The<code>certbot</code>package we installed takes care of this for us by adding a renew script to <code>/etc/cron.d</code>. This script runs twice a day and will automatically renew any certificate that's within thirty days of expiration.</p>
+<p>To test the renewal process, you can do a dry run with certbot:</p>
+<pre><code>certbot renew –dry-run
+</code></pre>
+<p>If you see no errors, you're all set. When necessary, Certbot will renew your certificates and reload Apache to pick up the changes. If the automated renewal process ever fails, Let’s Encrypt will send a message to the email you specified, warning you when your certificate is about to expire.</p>
+<h2 id="安装-transmission">安装 Transmission</h2>
+<p>参考文章：<a href="https://wiki.debian.org/BitTorrent/Transmission">BitTorrent/Transmission</a></p>
+<p>我装 Transmission 主要是用来玩 PT（PT下载，BT的一种，不过较为隐秘），但如果你要在国外下载公开盗版 BT资源的话，你的 VPS 会面临投诉被 BAN 的风险。</p>
+<ol>
+<li>
+<p>安装 Server 端</p>
+<p>apt install transmission-daemon –install-suggests</p>
+</li>
+</ol>
+<p>似乎这种安装方法存在依赖编译的过程，时间比较久，大概半个多到一个小时，这个时间可以出去买个奶茶吃个夜宵啥的。</p>
+<ol start="2">
+<li>配置</li>
+</ol>
+<p>停止服务</p>
+<pre><code>service transmission-daemon stop 
+
+#打开配置文件配置 
+nano /etc/transmission-daemon/settings.json
+
+#更改以下参数的值
+#替换为远程连接的密码
+“rpc-password”:“yourpassword”,
+#远程管理访问端口
+“rpc-port”: 9999,
+#登陆用户名
+“rpc-username”: “username”,
+#关闭远程连接白名单
+“rpc-whitelist-enabled”: false,
+#启动服务
+service transmission-daemon start
+</code></pre>
+<p>默认下载文件夹：<code>/var/lib/transmission-daemon/downloads</code></p>
+<p>现在你可以通过网页端管理 Transmission 了，也可以下载 Client 端获取更舒适的界面体验（Transmission 官网获取）。</p>
+<p>网页地址：ip地址:端口</p>
+<h2 id="在-nextcloud-中添加-transmission-的下载文件夹">在 NextCloud 中添加 Transmission 的下载文件夹</h2>
+<ol>
+<li>为 NextCloud 安装外部储存插件</li>
+</ol>
+<ul>
+<li>点击右上角的圆圈头像上，点击展开菜单「应用」</li>
+<li>找到 “External storage support” 并启用</li>
+<li>点击右上角的圆圈头像上，点击展开菜单「设置」</li>
+<li>点击左侧菜单栏中的「管理」中的「外部储存」</li>
+<li>「目录名称」任意填写，「外部储存」选择本地，「配置」 填写<code>/var/lib/transmission-daemon/downloads</code>，「可用于」选择<code>admin</code>用户组或用户</li>
+<li>回到首页「文件」页面你就会看到你刚才添加的文件夹了，但里面的东西你只有读取权限，这个是数据库用户组 <code>www-data</code>对 Transmission 创建的文件/文件夹没有写入/执行权限造成的，将 Transmission 文件夹及其下的文件设置成 5777 应该就行了（我不知道也没试过hhh）</li>
+</ul>
+<h2 id="使用">使用</h2>
+<p>大致流程就是在 Transmission 上下载完成后，在 NextCloud 里头在线播放就行了，但有时候会下到没有配字幕的视频文件，这里推荐一个软件，可以置顶单纯播放字幕文件，挺好用的。</p>
+<p>来源：<a href="https://www.52pojie.cn/thread-651882-1-1.html">[Windows] Penguin Subtitle Player【独立字幕播放器】【支持.srt, .ssa, .ass字幕及透明背景】</a></p>
+<p>你也可以直接搜名字下载。</p>
+<p>然而 NextCloud 的在线播放器支持播放的格式太少，如一些AVI、MKV等格式无法在浏览器在线播放。这里可以用Kodi进行在线播放，在里面添加 WebDAV 路径就可以在线看了。</p>
+<h1 id="题外话">题外话</h1>
+<p>如果说要搭建离线下载平台的话，更好的下载工具是 Aria2，但它不能用于 PT下载（具体为什么我也没去了解，反正我的PT站不允许），所以实用性就大打折扣了，如果你想用国外 VPS 来加速你下载国外的资源速度的话，有更简单的方法，就是给下载工具如IDM或者FDM套一层代理就行了，这种方法我后续会更新在我另一篇文章 <a href="https://www.jianshu.com/p/11bad1832716">教你通过软件创建HTTP代理并连接</a> 中，具体什么时候，我也不知道，过几个星期吧hhh，最近太忙忙忙忙忙忙忙忙忙忙忙忙忙忙忙忙了（都是假的，就是懒hhh）</p>
+<h1 id="现在北京时间201811131352">现在北京时间2018.11.1——3:13:52</h1>
+<p>不知不觉就到了11月，今年又快过去了，想来今年过得真快，呵呵呵呵我是不是重复两次快了……话说回一年多的大学生活来，看到了各种各样的人，也还是印证了那句话「鸟子大了什么林子都有」，人和人之间的关系是那么的「薄」，有多少是因为有了「接触」才产生的「关系」，可又有多少为了这「关系」而不遗余力地创造着「接触」，得好好珍惜一直在身边的人呀。</p>
+<p>送给我，也送给所有看到这里的人。</p>
+<p>话说真的会有人看到这里吗？</p>
+<p>不知道</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[树莓派] DHT22温湿度传感器]]></title>
+        <id>https://mijjj.github.io/post/shu-mei-pai-dht22-wen-shi-du-chuan-gan-qi</id>
+        <link href="https://mijjj.github.io/post/shu-mei-pai-dht22-wen-shi-du-chuan-gan-qi">
+        </link>
+        <updated>2018-10-02T11:52:08.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="前">前</h1>
+<p>想起来自己的树莓派从高考前一天买回来已经好久了（呵呵呵大家不要学我，高考的时候还在惦记着这些有的没的），这么久一直在捣鼓软件相关的东西，想来GPIO这么有用的东西也没有怎么动，所以在国庆前一晚深夜时分买了个DHT22温湿度传感器，想着来度过国庆这几天的发霉时光，没想到结果一个下午就搞定了……其实还是主要看了一个大佬的项目，才搞得这么快，不过在使用的过程中也遇到了一些坑，这里也顺便做一些记录，给后来的人指一下路。</p>
+<p>话不多说，先上个图。</p>
+<figure data-type="image" tabindex="1"><img src="https://upload-images.jianshu.io/upload_images/3463179-7020e98519c78e94.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="https://upload-images.jianshu.io/upload_images/3463179-7020e98519c78e94.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" loading="lazy"></figure>
+<p>Demo：http://mijjj.cf:8081</p>
+<h1 id="正文">正文</h1>
+<h2 id="教程内容">教程内容</h2>
+<p>本文主要参照项目 <a href="https://github.com/yfgeek/rpi-TempRuntime">rpi-Te mpRuntime</a></p>
+<ol>
+<li>DHT22温湿度传感器的安装</li>
+<li>传感器信息的采集</li>
+<li>http服务器部署</li>
+<li>frp内网穿透</li>
+</ol>
+<h2 id="dht22温湿度传感器的安装">DHT22温湿度传感器的安装</h2>
+<p>需要材料： 树莓派、面包板、面包线（母对母、公对公多条）、袖珍面包板、10KΩ电阻一个、DHT22温湿度传感器</p>
+<p>传感器连接方式：</p>
+<p>我的连接方式：</p>
+<figure data-type="image" tabindex="2"><img src="https://upload-images.jianshu.io/upload_images/3463179-4ca763bc975fd9bc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="https://upload-images.jianshu.io/upload_images/3463179-4ca763bc975fd9bc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" loading="lazy"></figure>
+<figure data-type="image" tabindex="3"><img src="https://upload-images.jianshu.io/upload_images/3463179-d08d0f8016768208.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="https://upload-images.jianshu.io/upload_images/3463179-d08d0f8016768208.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" loading="lazy"></figure>
+<p>细心的人或许会发现不同，电路图上的传感器是四个脚的，而我的或者你买的都是三个脚的，这里我们只要按照GPIO以及传感器脚对应来连接即可： &gt; VCC(+) 连接 <code>DC power 5V</code>（亮红色） &gt; DATA(out) 连接 <code>GPIO#</code>（绿色任意并请记住序号，我用的是 GPIO04） &gt; GND(-) 连接 <code>GND</code>（黑色） &gt; 10KΩ电阻并联在 DATA 与 VCC 之间（这里就要用到面包板了，具体操作看我的实物图）</p>
+<h2 id="传感器信息的采集">传感器信息的采集</h2>
+<figure data-type="image" tabindex="4"><img src="https://upload-images.jianshu.io/upload_images/3463179-1630d438449d5df9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="https://upload-images.jianshu.io/upload_images/3463179-1630d438449d5df9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" loading="lazy"></figure>
+<p>这里我们主要依赖到一个python库 <strong><a href="https://github.com/adafruit/Adafruit_Python_DHT">Adafruit_Python_DHT</a></strong></p>
+<h2 id="依赖的安装">依赖的安装</h2>
+<pre><code>#安装方法源于 rpi-TempRuntime
+#逐行运行命令
+sudo apt-get update
+sudo apt-get install python-dev python-rpi.gpio
+sudo apt-get install build-essential python-dev python-smbus python-pip
+git clone https://github.com/adafruit/Adafruit_Python_DHT.git
+cd Adafruit_Python_DHT
+sudo python setup.py install
+sudo pip install RPi.GPIO
+</code></pre>
+<h2 id="项目的下载">项目的下载</h2>
+<pre><code>sudo mkdir /var/www/html
+cd /var/www/html
+git clone https://github.com/yfgeek/rpi-TempRuntime.git
+</code></pre>
+<h2 id="运行之前">运行之前</h2>
+<p>我们需要对<code>DHT22-WITHOUT-LCD.py</code>进行修改来使其顺利地获取传感器数据。</p>
+<pre><code>cd /var/www/html/rpi-TempRuntime
+sudo nano DHT22-WITHOUT-LCD.py
+</code></pre>
+<p>找到第26行 将<code>humidity, temperature = Adafruit_DHT.read_retry(sensor, 26)</code>中的<code>26</code>改为自己的<code>GPIO#</code>序号，例如我的就改成<code>humidity, temperature = Adafruit_DHT.read_retry(sensor, 4)</code>，保存退出，不会的请查找<code>nano</code>用法。</p>
+<p>其实这一条也是最核心的代码，如果要单单挑出来的话 来源：https://www.jianshu.com/p/42fed7f1f610</p>
+<pre><code>import Adafruit_DHT
+sensor = Adafruit_DHT.DHT22
+humidity, temperature = Adafruit_DHT.read_retry(sensor, GPIO#)
+print(humidity, temperature)
+</code></pre>
+<h2 id="运行">运行</h2>
+<pre><code>screen
+sudo python DHT22-WITHOUT-LCD.py
+</code></pre>
+<p>等一会你就会在终端界面中看到时间、温度以及湿度的输出了。这个项目还会生成一个简单的查询网页，在<code>/var/www/html/rpi-TempRuntime/web</code>中，历史数据以JSON格式存储在<code>/var/www/html/rpi-TempRuntime/web/data/min（或者hour）</code>中。</p>
+<h2 id="http服务器部署">http服务器部署</h2>
+<p>既然这个项目为我们生成了http页面我们就要用上对吧，这里我们使用caddy。 安装方法参考自：https://pimylifeup.com/raspberry-pi-caddy-web-server/</p>
+<pre><code>curl https://getcaddy.com | bash -s personal
+sudo mkdir /etc/caddy
+sudo nano /etc/caddy/Caddyfile
+</code></pre>
+<p>输入</p>
+<pre><code>:80 localhost:80 {
+    root /var/www/html/rpi-TempRuntime/web
+    gzip
+}
+</code></pre>
+<p>启动caddy</p>
+<pre><code>cd /etc/caddy
+screen
+caddy
+</code></pre>
+<p>此时你就可以通过浏览器访问树莓派的ip来访问页面了。</p>
+<h2 id="frp内网穿透">frp内网穿透</h2>
+<p>如果想在公网访问这个在内网的页面则需要frp来转发树莓派的80端口，具体操作在这里就不赘述了，可以参考我的<a href="https://www.notion.so/mijjj/c765ae84eaa3498f89480eb218946702">另一篇文章</a>中，frp的部分。</p>
+<h1 id="后">后</h1>
+<p>写完了，吃晚饭去了 我tmd中秋没留学校你们这么鬼多活动，我这国庆留在学校tmd个个都回家了，呵呵呵呵</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[教你做一篇不一样的微信公众号推送]]></title>
+        <id>https://mijjj.github.io/post/jiao-ni-zuo-yi-pian-bu-yi-yang-de-wei-xin-gong-zhong-hao-tui-song</id>
+        <link href="https://mijjj.github.io/post/jiao-ni-zuo-yi-pian-bu-yi-yang-de-wei-xin-gong-zhong-hao-tui-song">
+        </link>
+        <updated>2018-06-10T11:50:56.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="引言">引言</h1>
+<p>最近由于实在挺忙的，就没有时间写东西，憋了好几个题材，打算在接下来的复习周学得无聊的时候就写写，这是第一个。（然而现在并没到复习周呵呵呵</p>
+<p>最初这些效果都是我从其他推送看来的，至于是哪篇推送我也忘记了哈哈哈哈哈哈哈… 先看效果： <a href="https://mp.weixin.qq.com/s/cKFbdOSN3QKjV8XMl0mXow">【群星闪耀】第五届SKY之星评选开始接受报名</a> <a href="https://mp.weixin.qq.com/s/bSc3LEdaMyy0VPAj2pwOGg">『迎接我们的18』2017-2018跨年留言征集活动</a></p>
+<p>你可以看到，在里头是包含两种效果的： 1. 图文渐显 2. 弹幕效果</p>
+<p>由于第二种效果已经看到有的编辑器（<a href="http://ipaiban.com/bianji.jsp">i排版</a>，在他的互动样式里头）已经玩出花来了，并且它的实现比较简单，就不教了，具体可以参考这篇文章：<a href="https://mp.weixin.qq.com/s/mxGjBttmj627qa4DwePenQ">弹幕还可以点击显示！？你需要了解的弹幕排版都在这里了</a></p>
+<p>这里主要介绍第一种效果（图文渐显）的实现。 # 正文 ## 准备</p>
+<ol>
+<li>看懂本文需要一些基本的HTML知识，可以从<a href="http://www.w3school.com.cn/html/">w3school的HTML教程</a>中<strong>基础、属性、元素</strong>的篇章中获得。</li>
+<li>你或许需要一个称手的文本编辑器：<a href="https://notepad-plus-plus.org/download/">Notepad++</a> 在编辑时将语言设置为HTML即可获得良好的阅读体验👍 在使用时请把自动换行关掉</li>
+<li>鉴于易用性以及广告骚扰等原因，这里我们用<a href="https://www.135editor.com/#">135编辑器</a>，而非 i 排版</li>
+<li>善于使用<code>Ctlr + A</code></li>
+<li>HTML源码 你可以轻松地从网页中获取它的全套源码，<s>如果你懒的话</s>在这里我也单独给出：</li>
+</ol>
+<p><em>这里你会理解我为啥叫你用Notepad++而不是记事本</em> 文字渐显：</p>
+<pre><code>&lt;section style=&quot;border-width: initial; border-color: initial; border-style: none; margin: 0rem auto;&quot;&gt;
+    &lt;section style=&quot;overflow: hidden; text-align: center;&quot;&gt;
+        &lt;section style=&quot;width: 100%; padding: 0rem 1rem; font-size: 0.875rem; line-height: 1.5; height: auto; overflow: hidden;&quot; data-width=&quot;100%&quot;&gt;
+            &lt;p class=&quot;&quot; data-brushtype=&quot;text&quot; style=&quot;text-align: center;&quot;&gt;
+                &lt;span style=&quot;font-size: 16px; font-family: 微软雅黑;&quot;&gt;你！的！文！本！你！的！文！本！&lt;/span&gt;
+            &lt;/p&gt;
+        &lt;/section&gt;
+        &lt;svg width=&quot;100%&quot; class=&quot;hiddenIn135&quot; style=&quot;width:100%;height:40rem;margin-top:-40rem&quot; data-width=&quot;100%&quot;&gt;
+            &lt;rect style=&quot;width:100%;height:40rem;opacity:1;fill: #fff;&quot; data-width=&quot;100%&quot;&gt;
+                &lt;animate attributename=&quot;opacity&quot; begin=&quot;2000ms&quot; dur=&quot;1s&quot; from=&quot;1&quot; to=&quot;0&quot; fill=&quot;freeze&quot;&gt;&lt;/animate&gt;
+            &lt;/rect&gt;
+        &lt;/svg&gt;
+    &lt;/section&gt;
+&lt;/section&gt;
+</code></pre>
+<p>图片渐显：</p>
+<pre><code>&lt;section style=&quot;border-width: initial; border-color: initial; border-style: none; margin: 0rem auto;&quot;&gt;
+    &lt;section style=&quot;overflow: hidden; text-align: center;&quot;&gt;
+        &lt;section style=&quot;width: 100%; padding: 0rem 1rem; font-size: 0.875rem; line-height: 1.5; height: auto; overflow: hidden;&quot; data-width=&quot;100%&quot;&gt;
+            &lt;p class=&quot;135brush&quot; data-brushtype=&quot;text&quot; style=&quot;text-align: center;&quot;&gt;
+                &lt;img data-src=&quot;http://你的图片链接你的图片链接&quot; style=&quot;z-index: -1; cursor: pointer; text-align: center; white-space: pre-wrap; width: auto !important; height: auto !important; visibility: visible !important;&quot; class=&quot; &quot; data-ratio=&quot;0.32669616519174044&quot; data-w=&quot;1356&quot; data-type=&quot;gif&quot; src=&quot;http://你的图片链接你的图片链接&quot; data-fail=&quot;0&quot;/&gt;
+            &lt;/p&gt;
+        &lt;/section&gt;
+        &lt;svg width=&quot;100%&quot; class=&quot;hiddenIn135&quot; style=&quot;width:100%;height:40rem;margin-top:-40rem&quot; data-width=&quot;100%&quot;&gt;
+            &lt;rect style=&quot;width:100%;height:40rem;opacity:1;fill: #fff;&quot; data-width=&quot;100%&quot;&gt;
+                &lt;animate attributename=&quot;opacity&quot; begin=&quot;2000ms&quot; dur=&quot;1s&quot; from=&quot;1&quot; to=&quot;0&quot; fill=&quot;freeze&quot;&gt;&lt;/animate&gt;
+            &lt;/rect&gt;
+        &lt;/svg&gt;
+    &lt;/section&gt;
+&lt;/section&gt;
+</code></pre>
+<h2 id="文字渐显">文字渐显</h2>
+<p>文字的效果编辑我们分为两个部分：</p>
+<ol>
+<li>文本、出现时序、效果持续时间的编辑——在文本编辑器中完成</li>
+<li>文字排版的编辑——在135编辑器中完成</li>
+</ol>
+<h3 id="文本编辑器中的编辑">文本编辑器中的编辑</h3>
+<p>首先是文本，你有多少段文字就要有多少段上面<strong>文字渐显</strong>的代码块，将你每段的文本填入代码中<code>你！的！文！本！你！的！文！本！</code>的位置中即可。 例如你有两段文字要顺序显示：</p>
+<pre><code>我是第一段
+我是第二段
+</code></pre>
+<p>那么你的代码：</p>
+<pre><code>&lt;section style=&quot;border-width: initial; border-color: initial; border-style: none; margin: 0rem auto;&quot;&gt;
+    &lt;section style=&quot;overflow: hidden; text-align: center;&quot;&gt;
+        &lt;section style=&quot;width: 100%; padding: 0rem 1rem; font-size: 0.875rem; line-height: 1.5; height: auto; overflow: hidden;&quot; data-width=&quot;100%&quot;&gt;
+            &lt;p class=&quot;&quot; data-brushtype=&quot;text&quot; style=&quot;text-align: center;&quot;&gt;
+                &lt;span style=&quot;font-size: 16px; font-family: 微软雅黑;&quot;&gt;我是第一段&lt;/span&gt;
+            &lt;/p&gt;
+        &lt;/section&gt;
+        &lt;svg width=&quot;100%&quot; class=&quot;hiddenIn135&quot; style=&quot;width:100%;height:40rem;margin-top:-40rem&quot; data-width=&quot;100%&quot;&gt;
+            &lt;rect style=&quot;width:100%;height:40rem;opacity:1;fill: #fff;&quot; data-width=&quot;100%&quot;&gt;
+                &lt;animate attributename=&quot;opacity&quot; begin=&quot;2000ms&quot; dur=&quot;1s&quot; from=&quot;1&quot; to=&quot;0&quot; fill=&quot;freeze&quot;&gt;&lt;/animate&gt;
+            &lt;/rect&gt;
+        &lt;/svg&gt;
+    &lt;/section&gt;
+&lt;/section&gt;
+
+&lt;section style=&quot;border-width: initial; border-color: initial; border-style: none; margin: 0rem auto;&quot;&gt;
+    &lt;section style=&quot;overflow: hidden; text-align: center;&quot;&gt;
+        &lt;section style=&quot;width: 100%; padding: 0rem 1rem; font-size: 0.875rem; line-height: 1.5; height: auto; overflow: hidden;&quot; data-width=&quot;100%&quot;&gt;
+            &lt;p class=&quot;&quot; data-brushtype=&quot;text&quot; style=&quot;text-align: center;&quot;&gt;
+                &lt;span style=&quot;font-size: 16px; font-family: 微软雅黑;&quot;&gt;我是第二段&lt;/span&gt;
+            &lt;/p&gt;
+        &lt;/section&gt;
+        &lt;svg width=&quot;100%&quot; class=&quot;hiddenIn135&quot; style=&quot;width:100%;height:40rem;margin-top:-40rem&quot; data-width=&quot;100%&quot;&gt;
+            &lt;rect style=&quot;width:100%;height:40rem;opacity:1;fill: #fff;&quot; data-width=&quot;100%&quot;&gt;
+                &lt;animate attributename=&quot;opacity&quot; begin=&quot;4000ms&quot; dur=&quot;1s&quot; from=&quot;1&quot; to=&quot;0&quot; fill=&quot;freeze&quot;&gt;&lt;/animate&gt;
+            &lt;/rect&gt;
+        &lt;/svg&gt;
+    &lt;/section&gt;
+&lt;/section&gt;
+</code></pre>
+<p>编辑好了文本之后，我们就要对出现时序进行编辑。方法是编辑每段文字的代码里<code>animate</code>标签中<code>begin</code>属性的值。通常上一段与下一段的时间间隔为<code>1500~2000ms</code>，并且第一段的值一般为<code>1000-2000ms</code>。这里的修改我是没有想到有什么方便的方法，只能一个个按顺序修改咯，具体的例子可以在上面看到。</p>
+<p>另外，你可以看到<code>animate</code>标签中还有其他的属性： &gt; - dur - 动画持续时间，在这里可以理解为文字显示过程需要的时间 &gt; - from/to - 这里的<code>1</code>和<code>0</code>代表文字从透明(1)到不透明(0)的过程，即文字透明度的变化初状态与末状态，这里你可以将<code>0</code>和<code>1</code>换过来并配合其他属性的修改来玩出其他的效果。 &gt; - fill - 我也不知道是啥… &gt; - 更多其他属性请参考：https://developer.mozilla.org/zh-CN/docs/Web/SVG/Attribute#ConditionalProccessing</p>
+<p>其他的玩法请搜索：svg animate stml</p>
+<h2 id="135编辑器中的编辑">135编辑器中的编辑</h2>
+<p>编辑好了代码之后，打开<a href="https://www.135editor.com/">135编辑器</a>，点击编辑页面左上角 <strong>HTML</strong> 字样的按钮，把你的代码全复制进去，再点一次那个按钮就可以看到你的文本了，需要注意，在这个界面你看到的是不带动画效果的，需要查看效果请点击右边的 <strong>手机预览</strong>。</p>
+<p>在这里进行文字的排版，你可以进行你熟悉的 左右对齐/居中、文字大小、加粗斜体下划线、文字颜色、阴影等等等等等等你熟悉的编辑，你也可以对段落中的文字进行删改，但应尽量避免段落的增减以及段落位序改变，不然就会出现奇奇怪怪的效果（如果要进行修改请回到文本编辑器中修改）。</p>
+<h2 id="图片渐显">图片渐显</h2>
+<p>具体操作和文字渐显差不多，具体就是怎么放上你的图片，这里我们需要一个叫 <strong>图床</strong> 的东西，它的作用相当于帮你存储图片，并给你一个可以直接获取图片的链接<s>巴拉巴拉巴拉</s>…</p>
+<p>你可以自建，比如利用七牛云的10g免费空间配合极简图床使用。 也可以用一些国内的公共图床比如：https://imgchr.com/ 另：国外的公共图床大多在微信中不能访问，或访问速度偏慢。微博图床也是一个目前来说不错选择，不过很久很久之后你的直链还能不能访问取决于微博</p>
+<p>获取到图片的直链后，替换掉代码中的<strong>两个</strong><code>http://你的图片链接你的图片链接</code>即可，图片可以是静态的jpg/png等，也可以是动态的gif。</p>
+<p>替换完成之后你也可以插入文本的HTML代码中进行时间的排序，同样是编辑<code>animate</code>中<code>begin</code>的值。</p>
+<p>135编辑器中对图片的编辑除了边框、大小调整、左右对齐/居中外都是收费的。它还有一个换图的功能，我不知道换过后渐显效果还在不，你们自己去试吧🙃</p>
+<h2 id="与其他编辑器素材的结合">与其他编辑器素材的结合</h2>
+<p>有时候你想用用这个编辑器的素材，然后那个编辑器你也有一些素材想用，怎么怎么办呢？</p>
+<p>这里有一个办法，先统计你有多少块素材，然后按素材的块数在微信公众号的编辑器中打入相应数量的换行（就是回车，最好再多几个）。然后按顺序在各自的行中粘贴素材就行。</p>
+<p>举个例子，我有一个135编辑器的素材，一个秀米的素材，以及两个自己需要在微信编辑器中插入的素材（一段文字、一个投票窗）。 1. 在微信编辑器中打入五或六个换行 2. 插入投票窗，并调整投票窗所在的位置（行） 3. 在相应位置写下自己需要的文字 4. 在相应位置将粘贴素材 5. 将多出来的行视情况删除</p>
+<p>注：在微信编辑器中就尽量不要对素材进行额外的编辑了，很多时候会出现一些奇奇怪怪的现象，对素材的编辑请回到相应的编辑器中进行。</p>
+<p>最后请不要忘记发到自己手机上预览一下效果，毕竟一天只有一次推。 # 最后 这些效果似乎都可以在 i排版 中实现，不过我看了看它的界面呵呵呵立马不想用了。可以这么说，所有的效果也都是建立在HTML上的，既然是HTML，那么代码也必然会暴露给别人，你也就可以很轻易地从中学习它效果的实现方法，看到感兴趣的，<code>右键-检查/查看源代码</code> 就行了。</p>
+<p>话说回来，大一里一年的院会干事时光就要结束了，可以说<s>被逼得</s>学到很多东西了，也过得很开心，不过说回来，大二的夜宵估计是没着落了呵呵呵呵呵呵呵呵…</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[利用学校的edu邮箱免费注册教育版Office365]]></title>
+        <id>https://mijjj.github.io/post/li-yong-xue-xiao-de-edu-you-xiang-mian-fei-zhu-ce-jiao-yu-ban-office365</id>
+        <link href="https://mijjj.github.io/post/li-yong-xue-xiao-de-edu-you-xiang-mian-fei-zhu-ce-jiao-yu-ban-office365">
+        </link>
+        <updated>2017-10-11T11:28:37.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="起因">起因</h1>
+<p>很久之前我就知道edu域名邮箱的各种好处，最出名的就是AWS的学生优惠券，🍎 Music 的学生半价优惠，以及Office365教育版，因此梦寐以求地要上一所对现代数字生活向往的大学（因为有的大学不向学生派发edu邮箱）。进了暨大，了解到学校接入微信企业平台，支付宝充值饭卡，交续网费，以及数字暨大主页，极大的便利了老师和学生们的教育生活，我发现我当初的选择是正确的。（为暨大打call）</p>
+<p>入学之后同学们开始加入各种组织，于是就需要各种办公软件，Office套件自然在列。有的笔记本是会赠送Office套件的（一般都会在网页图文介绍或机箱＆笔记本上贴有Office的贴纸），然而有的笔记本是不赠送的，然而面对299一年的Office365个人版（包含1T的OneDrive储存），或399买断Office2016，都不是一项小数目。</p>
+<p>因此巨硬（误）就推出了教育版Office365（Web版Office套件以及免费的OneDrive储存）。虽说是Web版，但日常使用也是足够的，对于学生来说，关键是免费不是吗？ <em>不要跟我说WPS也免费，免费的就是最贵的。这个定律同样适用于Office365教育版。</em></p>
+<h1 id="正文">正文</h1>
+<h2 id="1准备edu邮箱">1.准备edu邮箱</h2>
+<p>对于暨大的学生，我们可以通过申请学子邮来获得个人的edu邮箱。通过我在暨南大学各种在线网页的摸索，发现并不需要向网络中心提交纸质申请，只需在网络上办理开通即可，整个过程轻松快捷。（再次打call）</p>
+<p>①首先登陆暨南大学的<a href="https://mynet.jnu.edu.cn/">“校园用户自助服务平台”</a>。 ps：账号是个人的学号，密码为身份证后六位数字。</p>
+<p><s>（在这想吐槽一下，在更改过原数字密码后，新密码与原密码都可以用来登陆在线平台，然而校园网认证则只能用新密码）</s></p>
+<p>②依次点击：左侧菜单的“业务办理” ===》展开栏下的“学子邮申请”</p>
+<p>③在右侧填写并确认自己的邮箱用户名，点下方确认即可。 ps：确认用户名的框内只需重复上面填过的用户名即可，无需整个邮箱地址填入。</p>
+<p><strong>现在就拥有属于自己的edu邮箱了hahahahahaha。</strong> <em>（这是我刚拿到邮箱的心情。。。（误））</em></p>
+<p>对于其他学校的学生你可以咨询一下你们的学长或致电你们学校的网络中心。</p>
+<figure data-type="image" tabindex="1"><img src="http://upload-images.jianshu.io/upload_images/3463179-c772dff3f6f8ebcf.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="http://upload-images.jianshu.io/upload_images/3463179-c772dff3f6f8ebcf.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" loading="lazy"></figure>
+<p>暨南大学学子邮申请界面</p>
+<h2 id="2登陆邮箱">2.登陆邮箱</h2>
+<p>其实这个没什么好说的，只是我觉得邮箱登陆地址比较难找，<s>或者是我瞎？</s>，所以在这里我贴出暨南邮箱的登陆链接：<a href="https://mail.jnu.edu.cn/">暨南大学电子邮件系统</a></p>
+<p>登陆的时候记得选择学子邮以及正确选择入学年份。</p>
+<p>ps：至于edu邮箱的登陆方式，不同学校有着不同的方法。我有个中大岭院的同学，他的edu邮箱是在腾讯企业邮箱登录的……</p>
+<h2 id="3获取office365教育版">3.获取Office365教育版</h2>
+<p><a href="https://www.microsoft.com/zh-cn/education/products/office/default.aspx">获取地址</a></p>
+<p>进入获取页面，在邮箱填写处填写自己的edu邮箱地址即可，后续步骤可按照提示完成。</p>
+<figure data-type="image" tabindex="2"><img src="http://upload-images.jianshu.io/upload_images/3463179-c4fd86e4d3b32263.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="http://upload-images.jianshu.io/upload_images/3463179-c4fd86e4d3b32263.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" loading="lazy"></figure>
+<p>获取页面</p>
+<p>一套流程下来后，我们便进入到Office365教育版的界面，即web版的Office套件，你无须下载整个Office套件软体到电脑本地，只需在网页上进行编辑，操作与软体版本区别不大，文件都会自动储存在你的OneDrive中，你可以随时在云端访问。</p>
+<p>下次继续访问的链接：<a href="https://www.office.com/">www.office.com</a></p>
+<p>你也可以通过安装<a href="https://chrome.google.com/webstore/detail/office-online/ndjpnladcallmjemlbaebfadecfhkepb?hl=zh-CN">Chrome扩展</a>来改善web版体验。 小技巧：在工作时按F11进行全屏使用体验更佳。</p>
+<figure data-type="image" tabindex="3"><img src="http://upload-images.jianshu.io/upload_images/3463179-5cfd3feeacfdbcc7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="http://upload-images.jianshu.io/upload_images/3463179-5cfd3feeacfdbcc7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" loading="lazy"></figure>
+<p>web版界面</p>
+<figure data-type="image" tabindex="4"><img src="http://upload-images.jianshu.io/upload_images/3463179-b91ede207820098a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="http://upload-images.jianshu.io/upload_images/3463179-b91ede207820098a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" loading="lazy"></figure>
+<p>Excel界面</p>
+<figure data-type="image" tabindex="5"><img src="http://upload-images.jianshu.io/upload_images/3463179-f2ecadea84ea473a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="http://upload-images.jianshu.io/upload_images/3463179-f2ecadea84ea473a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" loading="lazy"></figure>
+<p>Word界面</p>
+<figure data-type="image" tabindex="6"><img src="http://upload-images.jianshu.io/upload_images/3463179-9eda6651eec3f0e2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="http://upload-images.jianshu.io/upload_images/3463179-9eda6651eec3f0e2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" loading="lazy"></figure>
+<p>PowerPoint界面</p>
+<h1 id="写在最后">写在最后</h1>
+<p>这个世界没有那么多的羊毛给你蓐，所谓的大学生福利也只是你步入茫茫社会前给你的小小甜头而已。</p>
+<p>还有，对于破解的Office套件，我不说太多，因为在普通小市民眼中，趋向于使用“免费的”付费软件似乎已经成为了“政治正确”。但希望在你有能力的时候尽快入正吧。对于Adobe系列亦是如此。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[教你更方便地连接学校FTP文件夹]]></title>
+        <id>https://mijjj.github.io/post/jiao-ni-geng-fang-bian-di-lian-jie-xue-xiao-ftp-wen-jian-jia</id>
+        <link href="https://mijjj.github.io/post/jiao-ni-geng-fang-bian-di-lian-jie-xue-xiao-ftp-wen-jian-jia">
+        </link>
+        <updated>2017-09-21T11:27:23.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="起因">起因</h1>
+<p>今天上了大学的第一节大学计算机课，（<s>简称大机呵呵呵</s>）课中谈论到我们学校内网自建有各种FTP服务器以方便同学们更便捷地获取到上课所需的文件等内容。但是每次都要在地址栏打上FTP服务器的地址，不单止要记住地址，还要一个个输入，<s>你不觉得麻烦我还觉得麻烦</s>，因此我想起了我以往在 Windows 上访问我树莓派文件系统的方法。</p>
+<h1 id="正文">正文</h1>
+<h2 id="效果展示">效果展示</h2>
+<blockquote>
+<p>现在的大部分电脑都是 Win 7 或 Win 10 ，经过我的测试都是适用于我的方法的，至于 xp 我就没试过了。</p>
+</blockquote>
+<p>以下是最终的效果图，我们能在“我的电脑”中如进入本地硬盘一样直接访问FTP服务器。</p>
+<figure data-type="image" tabindex="1"><img src="http://upload-images.jianshu.io/upload_images/3463179-23cc71fe1d4b0368.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="http://upload-images.jianshu.io/upload_images/3463179-23cc71fe1d4b0368.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" loading="lazy"></figure>
+<figure data-type="image" tabindex="2"><img src="http://upload-images.jianshu.io/upload_images/3463179-8207ee410bffb59f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="http://upload-images.jianshu.io/upload_images/3463179-8207ee410bffb59f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" loading="lazy"></figure>
+<p>效果图2</p>
+<h2 id="第一步">第一步</h2>
+<p>获取FTP服务器地址</p>
+<p>我们都知道学校给予我们的FTP文件夹地址： &gt; ftp://share.jnu.edu.cn &gt; ftp://202.116.6.197</p>
+<p>这两个都是暨南大学FTP的两个地址，应该只有暨大的校园网能访问（可以匿名访问不需要用户名＆密码），第一个是普通的分享文件夹，第二个是我们大机的教学文件夹。</p>
+<h2 id="第二步">第二步</h2>
+<p>相信大家的老师都说过直接在地址栏输入就可以访问了，而我们的目的是不用输入就能访问文件系统。简单来说就是在“我的电脑”中创建一个FTP服务器的快捷方式。</p>
+<p>首先打开“我的电脑”界面，点击上方的“添加一个网络位置”</p>
+<figure data-type="image" tabindex="3"><img src="http://upload-images.jianshu.io/upload_images/3463179-4267cf521e5e803a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="http://upload-images.jianshu.io/upload_images/3463179-4267cf521e5e803a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" loading="lazy"></figure>
+<p>添加一个网络位置</p>
+<p>下一步 — 选择“自定义网络位置” — 下一步 — 填入FTP服务器的地址 — 下一步。。。</p>
+<figure data-type="image" tabindex="4"><img src="http://upload-images.jianshu.io/upload_images/3463179-486e02859d8f4e5a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="http://upload-images.jianshu.io/upload_images/3463179-486e02859d8f4e5a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" loading="lazy"></figure>
+<p>教程到此完成，最终的效果就是像文章开始的图一样。</p>
+<h2 id="btw">BTW</h2>
+<ol>
+<li>课上老师说的FlashFXP是一款FTP服务器管理软件，第三方代理商<a href="https://item.taobao.com/item.htm?id=535713940889">购买链接</a>，请支持正版软件。</li>
+<li>手机也可以直接访问FTP服务器，方法就是直接在浏览器地址栏上打链接就行了。手机上也有一些App可以<s>更美观地</s>访问FTP服务器，iOS 上有<a href="https://itunes.apple.com/us/app/documents-6-file-manager-pdf-reader-and-browser/id364901807?mt=8">Documents</a>，安卓上有<a href="https://www.coolapk.com/apk/com.estrongs.android.pop">ES文件浏览器</a>。也有能在线播放FTP服务器中视频的App，iOS上有 nplayer，infuse，avplayer，aceplayer等，安卓的我没接触过就不推介了。</li>
+</ol>
+<figure data-type="image" tabindex="5"><img src="http://upload-images.jianshu.io/upload_images/3463179-f38be07d53d81690.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="http://upload-images.jianshu.io/upload_images/3463179-f38be07d53d81690.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" loading="lazy"></figure>
+<p>nplayer在线播放1</p>
+<figure data-type="image" tabindex="6"><img src="http://upload-images.jianshu.io/upload_images/3463179-216dc1b49cad0c8e.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="http://upload-images.jianshu.io/upload_images/3463179-216dc1b49cad0c8e.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" loading="lazy"></figure>
+<p>nplayer在线播放2</p>
+<ol>
+<li>有的人想问，为什么FTP服务器上的文件要完全下载到本地上才能运行，是因为需要保持本地计算机的安全。</li>
+</ol>
+<h1 id="最后">最后</h1>
+<p>上面推荐的软件大多都是付费的，有的人或许会对付费软件厌恶，但我想说，只有付费才能让你喜爱的软件一直活下去，还有，不给钱人家喝西北风去啊？ ## 相关阅读 <a href="https://sspai.com/post/39514">有那么多免费盗版，你为什么还要花钱买正版？</a></p>
 ]]></content>
     </entry>
 </feed>

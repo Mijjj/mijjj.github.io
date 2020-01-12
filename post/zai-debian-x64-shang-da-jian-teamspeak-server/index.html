@@ -1,0 +1,291 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>在 Debian x64 上搭建 Teamspeak Server | MIJJJ‘s Blog</title>
+<meta name="description" content="" />
+<link rel="shortcut icon" href="https://mijjj.github.io/favicon.ico?v=1578832549838">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://mijjj.github.io/styles/main.css">
+
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id= UA-130395938-1 "></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', ' UA-130395938-1 ');
+</script>
+
+
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://mijjj.github.io">
+  <img class="avatar" src="https://mijjj.github.io/images/avatar.png?v=1578832549838" alt="">
+  </a>
+  <h1 class="site-title">
+    MIJJJ‘s Blog
+  </h1>
+  <p class="site-description">
+    
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          关于
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+        <a href="https://weibo.com/dadadamijie" target="_blank">
+          <i class="fab fa-weibo"></i>
+        </a>
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              在 Debian x64 上搭建 Teamspeak Server
+            </h2>
+            <div class="post-info">
+              <span>
+                2019-06-07
+              </span>
+              <span>
+                3 min read
+              </span>
+              
+                <a href="https://mijjj.github.io/tag/-WESQYAZy" class="post-tag">
+                  # 网络
+                </a>
+              
+                <a href="https://mijjj.github.io/tag/3-8qImkrsy" class="post-tag">
+                  # 工具
+                </a>
+              
+            </div>
+            
+            <div class="post-content-wrapper">
+              <div class="post-content">
+                <h1 id="引">引</h1>
+<p>又到了一年一度的暑假，多人游戏想必是内容之一，多年来受够了 YY 的摧残，想寻找一个新的团队语音软件。本来想着用 Discord ，但在去年还是今年初就被墙了我也是无语（不受审查的服务都有极大的被封锁风险），不过 Discord 也没有大陆服务器，连接不稳定也是料想之中，所以弃用之。还有，我是在 Discord 首页上发现 Teamspeak 的。</p>
+<figure data-type="image" tabindex="1"><img src="https://mijjj.github.io/post-images/1578832504680.png" alt="" loading="lazy"></figure>
+<h1 id="正文">正文</h1>
+<p>为什么我会选择 Teamspeak，最大的原因还是他没有被国内封锁（可自搭建服务器保证了这一点），而且功能强大，UI 简洁</p>
+<h2 id="大概流程">大概流程</h2>
+<p>购买服务器 → 安装服务端</p>
+<h3 id="购买服务器">购买服务器</h3>
+<p>这里强烈建议使用国内机子（保证低延时与低丢包），即使是学生1M 1G机子都可以，这里我选择<a href="https://promotion.aliyun.com/ntms/act/campus2018.html">阿里云的轻量应用服务器</a>10块钱一个月，还可以用来内网穿透（先选择：系统镜像 → CentOS；之后可以在控制台重装为 Debian9 x64）</p>
+<p>有的同学或许会担心1M带宽不够用，事实上是完全够用的，设置Teamspeak 传输最高音质 10，每人占用的带宽才<code>7.71KiB/s</code>，1M对于4个人吃鸡是完全够用的。</p>
+<h3 id="安装服务端">安装服务端</h3>
+<ol>
+<li>
+<p>因为 Teamspeak 不允许在root用户下运行，因此我们需要创建一个名为 Teamspeak 的新用户</p>
+<pre><code>adduser teamspeak
+#这里你或许会遇到一些需要你输入的内容，如果你看不懂的话，一直回车和 Y 就行
+</code></pre>
+</li>
+<li>
+<p>切换新用户，移动到所属的用户文件夹</p>
+<pre><code>su teamspeak
+cd
+</code></pre>
+</li>
+<li>
+<p>下载，解压软件包</p>
+<pre><code>#wget 后面的网址是会变化的，你可以去 [Teamspeak 官网](https://www.teamspeak.com/en/downloads/#server)查询最新的 Server 
+wget https://files.teamspeak-services.com/releases/server/3.9.1/teamspeak3-server_linux_amd64-3.9.1.tar.bz2
+#解压
+tar -xjvf teamspeak3-server_linux_amd64-3.9.1.tar.bz2
+#删除压缩包
+rm -r teamspeak3-server_linux_amd64-3.9.1.tar.bz2
+</code></pre>
+</li>
+<li>
+<p>同意服务条款、运行</p>
+<pre><code>#切换到目录
+cd teamspeak3-server_linux_amd64
+#同意服务条款
+touch .ts3server_license_accepted
+#运行
+./ts3server_startscript.sh start
+</code></pre>
+</li>
+<li>
+<p>记录token</p>
+<pre><code>------------------------------------------------------------------
+               Server Query Admin Account created                 
+         loginname= &quot;XXX&quot;, password= &quot;XXXX&quot;
+------------------------------------------------------------------
+               token=XXXXX
+------------------------------------------------------------------
+</code></pre>
+</li>
+<li>
+<p>打开端口</p>
+<p>阿里云可以在控制台开启端口（在防火墙里），当然你也可以使用命令</p>
+<pre><code>#token页面再按一次回车就可以回到命令输入状态了
+#如果无法运行sudo，请使用root用户运行以下命令（命令去除sudo）
+9987 / 10011 / 30033
+sudo iptables -A INPUT -p 类型 --dport 端口 --jump ACCEPT
+sudo iptables-save
+</code></pre>
+<p><a href="https://www.notion.so/e99fd927fdb142eba5b95afb03bc65fb">Teamspeak 端口</a></p>
+</li>
+<li>
+<p>客户端使用</p>
+<p>简略说一下，官网客户端下载页面是：<a href="https://www.teamspeak.com/zh-CN/downloads/">https://www.teamspeak.com/zh-CN/downloads/</a></p>
+<p>汉化在软件内插件页面有：按 <code>Alt+P</code> 进入选项页面，安装繁体中文包，重启软件即可</p>
+<p>服务器第一次被连接需要输入token，确定频道拥有人</p>
+</li>
+</ol>
+<figure data-type="image" tabindex="2"><img src="https://mijjj.github.io/post-images/1578832514877.png" alt="" loading="lazy"></figure>
+
+              </div>
+              <div class="toc-container">
+                <ul class="markdownIt-TOC">
+<li><a href="#%E5%BC%95">引</a></li>
+<li><a href="#%E6%AD%A3%E6%96%87">正文</a>
+<ul>
+<li><a href="#%E5%A4%A7%E6%A6%82%E6%B5%81%E7%A8%8B">大概流程</a>
+<ul>
+<li><a href="#%E8%B4%AD%E4%B9%B0%E6%9C%8D%E5%8A%A1%E5%99%A8">购买服务器</a></li>
+<li><a href="#%E5%AE%89%E8%A3%85%E6%9C%8D%E5%8A%A1%E7%AB%AF">安装服务端</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+              </div>
+            </div>
+          </article>
+        </div>
+
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://mijjj.github.io/post/dui-yi-pian-sao-miao-wen-ben-jin-xing-cu-fan-yi-de-liu-cheng">
+              <h3 class="post-title">
+                对一篇扫描文本进行粗翻译的流程
+              </h3>
+            </a>
+          </div>
+        
+
+        
+          
+
+          
+            <link rel="stylesheet" href="https://unpkg.com/disqusjs@1.1/dist/disqusjs.css">
+<script src="https://unpkg.com/disqusjs@1.1/dist/disqus.js"></script>
+
+<div id="disqus_thread"></div>
+
+<script>
+
+var options = {
+  shortname: 'Mijjj',
+  apikey: 's09QRCm15TiGSFKyQPBo6I90CO1OqVz5OQod7JolAEHg3BBMahgCKqukxSRnN3Pt',
+}
+if ('') {
+  options.api = ''
+}
+var dsqjs = new DisqusJS(options)
+
+</script>
+
+          
+        
+
+        <div class="site-footer">
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | 
+  <a class="rss" href="https://mijjj.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+
+  let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+  // This should probably be throttled.
+  // Especially because it triggers during smooth scrolling.
+  // https://lodash.com/docs/4.17.10#throttle
+  // You could do like...
+  // window.addEventListener("scroll", () => {
+  //    _.throttle(doThatStuff, 100);
+  // });
+  // Only not doing it here to keep this Pen dependency-free.
+
+  window.addEventListener("scroll", event => {
+    let fromTop = window.scrollY;
+
+    mainNavLinks.forEach((link, index) => {
+      let section = document.getElementById(decodeURI(link.hash).substring(1));
+      let nextSection = null
+      if (mainNavLinks[index + 1]) {
+        nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+      }
+      if (section.offsetTop <= fromTop) {
+        if (nextSection) {
+          if (nextSection.offsetTop > fromTop) {
+            link.classList.add("current");
+          } else {
+            link.classList.remove("current");    
+          }
+        } else {
+          link.classList.add("current");
+        }
+      } else {
+        link.classList.remove("current");
+      }
+    });
+  });
+
+</script>
+
+      </div>
+    </div>
+  </body>
+</html>

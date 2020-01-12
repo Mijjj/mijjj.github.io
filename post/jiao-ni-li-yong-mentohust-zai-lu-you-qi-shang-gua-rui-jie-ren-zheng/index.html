@@ -1,0 +1,279 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>教你利用MentoHUST在路由器上挂锐捷认证 | MIJJJ‘s Blog</title>
+<meta name="description" content="" />
+<link rel="shortcut icon" href="https://mijjj.github.io/favicon.ico?v=1578832549838">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://mijjj.github.io/styles/main.css">
+
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id= UA-130395938-1 "></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', ' UA-130395938-1 ');
+</script>
+
+
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://mijjj.github.io">
+  <img class="avatar" src="https://mijjj.github.io/images/avatar.png?v=1578832549838" alt="">
+  </a>
+  <h1 class="site-title">
+    MIJJJ‘s Blog
+  </h1>
+  <p class="site-description">
+    
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          关于
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+        <a href="https://weibo.com/dadadamijie" target="_blank">
+          <i class="fab fa-weibo"></i>
+        </a>
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              教你利用MentoHUST在路由器上挂锐捷认证
+            </h2>
+            <div class="post-info">
+              <span>
+                2020-01-12
+              </span>
+              <span>
+                8 min read
+              </span>
+              
+                <a href="https://mijjj.github.io/tag/h3yG-2A6h3" class="post-tag">
+                  # 日常
+                </a>
+              
+                <a href="https://mijjj.github.io/tag/-WESQYAZy" class="post-tag">
+                  # 网络
+                </a>
+              
+                <a href="https://mijjj.github.io/tag/3-8qImkrsy" class="post-tag">
+                  # 工具
+                </a>
+              
+            </div>
+            
+            <div class="post-content-wrapper">
+              <div class="post-content">
+                <p>2020.1.12<br>
+找到了一个新的固件，十分简单，集成了 MentoHUST ，而且支持型号众多，而且添加了<strong>路由代理伪装</strong>功能，隐藏代理的多个设备<strong>避免因为代理检测断网</strong>，经测试下来，确实不会因检测而封号了（多台iOS、PC和Android同时使用），但是我的K2时不时会断网重启...频率大概三四天一次，每次断开大概20s左右...感觉是因为设备数或者请求数多了的问题...<br>
+<a href="https://dl.x-wrt.com:4443/rom/sch_index.html">https://dl.x-wrt.com:4443/rom/sch_index.html</a></p>
+<h1 id="起因">起因</h1>
+<p>在开学之前我就早早地听闻过校园网恶劣的名声，但正真到了大学，使用它的时候，发现它并没有之前自己想象中的不堪。（我们学校的是鹏博士…）我最喜欢的便是校园网会分配 IPv6 地址，满足了我的好奇心（但也仅仅是好奇心而已），还有ping 8.8.8.8 的时间能达到稳定20ms左右，上传下载100M对等…当然已有不尽人意的地方，比如它居然连不上Onedrive！！！还有电脑认证需要下载一个认证软件，需要在后台打开才能保持联网，这个我还能忍受，但它对于电脑是否开启共享热点的判断居然是简单粗暴地检查电脑中是否同时开启了一个以上的网卡（虚拟网卡也包含其中），这便与我常用的游戏加速器SStap（用来吃鸡的）起了冲突，因此我也要每月划出至少￥30来买另外的加速器，本着能省一点是一点的精神，我走上了“歪路”。</p>
+<p><em>我本来想过隐藏网卡这一条路子，但由于技术不精，干不成，其实别的加速器应该都是有通过安装隐藏虚拟网卡来进行代理，然而我不会。</em> # 正文 我的方法就是让认证挂在路由器上，然后电脑就不需要开启认证软件，从而规避其检测我的网卡。</p>
+<p><em>本教程 MentoHUST的参数设置仅适用于暨南大学校本部，理论上南校区也适用，其他学校请自行摸索（其实都差不多的）。</em></p>
+<p>我们下面会需要获取网关、子网掩码，所以先用正常的认证方法，然后把这两个东西记下来，具体的方法自己Google（或百度）。</p>
+<p>本教程的刷机过程参考： <a href="http://www.cnblogs.com/xuliangxing/p/6486560.html">http://www.cnblogs.com/xuliangxing/p/6486560.html</a> 下文我只是粗略的点出步骤，若途中碰到困难，请自己动手Google（或百度），当然如果你留言我也会出来解答，前提是我心情好。</p>
+<p>首先需要一台空闲的路由器，而并不是什么路由器都能用，因为我们要给路由器刷固件<br>
+<s>大家可以参考这个链接中的支持设备列表： http://www.right.com.cn/forum/thread-161324-1-1.html</s>（已经删帖，型号可以参考下面的文件列表）</p>
+<p>在以下链接中找到自己路由型号的固件文件，并下载到电脑上： <a href="http://opt.cn2qq.com/padavan/">http://opt.cn2qq.com/padavan/</a></p>
+<p>老毛子固件更新channel（仍在频繁更新，需要过墙）：<a href="https://t.me/s/pdcn1">https://t.me/s/pdcn1</a></p>
+<p>其中我比较建议 斐讯K2、newifi、小米路由器mini，这三个路由器可刷固件比较多即可玩性高，价格比较便宜（K2之前可以免费撸，现在不知道活动还有没有，你们也可以上闲鱼淘个二手的）。我手上只有K2，所以只给出它的示例，其实过程都大同小异。</p>
+<p>为了避免你的麻烦，建议完整仔细地看完以下步骤并把需要的文件都下载好，再进行操作。</p>
+<h2 id="一-给路由器刷入breed">一、给路由器刷入Breed</h2>
+<p>这个是以后刷路由固件的基础，详细的教程链接： <a href="http://www.right.com.cn/forum/thread-161906-1-1.html">http://www.right.com.cn/forum/thread-161906-1-1.html</a> 帖中的内容很详细，大家跟着自己的路由型号操作即可</p>
+<h2 id="二-刷入固件">二、刷入固件</h2>
+<p>这里我们用到老毛子的 Padavan固件。</p>
+<ol>
+<li>刷完后用网线连接电脑和路由 （其实你刷 Breed 的时候网线与电脑就得连在一起，不建议用无线的方式操作）</li>
+<li>拔出路由电源线，一直按住还原按钮（大多数是路由身上的小按钮，凹进去的机子需要用到尖细物捅），然后插入电源线，等待8~10秒后松开还原按钮，此时路由器会启动 Breed控制台。</li>
+<li>电脑浏览器访问 192.168.1.1 ，进入 Breed控制台。</li>
+<li>点击固件更新，勾选“固件”，文件选择你之前下载的固件文件，点击上传等进度条走完，然后等待一两分钟，电脑浏览器访问 192.168.2.1 就可以进入新的路由管理界面了，若提示输入账号密码，则账号密码都为 admin。</li>
+</ol>
+<p>ps：上述过程不需要拔出电源</p>
+<figure data-type="image" tabindex="1"><img src="http://upload-images.jianshu.io/upload_images/3463179-aa71c4e4c0864151.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="http://upload-images.jianshu.io/upload_images/3463179-aa71c4e4c0864151.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" loading="lazy"></figure>
+<h2 id="三-mentohust的设置">三、MentoHUST的设置</h2>
+<p>MentoHUST是我们在路由器上进行校园网认证的工具。</p>
+<p>还有其他的工具就是minieap，<strong>但这个我没测试</strong>，项目地址： https://github.com/updateing/minieap minieap需要用到交叉编译，这里有一个同学交叉编译好了适用于K2的文件： <a href="http://www.right.com.cn/forum/forum.php%EF%BC%9Fmod=viewthread&amp;tid=214234">http://www.right.com.cn/forum/forum.php？mod=viewthread&amp;tid=214234</a></p>
+<h2 id="mentohust设置">MentoHUST设置</h2>
+<ol>
+<li>将路由器的wan口连上交换机</li>
+<li>进入路由管理界面 依次点击 左侧菜单“配置扩展环境”==》锐捷认证</li>
+<li>参数设置</li>
+</ol>
+<p>打开开关 用户名以及密码和你用来正常网络认证的相同 子网掩码和网关则填入文章开头你记下的ip地址 心跳间隔 2 失败等待 4 组播地址 1 锐捷 DHCP方式 2 认证后 是否后台运行 否 客户端版本号 4.98</p>
+<p>其他未提及的参数不要修改或按默认的来，最后点击页面末的“应用本页设置”，如果顺利的话，等待一段时间，点击左侧菜单栏中的网络地图，右边第一个图标会显示绿色的勾勾，此时应该就认证完成可以上网了。(不行就点一下首页的重新连接)</p>
+<h1 id="注意事项">注意事项⚠</h1>
+<h2 id="不看被网管拉黑名单就不要怪我了">不看被网管拉黑名单就不要怪我了！</h2>
+<p>我用路由认证主要目的是规避虚拟网卡的检测，通过此方法也可以让无线路由器共享出WiFi让手机连接上网。<strong>需要注意的是，不要让iOS和Android的手机都连接这个WiFi</strong>，多个iOS系统的手机<strong>应该、大概</strong>是可以的，我在被拉黑名单之前就是只有让拿iPhone的同学连，经过一天的测试，没有发现异常。等我让一个拿Android手机的同学连上之后，当天中午就被系统拉黑名单了，网络中心的同学来我这里登陆后台管理后，我瞄到一眼，发现系统识别到的终端只有两个，而我同时连接的手机数量在当时并不止两个，再看到备注，写到“Android与iOS同时在线”，我就略知一二了。在此特意提醒，希望大家不要走我的老路…最后还是建议如果你一定要共享WiFi（<s>校园的WiFi真的屎…要不是我还用着小5s…呵呵呵…</s>），那么还是留着自己一台手机用吧，毕竟“<s>闷声发大财</s>”不是吗？</p>
+<p>ps：当你被拉黑名单后，通过正常软件认证是认证不了的，他会提示“FOUND”字样。这种情况，普通打电话到网络中心或到科学楼202室刷新账号是解决不了问题的，需要到207室（工程系）找到更高一级的“工程师”才能帮你移除黑名单，而且他们还会问这问那，详细的就不说了…都是泪啊…</p>
+<figure data-type="image" tabindex="2"><img src="http://upload-images.jianshu.io/upload_images/3463179-428aa3bed3629ec1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="http://upload-images.jianshu.io/upload_images/3463179-428aa3bed3629ec1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" loading="lazy"></figure>
+<h1 id="最后">最后</h1>
+<p>三句话</p>
+<blockquote>
+<p>“且用且珍惜”</p>
+</blockquote>
+<blockquote>
+<p>“闷声发大财”</p>
+</blockquote>
+<blockquote>
+<p>“自己动手 丰衣足食”</p>
+</blockquote>
+
+              </div>
+              <div class="toc-container">
+                <ul class="markdownIt-TOC">
+<li><a href="#%E8%B5%B7%E5%9B%A0">起因</a>
+<ul>
+<li><a href="#%E4%B8%80-%E7%BB%99%E8%B7%AF%E7%94%B1%E5%99%A8%E5%88%B7%E5%85%A5breed">一、给路由器刷入Breed</a></li>
+<li><a href="#%E4%BA%8C-%E5%88%B7%E5%85%A5%E5%9B%BA%E4%BB%B6">二、刷入固件</a></li>
+<li><a href="#%E4%B8%89-mentohust%E7%9A%84%E8%AE%BE%E7%BD%AE">三、MentoHUST的设置</a></li>
+<li><a href="#mentohust%E8%AE%BE%E7%BD%AE">MentoHUST设置</a></li>
+</ul>
+</li>
+<li><a href="#%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9">注意事项⚠</a>
+<ul>
+<li><a href="#%E4%B8%8D%E7%9C%8B%E8%A2%AB%E7%BD%91%E7%AE%A1%E6%8B%89%E9%BB%91%E5%90%8D%E5%8D%95%E5%B0%B1%E4%B8%8D%E8%A6%81%E6%80%AA%E6%88%91%E4%BA%86">不看被网管拉黑名单就不要怪我了！</a></li>
+</ul>
+</li>
+<li><a href="#%E6%9C%80%E5%90%8E">最后</a></li>
+</ul>
+
+              </div>
+            </div>
+          </article>
+        </div>
+
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://mijjj.github.io/post/tong-guo-dai-li-shi-xian-zai-xiao-yuan-wai-shi-yong-xiao-yuan-wang-nei-de-fu-wu">
+              <h3 class="post-title">
+                通过代理实现在校园外使用校园网内的服务
+              </h3>
+            </a>
+          </div>
+        
+
+        
+          
+
+          
+            <link rel="stylesheet" href="https://unpkg.com/disqusjs@1.1/dist/disqusjs.css">
+<script src="https://unpkg.com/disqusjs@1.1/dist/disqus.js"></script>
+
+<div id="disqus_thread"></div>
+
+<script>
+
+var options = {
+  shortname: 'Mijjj',
+  apikey: 's09QRCm15TiGSFKyQPBo6I90CO1OqVz5OQod7JolAEHg3BBMahgCKqukxSRnN3Pt',
+}
+if ('') {
+  options.api = ''
+}
+var dsqjs = new DisqusJS(options)
+
+</script>
+
+          
+        
+
+        <div class="site-footer">
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | 
+  <a class="rss" href="https://mijjj.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+
+  let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+  // This should probably be throttled.
+  // Especially because it triggers during smooth scrolling.
+  // https://lodash.com/docs/4.17.10#throttle
+  // You could do like...
+  // window.addEventListener("scroll", () => {
+  //    _.throttle(doThatStuff, 100);
+  // });
+  // Only not doing it here to keep this Pen dependency-free.
+
+  window.addEventListener("scroll", event => {
+    let fromTop = window.scrollY;
+
+    mainNavLinks.forEach((link, index) => {
+      let section = document.getElementById(decodeURI(link.hash).substring(1));
+      let nextSection = null
+      if (mainNavLinks[index + 1]) {
+        nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+      }
+      if (section.offsetTop <= fromTop) {
+        if (nextSection) {
+          if (nextSection.offsetTop > fromTop) {
+            link.classList.add("current");
+          } else {
+            link.classList.remove("current");    
+          }
+        } else {
+          link.classList.add("current");
+        }
+      } else {
+        link.classList.remove("current");
+      }
+    });
+  });
+
+</script>
+
+      </div>
+    </div>
+  </body>
+</html>

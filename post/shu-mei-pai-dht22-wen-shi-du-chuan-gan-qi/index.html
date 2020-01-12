@@ -1,0 +1,301 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>[树莓派] DHT22温湿度传感器 | MIJJJ‘s Blog</title>
+<meta name="description" content="" />
+<link rel="shortcut icon" href="https://mijjj.github.io/favicon.ico?v=1578832549838">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://mijjj.github.io/styles/main.css">
+
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id= UA-130395938-1 "></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', ' UA-130395938-1 ');
+</script>
+
+
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://mijjj.github.io">
+  <img class="avatar" src="https://mijjj.github.io/images/avatar.png?v=1578832549838" alt="">
+  </a>
+  <h1 class="site-title">
+    MIJJJ‘s Blog
+  </h1>
+  <p class="site-description">
+    
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          关于
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+        <a href="https://weibo.com/dadadamijie" target="_blank">
+          <i class="fab fa-weibo"></i>
+        </a>
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              [树莓派] DHT22温湿度传感器
+            </h2>
+            <div class="post-info">
+              <span>
+                2018-10-02
+              </span>
+              <span>
+                4 min read
+              </span>
+              
+                <a href="https://mijjj.github.io/tag/h3yG-2A6h3" class="post-tag">
+                  # 日常
+                </a>
+              
+                <a href="https://mijjj.github.io/tag/3-8qImkrsy" class="post-tag">
+                  # 工具
+                </a>
+              
+            </div>
+            
+            <div class="post-content-wrapper">
+              <div class="post-content">
+                <h1 id="前">前</h1>
+<p>想起来自己的树莓派从高考前一天买回来已经好久了（呵呵呵大家不要学我，高考的时候还在惦记着这些有的没的），这么久一直在捣鼓软件相关的东西，想来GPIO这么有用的东西也没有怎么动，所以在国庆前一晚深夜时分买了个DHT22温湿度传感器，想着来度过国庆这几天的发霉时光，没想到结果一个下午就搞定了……其实还是主要看了一个大佬的项目，才搞得这么快，不过在使用的过程中也遇到了一些坑，这里也顺便做一些记录，给后来的人指一下路。</p>
+<p>话不多说，先上个图。</p>
+<figure data-type="image" tabindex="1"><img src="https://upload-images.jianshu.io/upload_images/3463179-7020e98519c78e94.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="https://upload-images.jianshu.io/upload_images/3463179-7020e98519c78e94.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" loading="lazy"></figure>
+<p>Demo：http://mijjj.cf:8081</p>
+<h1 id="正文">正文</h1>
+<h2 id="教程内容">教程内容</h2>
+<p>本文主要参照项目 <a href="https://github.com/yfgeek/rpi-TempRuntime">rpi-Te mpRuntime</a></p>
+<ol>
+<li>DHT22温湿度传感器的安装</li>
+<li>传感器信息的采集</li>
+<li>http服务器部署</li>
+<li>frp内网穿透</li>
+</ol>
+<h2 id="dht22温湿度传感器的安装">DHT22温湿度传感器的安装</h2>
+<p>需要材料： 树莓派、面包板、面包线（母对母、公对公多条）、袖珍面包板、10KΩ电阻一个、DHT22温湿度传感器</p>
+<p>传感器连接方式：</p>
+<p>我的连接方式：</p>
+<figure data-type="image" tabindex="2"><img src="https://upload-images.jianshu.io/upload_images/3463179-4ca763bc975fd9bc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="https://upload-images.jianshu.io/upload_images/3463179-4ca763bc975fd9bc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" loading="lazy"></figure>
+<figure data-type="image" tabindex="3"><img src="https://upload-images.jianshu.io/upload_images/3463179-d08d0f8016768208.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="https://upload-images.jianshu.io/upload_images/3463179-d08d0f8016768208.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" loading="lazy"></figure>
+<p>细心的人或许会发现不同，电路图上的传感器是四个脚的，而我的或者你买的都是三个脚的，这里我们只要按照GPIO以及传感器脚对应来连接即可： &gt; VCC(+) 连接 <code>DC power 5V</code>（亮红色） &gt; DATA(out) 连接 <code>GPIO#</code>（绿色任意并请记住序号，我用的是 GPIO04） &gt; GND(-) 连接 <code>GND</code>（黑色） &gt; 10KΩ电阻并联在 DATA 与 VCC 之间（这里就要用到面包板了，具体操作看我的实物图）</p>
+<h2 id="传感器信息的采集">传感器信息的采集</h2>
+<figure data-type="image" tabindex="4"><img src="https://upload-images.jianshu.io/upload_images/3463179-1630d438449d5df9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="https://upload-images.jianshu.io/upload_images/3463179-1630d438449d5df9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" loading="lazy"></figure>
+<p>这里我们主要依赖到一个python库 <strong><a href="https://github.com/adafruit/Adafruit_Python_DHT">Adafruit_Python_DHT</a></strong></p>
+<h2 id="依赖的安装">依赖的安装</h2>
+<pre><code>#安装方法源于 rpi-TempRuntime
+#逐行运行命令
+sudo apt-get update
+sudo apt-get install python-dev python-rpi.gpio
+sudo apt-get install build-essential python-dev python-smbus python-pip
+git clone https://github.com/adafruit/Adafruit_Python_DHT.git
+cd Adafruit_Python_DHT
+sudo python setup.py install
+sudo pip install RPi.GPIO
+</code></pre>
+<h2 id="项目的下载">项目的下载</h2>
+<pre><code>sudo mkdir /var/www/html
+cd /var/www/html
+git clone https://github.com/yfgeek/rpi-TempRuntime.git
+</code></pre>
+<h2 id="运行之前">运行之前</h2>
+<p>我们需要对<code>DHT22-WITHOUT-LCD.py</code>进行修改来使其顺利地获取传感器数据。</p>
+<pre><code>cd /var/www/html/rpi-TempRuntime
+sudo nano DHT22-WITHOUT-LCD.py
+</code></pre>
+<p>找到第26行 将<code>humidity, temperature = Adafruit_DHT.read_retry(sensor, 26)</code>中的<code>26</code>改为自己的<code>GPIO#</code>序号，例如我的就改成<code>humidity, temperature = Adafruit_DHT.read_retry(sensor, 4)</code>，保存退出，不会的请查找<code>nano</code>用法。</p>
+<p>其实这一条也是最核心的代码，如果要单单挑出来的话 来源：https://www.jianshu.com/p/42fed7f1f610</p>
+<pre><code>import Adafruit_DHT
+sensor = Adafruit_DHT.DHT22
+humidity, temperature = Adafruit_DHT.read_retry(sensor, GPIO#)
+print(humidity, temperature)
+</code></pre>
+<h2 id="运行">运行</h2>
+<pre><code>screen
+sudo python DHT22-WITHOUT-LCD.py
+</code></pre>
+<p>等一会你就会在终端界面中看到时间、温度以及湿度的输出了。这个项目还会生成一个简单的查询网页，在<code>/var/www/html/rpi-TempRuntime/web</code>中，历史数据以JSON格式存储在<code>/var/www/html/rpi-TempRuntime/web/data/min（或者hour）</code>中。</p>
+<h2 id="http服务器部署">http服务器部署</h2>
+<p>既然这个项目为我们生成了http页面我们就要用上对吧，这里我们使用caddy。 安装方法参考自：https://pimylifeup.com/raspberry-pi-caddy-web-server/</p>
+<pre><code>curl https://getcaddy.com | bash -s personal
+sudo mkdir /etc/caddy
+sudo nano /etc/caddy/Caddyfile
+</code></pre>
+<p>输入</p>
+<pre><code>:80 localhost:80 {
+    root /var/www/html/rpi-TempRuntime/web
+    gzip
+}
+</code></pre>
+<p>启动caddy</p>
+<pre><code>cd /etc/caddy
+screen
+caddy
+</code></pre>
+<p>此时你就可以通过浏览器访问树莓派的ip来访问页面了。</p>
+<h2 id="frp内网穿透">frp内网穿透</h2>
+<p>如果想在公网访问这个在内网的页面则需要frp来转发树莓派的80端口，具体操作在这里就不赘述了，可以参考我的<a href="https://www.notion.so/mijjj/c765ae84eaa3498f89480eb218946702">另一篇文章</a>中，frp的部分。</p>
+<h1 id="后">后</h1>
+<p>写完了，吃晚饭去了 我tmd中秋没留学校你们这么鬼多活动，我这国庆留在学校tmd个个都回家了，呵呵呵呵</p>
+
+              </div>
+              <div class="toc-container">
+                <ul class="markdownIt-TOC">
+<li><a href="#%E5%89%8D">前</a></li>
+<li><a href="#%E6%AD%A3%E6%96%87">正文</a>
+<ul>
+<li><a href="#%E6%95%99%E7%A8%8B%E5%86%85%E5%AE%B9">教程内容</a></li>
+<li><a href="#dht22%E6%B8%A9%E6%B9%BF%E5%BA%A6%E4%BC%A0%E6%84%9F%E5%99%A8%E7%9A%84%E5%AE%89%E8%A3%85">DHT22温湿度传感器的安装</a></li>
+<li><a href="#%E4%BC%A0%E6%84%9F%E5%99%A8%E4%BF%A1%E6%81%AF%E7%9A%84%E9%87%87%E9%9B%86">传感器信息的采集</a></li>
+<li><a href="#%E4%BE%9D%E8%B5%96%E7%9A%84%E5%AE%89%E8%A3%85">依赖的安装</a></li>
+<li><a href="#%E9%A1%B9%E7%9B%AE%E7%9A%84%E4%B8%8B%E8%BD%BD">项目的下载</a></li>
+<li><a href="#%E8%BF%90%E8%A1%8C%E4%B9%8B%E5%89%8D">运行之前</a></li>
+<li><a href="#%E8%BF%90%E8%A1%8C">运行</a></li>
+<li><a href="#http%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%83%A8%E7%BD%B2">http服务器部署</a></li>
+<li><a href="#frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F">frp内网穿透</a></li>
+</ul>
+</li>
+<li><a href="#%E5%90%8E">后</a></li>
+</ul>
+
+              </div>
+            </div>
+          </article>
+        </div>
+
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://mijjj.github.io/post/jiao-ni-zuo-yi-pian-bu-yi-yang-de-wei-xin-gong-zhong-hao-tui-song">
+              <h3 class="post-title">
+                教你做一篇不一样的微信公众号推送
+              </h3>
+            </a>
+          </div>
+        
+
+        
+          
+
+          
+            <link rel="stylesheet" href="https://unpkg.com/disqusjs@1.1/dist/disqusjs.css">
+<script src="https://unpkg.com/disqusjs@1.1/dist/disqus.js"></script>
+
+<div id="disqus_thread"></div>
+
+<script>
+
+var options = {
+  shortname: 'Mijjj',
+  apikey: 's09QRCm15TiGSFKyQPBo6I90CO1OqVz5OQod7JolAEHg3BBMahgCKqukxSRnN3Pt',
+}
+if ('') {
+  options.api = ''
+}
+var dsqjs = new DisqusJS(options)
+
+</script>
+
+          
+        
+
+        <div class="site-footer">
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | 
+  <a class="rss" href="https://mijjj.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+
+  let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+  // This should probably be throttled.
+  // Especially because it triggers during smooth scrolling.
+  // https://lodash.com/docs/4.17.10#throttle
+  // You could do like...
+  // window.addEventListener("scroll", () => {
+  //    _.throttle(doThatStuff, 100);
+  // });
+  // Only not doing it here to keep this Pen dependency-free.
+
+  window.addEventListener("scroll", event => {
+    let fromTop = window.scrollY;
+
+    mainNavLinks.forEach((link, index) => {
+      let section = document.getElementById(decodeURI(link.hash).substring(1));
+      let nextSection = null
+      if (mainNavLinks[index + 1]) {
+        nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+      }
+      if (section.offsetTop <= fromTop) {
+        if (nextSection) {
+          if (nextSection.offsetTop > fromTop) {
+            link.classList.add("current");
+          } else {
+            link.classList.remove("current");    
+          }
+        } else {
+          link.classList.add("current");
+        }
+      } else {
+        link.classList.remove("current");
+      }
+    });
+  });
+
+</script>
+
+      </div>
+    </div>
+  </body>
+</html>

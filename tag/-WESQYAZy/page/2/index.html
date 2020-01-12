@@ -1,0 +1,242 @@
+<html>
+  <head>
+  <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>网络 | MIJJJ‘s Blog</title>
+<meta name="description" content="" />
+<link rel="shortcut icon" href="https://mijjj.github.io/favicon.ico?v=1578832549838">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://mijjj.github.io/styles/main.css">
+
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id= UA-130395938-1 "></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', ' UA-130395938-1 ');
+</script>
+
+
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://mijjj.github.io">
+  <img class="avatar" src="https://mijjj.github.io/images/avatar.png?v=1578832549838" alt="">
+  </a>
+  <h1 class="site-title">
+    MIJJJ‘s Blog
+  </h1>
+  <p class="site-description">
+    
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          关于
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+        <a href="https://weibo.com/dadadamijie" target="_blank">
+          <i class="fab fa-weibo"></i>
+        </a>
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+        <div class="current-tag-container">
+            <h2 class="title">
+                标签：# 网络
+            </h2> 
+        </div>
+        <div class="post-container">
+  
+    <article class="post">
+      <a href="https://mijjj.github.io/post/jiao-ni-tong-guo-ruan-jian-chuang-jian-http-dai-li-bing-lian-jie">
+        <h2 class="post-title">教你通过软件创建HTTP代理并连接</h2>
+      </a>
+      <div class="post-info">
+        <span>
+          2016-11-19
+        </span>
+        <span>
+          4 min read
+        </span>
+        
+          <a href="https://mijjj.github.io/tag/-WESQYAZy" class="post-tag">
+            # 网络
+          </a>
+        
+          <a href="https://mijjj.github.io/tag/3-8qImkrsy" class="post-tag">
+            # 工具
+          </a>
+        
+      </div>
+      
+      <div class="post-abstract">
+        <p>2018.11.10 打算写 Clash ，最近吧（想起来再写2020.1.12）</p>
+<h1 id="简要">简要</h1>
+<p>本文章教你利用软件创建HTTP代理并使其他设备连接代理服务。教程包含Surge2＆3、Quantumult、Shadowrocket和某R的HTTP代理创建，以及iOS、Win10和Nintendo Switch的HTTP代理连接设置。 # 创建HTTP代理服务 下面会列举几个能够创建HTTP代理服务的软件使用方法。包含Surge2＆3、Quantumult、Shadowrocket、某R（电脑端）、某RR（安卓端）。（其中除了某R和某RR外，其余均为iOS中的app，且在中区均下载/购买不到）</p>
+<h2 id="surge3">Surge3</h2>
+<p>Surge 3 - Web Developer Tool by Yachen Liu <a href="https://itunes.apple.com/cn/app/surge-3-web-developer-tool/id1329879957?l=en&amp;mt=8">https://itunes.apple.com/cn/app/surge-3-web-developer-tool/id1329879957?l=en&amp;mt=8</a></p>
+<ol>
+<li>
+<p>进入Surge，开启开关并选择规则模式，在首页下方点击进入“高级设置” 这里状态栏显示“4G”为iOS11的BUG，实际上我已经连接了Wifi</p>
+<figure data-type="image" tabindex="1"><img src="https://upload-images.jianshu.io/upload_images/3463179-ae3b9c405e6045da.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="https://upload-images.jianshu.io/upload_images/3463179-ae3b9c405e6045da.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" loading="lazy"></figure>
+</li>
+<li>
+<p>打开“允许 Wi-Fi 访问”的开关，点击完成</p>
+<figure data-type="image" tabindex="2"><img src="https://upload-images.jianshu.io/upload_images/3463179-ef7c1f62733c1b86.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="https://upload-images.jianshu.io/upload_images/3463179-ef7c1f62733c1b86.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" loading="lazy"></figure>
+</li>
+<li>
+<p>返回首页点击左上角的“配置名”进入配置列表</p>
+<figure data-type="image" tabindex="3"><img src="https://upload-images.jianshu.io/upload_images/3463179-7a3b499266c9e13e.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="https://upload-images.jianshu.io/upload_images/3463179-7a3b499266c9e13e.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" loading="lazy"></figure>
+</li>
+<li>
+<p>点击“在文本模式中编辑“</p>
+<figure data-type="image" tabindex="4"><img src="https://upload-images.jianshu.io/upload_images/3463179-fe02b99706c8777e.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="https://upload-images.jianshu.io/upload_images/3463179-fe02b99706c8777e.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" loading="lazy"></figure>
+</li>
+<li>
+<p>找到<code>［port = xxxxx］</code>字段，其中的“xxxxx”几个数字便是端口，若实在找不到，软件默认设置为6152</p>
+<figure data-type="image" tabindex="5"><img src="https://upload-images.jianshu.io/upload_images/3463179-9dcc03c102358676.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="https://upload-images.jianshu.io/upload_images/3463179-9dcc03c102358676.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" loading="lazy"></figure>
+</li>
+<li>
+<p>「代理地址」启动Surge设备的内网IP</p>
+</li>
+</ol>
+<h2 id="quantumult">Quantumult</h2>
+<p>Quantumult by Qian Hua <a href="https://itunes.apple.com/us/app/quantumult/id1252015438?mt=8">https://itunes.apple.com/us/app/quantumult/id1252015438?mt=8</a> <s>它是目前在iOS中区仍仅存活的工具</s></p>
+<ol>
+<li>
+<p>进入软件的“More”界面，点击“Accessibility”</p>
+<figure data-type="image" tabindex="6"><img src="https://upload-images.jianshu.io/upload_images/3463179-20daffdb181fb67a.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="https://upload-images.jianshu.io/upload_images/3463179-20daffdb181fb67a.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" loading="lazy"></figure>
+</li>
+<li>
+<p>打开“Allow Wi-Fi Access”的开关</p>
+<figure data-type="image" tabindex="7"><img src="https://upload-images.jianshu.io/upload_images/3463179-fd2335c05818eab2.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="https://upload-images.jianshu.io/upload_images/3463179-fd2335c05818eab2.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" loading="lazy"></figure>
+</li>
+<li>
+<p>回到“Home”界面，打开开关，你可以在软件左上角看到「代理地址」以及端口</p>
+<figure data-type="image" tabindex="8"><img src="https://upload-images.jianshu.io/upload_images/3463179-abe78e19fe71619f.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="https://upload-images.jianshu.io/upload_images/3463179-abe78e19fe71619f.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" loading="lazy"></figure>
+</li>
+</ol>
+<h2 id="shadowrocket">Shadowrocket</h2>
+<p>Shadowrocket 作者是 Guangming Li https://appsto.re/cn/UDjM3.i</p>
+<ol>
+<li>
+<p>打开你的Shadowrocket，点开设置页面。</p>
+<figure data-type="image" tabindex="9"><img src="http://upload-images.jianshu.io/upload_images/3463179-f613b7ef761b3b5c.jpeg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="http://upload-images.jianshu.io/upload_images/3463179-f613b7ef761b3b5c.jpeg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" loading="lazy"></figure>
+</li>
+<li>
+<p>滚到下面找到“代理”，点开</p>
+<figure data-type="image" tabindex="10"><img src="http://upload-images.jianshu.io/upload_images/3463179-19ba5ca93d176b26.jpeg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="http://upload-images.jianshu.io/upload_images/3463179-19ba5ca93d176b26.jpeg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" loading="lazy"></figure>
+</li>
+<li>
+<p>点开“代理共享”，打开“启用共享”</p>
+<figure data-type="image" tabindex="11"><img src="http://upload-images.jianshu.io/upload_images/3463179-76aad401640c57d6.jpeg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="http://upload-images.jianshu.io/upload_images/3463179-76aad401640c57d6.jpeg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" loading="lazy"></figure>
+</li>
+</ol>
+<h2 id="surge2">Surge2</h2>
+<p>Surge2 作者是 Yachen Liu [https://itunes.apple.com/us/app/surge-legacy-support/id1040100637?mt=8](https://itunes.apple.com/us/app/surge-legacy-support/id1040100637?mt=8</p>
+
+      </div>
+    </article>
+  
+</div>
+
+        <div class="pagination-container">
+  
+    <a href="https://mijjj.github.io/tag/-WESQYAZy" class="prev-page">上一页</a>
+  
+  
+</div>
+
+        <div class="site-footer">
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | 
+  <a class="rss" href="https://mijjj.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+
+  let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+  // This should probably be throttled.
+  // Especially because it triggers during smooth scrolling.
+  // https://lodash.com/docs/4.17.10#throttle
+  // You could do like...
+  // window.addEventListener("scroll", () => {
+  //    _.throttle(doThatStuff, 100);
+  // });
+  // Only not doing it here to keep this Pen dependency-free.
+
+  window.addEventListener("scroll", event => {
+    let fromTop = window.scrollY;
+
+    mainNavLinks.forEach((link, index) => {
+      let section = document.getElementById(decodeURI(link.hash).substring(1));
+      let nextSection = null
+      if (mainNavLinks[index + 1]) {
+        nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+      }
+      if (section.offsetTop <= fromTop) {
+        if (nextSection) {
+          if (nextSection.offsetTop > fromTop) {
+            link.classList.add("current");
+          } else {
+            link.classList.remove("current");    
+          }
+        } else {
+          link.classList.add("current");
+        }
+      } else {
+        link.classList.remove("current");
+      }
+    });
+  });
+
+</script>
+
+      </div>
+    </div>
+  </body>
+</html>

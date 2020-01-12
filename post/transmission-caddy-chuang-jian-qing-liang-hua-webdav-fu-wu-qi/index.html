@@ -1,0 +1,395 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Transmission + Caddy 创建轻量化WebDAV服务器📺 | MIJJJ‘s Blog</title>
+<meta name="description" content="" />
+<link rel="shortcut icon" href="https://mijjj.github.io/favicon.ico?v=1578832549838">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://mijjj.github.io/styles/main.css">
+
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id= UA-130395938-1 "></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', ' UA-130395938-1 ');
+</script>
+
+
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://mijjj.github.io">
+  <img class="avatar" src="https://mijjj.github.io/images/avatar.png?v=1578832549838" alt="">
+  </a>
+  <h1 class="site-title">
+    MIJJJ‘s Blog
+  </h1>
+  <p class="site-description">
+    
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          关于
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+        <a href="https://weibo.com/dadadamijie" target="_blank">
+          <i class="fab fa-weibo"></i>
+        </a>
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              Transmission + Caddy 创建轻量化WebDAV服务器📺
+            </h2>
+            <div class="post-info">
+              <span>
+                2019-04-08
+              </span>
+              <span>
+                6 min read
+              </span>
+              
+                <a href="https://mijjj.github.io/tag/-WESQYAZy" class="post-tag">
+                  # 网络
+                </a>
+              
+                <a href="https://mijjj.github.io/tag/3-8qImkrsy" class="post-tag">
+                  # 工具
+                </a>
+              
+            </div>
+            
+            <div class="post-content-wrapper">
+              <div class="post-content">
+                <h1 id="引">引</h1>
+<p>如果你看到我之前的文章：<a href="https://www.notion.so/mijjj/NextCloud-Transmission-PT-bc66d31061df472f8b3fedcee461445f">NextCloud☁+ Transmission▶ 实现 PT下载机以及在线播放</a>，就会知道我之前用 Nextcloud 来进行网盘文件管理以及搭建 WebDAV 服务。但在某一天它突然失灵了，缺乏后端经验的我感到无从下手，遂决定放弃 Nextcloud 。</p>
+<figure data-type="image" tabindex="1"><img src="https://mijjj.github.io/post-images/1578830655243.png" alt="" loading="lazy"></figure>
+<p>经过这一段时间的自建网盘使用后，重新审视一番自己的需求，发现自己的主要需求是 WebDAV ，我会用这项功能将网盘挂载到各种软件上，播放通过PT下载的视频。搭建 WebDAV 服务器的方法有很多，传统的有 Nginx ，但我觉得它还是太复杂了，我选择了更为轻量化的 Caddy。</p>
+<h1 id="正文">正文</h1>
+<p>什么是 Caddy？</p>
+<blockquote>
+<p>EVERY site on HTTPS<br>
+Caddy is the HTTP/2 web server with automatic HTTPS.</p>
+</blockquote>
+<h2 id="准备">准备</h2>
+<p>这里我用到的是 HostHatch 家 1T hhd 1G 的 vps，系统是debian 9  ，下面命令都在 root 用户下运行，非 root 用户请在命令前方加 <code>sudo</code> 。</p>
+<h2 id="开启-debian9-中的-bbr">开启 Debian9 中的 BBR</h2>
+<p>参考页面：<a href="https://www.moerats.com/archives/297/">Debian 9快速开启Google BBR的方法，实现高效单边加速</a></p>
+<ol>
+<li>
+<p>修改系统变量</p>
+<pre><code>echo &quot;net.core.default_qdisc=fq&quot; &gt;&gt; /etc/sysctl.conf
+echo &quot;net.ipv4.tcp_congestion_control=bbr&quot; &gt;&gt; /etc/sysctl.conf
+</code></pre>
+</li>
+<li>
+<p>保存生效</p>
+<pre><code>sysctl -p
+</code></pre>
+</li>
+<li>
+<p>查看内核是否已开启BBR</p>
+<pre><code>sysctl net.ipv4.tcp_available_congestion_control
+
+#显示以下即已开启：
+net.ipv4.tcp_available_congestion_control = bbr cubic reno
+</code></pre>
+</li>
+<li>
+<p>查看BBR是否启动</p>
+<pre><code>lsmod | grep bbr
+
+#显示与下方类似即启动成功
+tcp_bbr 20480 00
+</code></pre>
+</li>
+</ol>
+<h2 id="安装transmission">安装Transmission</h2>
+<p>参考页面：</p>
+<p><a href="https://www.moerats.com/archives/186/">https://www.moerats.com/archives/186/</a></p>
+<p><a href="https://wiki.debian.org/BitTorrent/Transmission">https://wiki.debian.org/BitTorrent/Transmission</a></p>
+<ol>
+<li>
+<p>安装 Server 端</p>
+<pre><code>#这里安装时间较长，约30-50min
+apt install transmission-daemon –install-suggests
+</code></pre>
+</li>
+<li>
+<p>保存生效</p>
+<pre><code>#停止服务
+service transmission-daemon stop 
+
+#打开配置文件配置 
+nano /etc/transmission-daemon/settings.json
+
+#更改以下参数的值
+#替换为远程连接的密码
+“rpc-password”:“yourpassword”,
+#远程管理访问端口
+“rpc-port”: 9999,
+#登陆用户名
+“rpc-username”: “username”,
+#关闭远程连接白名单
+“rpc-whitelist-enabled”: false,
+#nano 如何保存修改及退出请自行查询
+
+#启动服务
+service transmission-daemon start
+</code></pre>
+</li>
+</ol>
+<p>默认下载位置：<code>/var/lib/transmission-daemon/downloads</code></p>
+<p>Web管理地址：<code>ip地址:端口</code></p>
+<p>Client管理端下载地址：<a href="https://github.com/transmission-remote-gui/transgui/releases">https://github.com/transmission-remote-gui/transgui/releases</a></p>
+<h2 id="安装-caddy">安装 Caddy</h2>
+<p>参考页面：</p>
+<p><a href="https://caddyserver.com/docs/http-caddyfile">https://caddyserver.com/docs/http-caddyfile</a></p>
+<p><a href="https://huaien.me/article/technology/use-caddy-to-build-webdav-server/">https://huaien.me/article/technology/use-caddy-to-build-webdav-server/</a></p>
+<ol>
+<li>
+<p>安装</p>
+<pre><code>#安装Caddy并安装 http.webdav,http.cors 
+curl https://getcaddy.com | bash -s personal http.webdav,http.cors
+
+wget -N --no-check-certificate https://raw.githubusercontent.com/ToyoDAdoubiBackup/doubi/master/caddy_install.sh &amp;&amp; chmod +x caddy_install.sh &amp;&amp; bash caddy_install.sh install http.webdav,http.cors
+</code></pre>
+</li>
+<li>
+<p>编辑配置文件</p>
+<pre><code>nano /usr/local/caddy/Caddyfile
+#若上面提示无法保存文件，应该是缺少这个路径，请自行创建
+</code></pre>
+<p>如果你<strong>没有域名</strong>，写入以下内容</p>
+<pre><code>:80 {
+ #根目录
+ root /usr/local/caddy/www/file/dav
+ #给网站目录添加简单的登录机制（账号admin密码password自行修改）
+ basicauth / admin password
+ timeouts none
+ gzip
+#下面是webDAV模块
+webdav / {
+#路径为WebDAV浏览的目录
+ scope /var/lib/transmission-daemon/downloads/
+#是否允许通过WebDAV编辑文件
+ modify true
+ }
+}
+</code></pre>
+<p>如果你<strong>有域名</strong>，请<strong>先将域名指向vps的IP</strong>，再写入以下内容：</p>
+<pre><code>#将下方所有 example.com 替换为你的域名
+
+#将http访问转为https
+http://example.com {
+ timeouts none
+ redir https://example.com{url}
+}
+</code></pre>
+<p>​</p>
+<pre><code>https://example.com {
+ root /usr/local/caddy/www/webdav
+ timeouts none
+#自动获取tls证书
+#下方将 your@email.com 替换为你的邮箱
+ tls your@email.com
+#给网站目录添加简单的登录机制（账号admin密码password自行修改）
+ basicauth / user password
+ webdav / {
+    scope /var/lib/transmission-daemon/downloads/
+    modify true
+ }
+}
+</code></pre>
+</li>
+<li>
+<p>启动 Caddy</p>
+<pre><code>#切换到caddy配置文件目录
+cd /usr/local/caddy/
+
+#使用screen来启动caddy
+screen caddy
+#如果运行错误请运行以下命令安装screen
+#apt-get install screen
+</code></pre>
+</li>
+</ol>
+<p>其他有关 Caddy 的命令</p>
+<pre><code>启动：
+/etc/init.d/caddy start
+停止：
+/etc/init.d/caddy stop
+重启：
+/etc/init.d/caddy restart
+查看状态：
+etc/init.d/caddy status
+查看Caddy启动日志： 
+tail -f /tmp/caddy.log
+安装目录：
+/usr/local/caddy
+Caddy配置文件位置：
+/usr/local/caddy/Caddyfile
+Caddy自动申请SSL证书位置：
+/.caddy/acme/acme-v01.api.letsencrypt.org/sites/xxx.xxx(域名)/
+</code></pre>
+<h2 id="访问你刚搭建的-webdav">访问你刚搭建的 WebDAV</h2>
+<p>在移动端我通常使用 nPlayer，在PC端我使用 Kodi，如果使用 PotPlayer 也行，使用方法大同小异，这里只介绍 PotPlayer 的添加方法，他们最主要的差异在于如何加载字幕。在 nPlayer 和 Kodi 里加载 WebDAV 中的字幕文件更加方便，而 PotPlayer 就比较麻烦，不过 PotPlayer  加载本地字幕文件则较为方便（直接拖到正在播放的视频中）；而我习惯将字幕文件同视频一起保存到 vps 上。</p>
+<figure data-type="image" tabindex="2"><img src="https://mijjj.github.io/post-images/1578830673127.jpg" alt="" loading="lazy"></figure>
+<p>经过主观体验，由于服务器负担减小，进度条和文件列表加载都比 NextCloud 呢！😊</p>
+<h1 id="末">末</h1>
+<p>没有输入就没有输出，最近没有学习东西，也就没有东西好写了。</p>
+
+              </div>
+              <div class="toc-container">
+                <ul class="markdownIt-TOC">
+<li><a href="#%E5%BC%95">引</a></li>
+<li><a href="#%E6%AD%A3%E6%96%87">正文</a>
+<ul>
+<li><a href="#%E5%87%86%E5%A4%87">准备</a></li>
+<li><a href="#%E5%BC%80%E5%90%AF-debian9-%E4%B8%AD%E7%9A%84-bbr">开启 Debian9 中的 BBR</a></li>
+<li><a href="#%E5%AE%89%E8%A3%85transmission">安装Transmission</a></li>
+<li><a href="#%E5%AE%89%E8%A3%85-caddy">安装 Caddy</a></li>
+<li><a href="#%E8%AE%BF%E9%97%AE%E4%BD%A0%E5%88%9A%E6%90%AD%E5%BB%BA%E7%9A%84-webdav">访问你刚搭建的 WebDAV</a></li>
+</ul>
+</li>
+<li><a href="#%E6%9C%AB">末</a></li>
+</ul>
+
+              </div>
+            </div>
+          </article>
+        </div>
+
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://mijjj.github.io/post/nextcloud-transmissiongreater-shi-xian-pt-xia-zai-ji-yi-ji-zai-xian-bo-fang">
+              <h3 class="post-title">
+                NextCloud☁+ Transmission▶ 实现 PT下载机以及在线播放
+              </h3>
+            </a>
+          </div>
+        
+
+        
+          
+
+          
+            <link rel="stylesheet" href="https://unpkg.com/disqusjs@1.1/dist/disqusjs.css">
+<script src="https://unpkg.com/disqusjs@1.1/dist/disqus.js"></script>
+
+<div id="disqus_thread"></div>
+
+<script>
+
+var options = {
+  shortname: 'Mijjj',
+  apikey: 's09QRCm15TiGSFKyQPBo6I90CO1OqVz5OQod7JolAEHg3BBMahgCKqukxSRnN3Pt',
+}
+if ('') {
+  options.api = ''
+}
+var dsqjs = new DisqusJS(options)
+
+</script>
+
+          
+        
+
+        <div class="site-footer">
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | 
+  <a class="rss" href="https://mijjj.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+
+  let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+  // This should probably be throttled.
+  // Especially because it triggers during smooth scrolling.
+  // https://lodash.com/docs/4.17.10#throttle
+  // You could do like...
+  // window.addEventListener("scroll", () => {
+  //    _.throttle(doThatStuff, 100);
+  // });
+  // Only not doing it here to keep this Pen dependency-free.
+
+  window.addEventListener("scroll", event => {
+    let fromTop = window.scrollY;
+
+    mainNavLinks.forEach((link, index) => {
+      let section = document.getElementById(decodeURI(link.hash).substring(1));
+      let nextSection = null
+      if (mainNavLinks[index + 1]) {
+        nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+      }
+      if (section.offsetTop <= fromTop) {
+        if (nextSection) {
+          if (nextSection.offsetTop > fromTop) {
+            link.classList.add("current");
+          } else {
+            link.classList.remove("current");    
+          }
+        } else {
+          link.classList.add("current");
+        }
+      } else {
+        link.classList.remove("current");
+      }
+    });
+  });
+
+</script>
+
+      </div>
+    </div>
+  </body>
+</html>
