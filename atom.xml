@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://mijjj.github.io</id>
     <title>MIJJJ‘s Blog</title>
-    <updated>2020-02-18T17:36:49.728Z</updated>
+    <updated>2020-02-18T17:38:34.056Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://mijjj.github.io"/>
     <link rel="self" href="https://mijjj.github.io/atom.xml"/>
@@ -11,8 +11,8 @@
     <rights>All rights reserved 2020, MIJJJ‘s Blog</rights>
     <entry>
         <title type="html"><![CDATA[My Awesome Windows——我的PC软件记录]]></title>
-        <id>https://mijjj.github.io/post/my-awesome-windows-wo-de-pc-ruan-jian-ji-lu</id>
-        <link href="https://mijjj.github.io/post/my-awesome-windows-wo-de-pc-ruan-jian-ji-lu">
+        <id>https://mijjj.github.io/post/my-awesome-windows/</id>
+        <link href="https://mijjj.github.io/post/my-awesome-windows/">
         </link>
         <updated>2020-02-18T17:35:05.000Z</updated>
         <content type="html"><![CDATA[<h1 id="my-awesome-windows">My Awesome Windows</h1>
@@ -474,8 +474,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[教你利用MentoHUST在路由器上挂锐捷认证]]></title>
-        <id>https://mijjj.github.io/post/jiao-ni-li-yong-mentohust-zai-lu-you-qi-shang-gua-rui-jie-ren-zheng</id>
-        <link href="https://mijjj.github.io/post/jiao-ni-li-yong-mentohust-zai-lu-you-qi-shang-gua-rui-jie-ren-zheng">
+        <id>https://mijjj.github.io/post/jiao-ni-li-yong-mentohust-zai-lu-you-qi-shang-gua-rui-jie-ren-zheng/</id>
+        <link href="https://mijjj.github.io/post/jiao-ni-li-yong-mentohust-zai-lu-you-qi-shang-gua-rui-jie-ren-zheng/">
         </link>
         <updated>2020-01-12T11:30:39.000Z</updated>
         <content type="html"><![CDATA[<p>2020.1.12<br>
@@ -536,8 +536,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[通过代理实现在校园外使用校园网内的服务]]></title>
-        <id>https://mijjj.github.io/post/tong-guo-dai-li-shi-xian-zai-xiao-yuan-wai-shi-yong-xiao-yuan-wang-nei-de-fu-wu</id>
-        <link href="https://mijjj.github.io/post/tong-guo-dai-li-shi-xian-zai-xiao-yuan-wai-shi-yong-xiao-yuan-wang-nei-de-fu-wu">
+        <id>https://mijjj.github.io/post/tong-guo-dai-li-shi-xian-zai-xiao-yuan-wai-shi-yong-xiao-yuan-wang-nei-de-fu-wu/</id>
+        <link href="https://mijjj.github.io/post/tong-guo-dai-li-shi-xian-zai-xiao-yuan-wai-shi-yong-xiao-yuan-wang-nei-de-fu-wu/">
         </link>
         <updated>2020-01-12T01:46:17.000Z</updated>
         <content type="html"><![CDATA[<p>2020.1.12<br>
@@ -656,8 +656,8 @@ nano /etc/issue
     </entry>
     <entry>
         <title type="html"><![CDATA[在 Debian x64 上搭建 Teamspeak Server]]></title>
-        <id>https://mijjj.github.io/post/zai-debian-x64-shang-da-jian-teamspeak-server</id>
-        <link href="https://mijjj.github.io/post/zai-debian-x64-shang-da-jian-teamspeak-server">
+        <id>https://mijjj.github.io/post/zai-debian-x64-shang-da-jian-teamspeak-server/</id>
+        <link href="https://mijjj.github.io/post/zai-debian-x64-shang-da-jian-teamspeak-server/">
         </link>
         <updated>2019-06-07T12:34:21.000Z</updated>
         <content type="html"><![CDATA[<h1 id="引">引</h1>
@@ -737,8 +737,8 @@ sudo iptables-save
     </entry>
     <entry>
         <title type="html"><![CDATA[对一篇扫描文本进行粗翻译的流程]]></title>
-        <id>https://mijjj.github.io/post/dui-yi-pian-sao-miao-wen-ben-jin-xing-cu-fan-yi-de-liu-cheng</id>
-        <link href="https://mijjj.github.io/post/dui-yi-pian-sao-miao-wen-ben-jin-xing-cu-fan-yi-de-liu-cheng">
+        <id>https://mijjj.github.io/post/dui-yi-pian-sao-miao-wen-ben-jin-xing-cu-fan-yi-de-liu-cheng/</id>
+        <link href="https://mijjj.github.io/post/dui-yi-pian-sao-miao-wen-ben-jin-xing-cu-fan-yi-de-liu-cheng/">
         </link>
         <updated>2019-06-07T12:05:11.000Z</updated>
         <content type="html"><![CDATA[<h1 id="引">引</h1>
@@ -834,8 +834,8 @@ sudo iptables-save
     </entry>
     <entry>
         <title type="html"><![CDATA[Transmission + Caddy 创建轻量化WebDAV服务器📺]]></title>
-        <id>https://mijjj.github.io/post/transmission-caddy-chuang-jian-qing-liang-hua-webdav-fu-wu-qi</id>
-        <link href="https://mijjj.github.io/post/transmission-caddy-chuang-jian-qing-liang-hua-webdav-fu-wu-qi">
+        <id>https://mijjj.github.io/post/transmission-caddy-chuang-jian-qing-liang-hua-webdav-fu-wu-qi/</id>
+        <link href="https://mijjj.github.io/post/transmission-caddy-chuang-jian-qing-liang-hua-webdav-fu-wu-qi/">
         </link>
         <updated>2019-04-08T11:57:40.000Z</updated>
         <content type="html"><![CDATA[<h1 id="引">引</h1>
@@ -1019,8 +1019,8 @@ Caddy自动申请SSL证书位置：
     </entry>
     <entry>
         <title type="html"><![CDATA[NextCloud☁+ Transmission▶ 实现 PT下载机以及在线播放]]></title>
-        <id>https://mijjj.github.io/post/nextcloud-transmissiongreater-shi-xian-pt-xia-zai-ji-yi-ji-zai-xian-bo-fang</id>
-        <link href="https://mijjj.github.io/post/nextcloud-transmissiongreater-shi-xian-pt-xia-zai-ji-yi-ji-zai-xian-bo-fang">
+        <id>https://mijjj.github.io/post/nextcloud-transmissiongreater-shi-xian-pt-xia-zai-ji-yi-ji-zai-xian-bo-fang/</id>
+        <link href="https://mijjj.github.io/post/nextcloud-transmissiongreater-shi-xian-pt-xia-zai-ji-yi-ji-zai-xian-bo-fang/">
         </link>
         <updated>2018-11-01T11:54:01.000Z</updated>
         <content type="html"><![CDATA[<h1 id="引">引</h1>
@@ -1317,8 +1317,8 @@ service transmission-daemon start
     </entry>
     <entry>
         <title type="html"><![CDATA[[树莓派] DHT22温湿度传感器]]></title>
-        <id>https://mijjj.github.io/post/shu-mei-pai-dht22-wen-shi-du-chuan-gan-qi</id>
-        <link href="https://mijjj.github.io/post/shu-mei-pai-dht22-wen-shi-du-chuan-gan-qi">
+        <id>https://mijjj.github.io/post/shu-mei-pai-dht22-wen-shi-du-chuan-gan-qi/</id>
+        <link href="https://mijjj.github.io/post/shu-mei-pai-dht22-wen-shi-du-chuan-gan-qi/">
         </link>
         <updated>2018-10-02T11:52:08.000Z</updated>
         <content type="html"><![CDATA[<h1 id="前">前</h1>
@@ -1404,8 +1404,8 @@ caddy
     </entry>
     <entry>
         <title type="html"><![CDATA[教你做一篇不一样的微信公众号推送]]></title>
-        <id>https://mijjj.github.io/post/jiao-ni-zuo-yi-pian-bu-yi-yang-de-wei-xin-gong-zhong-hao-tui-song</id>
-        <link href="https://mijjj.github.io/post/jiao-ni-zuo-yi-pian-bu-yi-yang-de-wei-xin-gong-zhong-hao-tui-song">
+        <id>https://mijjj.github.io/post/jiao-ni-zuo-yi-pian-bu-yi-yang-de-wei-xin-gong-zhong-hao-tui-song/</id>
+        <link href="https://mijjj.github.io/post/jiao-ni-zuo-yi-pian-bu-yi-yang-de-wei-xin-gong-zhong-hao-tui-song/">
         </link>
         <updated>2018-06-10T11:50:56.000Z</updated>
         <content type="html"><![CDATA[<h1 id="引言">引言</h1>
@@ -1518,8 +1518,8 @@ caddy
     </entry>
     <entry>
         <title type="html"><![CDATA[利用学校的edu邮箱免费注册教育版Office365]]></title>
-        <id>https://mijjj.github.io/post/li-yong-xue-xiao-de-edu-you-xiang-mian-fei-zhu-ce-jiao-yu-ban-office365</id>
-        <link href="https://mijjj.github.io/post/li-yong-xue-xiao-de-edu-you-xiang-mian-fei-zhu-ce-jiao-yu-ban-office365">
+        <id>https://mijjj.github.io/post/li-yong-xue-xiao-de-edu-you-xiang-mian-fei-zhu-ce-jiao-yu-ban-office365/</id>
+        <link href="https://mijjj.github.io/post/li-yong-xue-xiao-de-edu-you-xiang-mian-fei-zhu-ce-jiao-yu-ban-office365/">
         </link>
         <updated>2017-10-11T11:28:37.000Z</updated>
         <content type="html"><![CDATA[<h1 id="起因">起因</h1>
