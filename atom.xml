@@ -2,13 +2,476 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://mijjj.github.io</id>
     <title>MIJJJ‘s Blog</title>
-    <updated>2020-01-12T12:39:50.707Z</updated>
+    <updated>2020-02-18T17:36:01.202Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://mijjj.github.io"/>
     <link rel="self" href="https://mijjj.github.io/atom.xml"/>
     <logo>https://mijjj.github.io/images/avatar.png</logo>
     <icon>https://mijjj.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, MIJJJ‘s Blog</rights>
+    <entry>
+        <title type="html"><![CDATA[My Awesome Windows——我的PC软件记录]]></title>
+        <id>https://mijjj.github.io/post/my-awesome-windows-wo-de-pc-ruan-jian-ji-lu</id>
+        <link href="https://mijjj.github.io/post/my-awesome-windows-wo-de-pc-ruan-jian-ji-lu">
+        </link>
+        <updated>2020-02-18T17:35:05.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="my-awesome-windows">My Awesome Windows</h1>
+<h2 id="引">引</h2>
+<p>创建这个列表的起因是看到了 <a href="https://github.com/Awesome-Windows/Awesome">Awesome Windows</a> 项目，也想及此作为自己的纪录</p>
+<h2 id="正文">正文</h2>
+<p>列表的编写是按照我<strong>装配新机时</strong>的顺序来编写的</p>
+<h3 id="浏览器">浏览器</h3>
+<h4 id="edge">Edge</h4>
+<ul>
+<li>Windows 10 自带（旧版可以更新到新版）
+<ul>
+<li>Chromium 内核的 Edge 下载地址：<a href="https://www.microsoft.com/en-us/edge">https://www.microsoft.com/en-us/edge</a></li>
+</ul>
+</li>
+<li>一切的起点（用来下载其他浏览器）</li>
+<li>其实也挺好用的，特别是用来看 PDF</li>
+<li>Chromium 内核的 Edge <s>即将推出</s>（已经推出），也挺好用的</li>
+</ul>
+<h4 id="chrome">Chrome</h4>
+<ul>
+<li>
+<p>下载地址：<a href="https://www.google.cn/intl/zh-CN/chrome/">https://www.google.cn/intl/zh-CN/chrome/</a></p>
+<ul>
+<li>此链接在中国大陆可以访问</li>
+</ul>
+</li>
+<li>
+<p>Chrome 有强大的插件库，稳定的工作性能以及被众多网站优先适配</p>
+</li>
+</ul>
+<h4 id="firefox国际版">Firefox（国际版）</h4>
+<ul>
+<li>
+<p>下载地址（文档）：<a href="https://ftp.mozilla.org/pub/firefox/releases/latest/README.txt">https://ftp.mozilla.org/pub/firefox/releases/latest/README.txt</a></p>
+<ul>
+<li>
+<p>适用于 Windows 64bit 的中文最新安装包 的<strong>下载链接</strong>为：</p>
+<p><a href="https://download.mozilla.org/?product=firefox-latest&amp;os=win64&amp;lang=zh-CN">https://download.mozilla.org/?product=firefox-latest&amp;os=win64&amp;lang=zh-CN</a></p>
+</li>
+<li>
+<p>请!!!<strong>不要</strong>!!!在中国官网（<a href="http://www.firefox.com.cn/">http://www.firefox.com.cn/</a>）下载安装，会包含**“国内特制”**内容</p>
+</li>
+<li>
+<p>如何鉴别：在“菜单 - 帮助 - 关于 Firefox”页面中，会有“北京谋智网络技术有限公司”字样（Mozilla在中国的子公司），国际版则没有</p>
+</li>
+</ul>
+</li>
+<li>
+<p>由于<strong>没有相关网络阻断</strong>，更适合中国大陆用户使用，拥有较为强大的插件库，稳定的工作性能以及被众多网站优先适配</p>
+</li>
+</ul>
+<h3 id="下载软件">下载软件</h3>
+<blockquote>
+<p>一般 Chrome、Edge 和 Firefox 的自带下载都是单线程，多线程下载可以极大地提高下载速度</p>
+</blockquote>
+<h4 id="internet-download-manager-idm">Internet Download Manager (IDM)</h4>
+<ul>
+<li>下载地址：<a href="https://www.internetdownloadmanager.com/download.html">https://www.internetdownloadmanager.com/download.html</a>
+<ul>
+<li>软件需要付费（数码荔枝 <a href="https://item.taobao.com/item.htm?id=535928527337">永久授权99/一年授权55</a>）</li>
+<li>Cracker：<a href="https://www.upload.ee/files/11101871/IDM_6.3x_Crack_v16.7_Pass_1234_.zip.html">Internet Download Manager 6.3x Crack</a></li>
+</ul>
+</li>
+<li>一款多线程下载工具，是我的<strong>日常使用</strong>的下载工具，安装浏览器插件支持音视频下载（Youtube多清晰度、m3u8格式等）</li>
+<li><strong>不能进行BT下载</strong>，使用界面较远古</li>
+</ul>
+<h4 id="free-download-manage-fdm">Free Download Manage (FDM)</h4>
+<ul>
+<li>下载地址：<a href="https://www.freedownloadmanager.org/zh/download.htm">https://www.freedownloadmanager.org/zh/download.htm</a>
+<ul>
+<li><strong>免费、多平台支持</strong>，不想付费的可以使用这款下载工具</li>
+</ul>
+</li>
+<li><strong>支持BT下载</strong>，因此是我的备用下载工具。和 IDM 一样，多线程下载。</li>
+</ul>
+<h4 id="迅雷">迅雷</h4>
+<ul>
+<li>
+<p>下载地址：<a href="https://www.xunlei.com/">https://www.xunlei.com/</a></p>
+</li>
+<li>
+<p>用来下载迅雷链接 <code>thunder:\\</code></p>
+<ul>
+<li>在一款开源下载工具 Motrix 的最新版(1.4.1)已经支持 <code>thunder:\\</code> 的下载</li>
+<li>Motrix 下载地址：<a href="https://motrix.app/zh-CN/">https://motrix.app/zh-CN/</a></li>
+</ul>
+</li>
+</ul>
+<h4 id="qbittorrent">qBittorrent</h4>
+<ul>
+<li>
+<p>下载地址：<a href="https://www.qbittorrent.org/download.php">https://www.qbittorrent.org/download.php</a></p>
+</li>
+<li>
+<p>一款BT下载工具，我主要用来进行pt下载（一种半公开的BT下载）</p>
+</li>
+</ul>
+<h3 id="网络工具">网络工具</h3>
+<h4 id="xshell-6">Xshell 6</h4>
+<ul>
+<li>下载地址（家庭/学校免费使用许可）：<a href="https://www.netsarang.com/zh/free-for-home-school/">https://www.netsarang.com/zh/free-for-home-school/</a>
+<ul>
+<li>填写姓名、邮箱后下载地址就会发送到填写的邮箱</li>
+<li>可以与XFTP 6 一同申请</li>
+</ul>
+</li>
+<li>一款功能强大的 SSH 客户端，与 XFTP 6 配合使用十分方便</li>
+</ul>
+<h4 id="xftp-6">XFTP 6</h4>
+<ul>
+<li>下载地址（家庭/学校免费使用许可）：<a href="https://www.netsarang.com/zh/free-for-home-school/">https://www.netsarang.com/zh/free-for-home-school/</a>
+<ul>
+<li>填写姓名、邮箱后下载地址就会发送到填写的邮箱</li>
+<li>可以与Xshell 6 一同申请</li>
+</ul>
+</li>
+<li>一款功能强大的 FTP 客户端，可以与 Xshell 6 配合使用，十分方便</li>
+</ul>
+<h4 id="clash-for-windows">Clash for Windows</h4>
+<ul>
+<li>
+<p>下载地址：<a href="https://github.com/Fndroid/clash_for_windows_pkg/releases">https://github.com/Fndroid/clash_for_windows_pkg/releases</a></p>
+</li>
+<li>
+<p>一款 Windows 平台 (64bit) 上 Clash 的 GUI</p>
+<ul>
+<li>Clash 是一款可自定义规则的代理客户端</li>
+<li>Clash 项目地址：<a href="https://github.com/Dreamacro/clash">https://github.com/Dreamacro/clash</a></li>
+</ul>
+</li>
+<li>
+<p>用来改善网络环境，提高网络质量，日常使用</p>
+</li>
+</ul>
+<h4 id="best-trace">Best Trace</h4>
+<ul>
+<li>
+<p>下载地址：<a href="https://www.ipip.net/product/client.html">https://www.ipip.net/product/client.html</a></p>
+<ul>
+<li>全平台支持</li>
+</ul>
+</li>
+<li>
+<p>从设备上发起 traceroute 请求，附带链路可视化。</p>
+<ul>
+<li>用来检测本机到服务器的路由情况</li>
+</ul>
+</li>
+</ul>
+<h3 id="软件管理">软件管理</h3>
+<h4 id="腾讯软件管家独立版">腾讯软件管家（独立版）</h4>
+<ul>
+<li>下载地址：<a href="http://www.carrotchou.blog/27791.html">http://www.carrotchou.blog/27791.html</a>
+<ul>
+<li>这里提供的是第三方的下载地址，安装包带有有效的腾讯官方数字签名</li>
+</ul>
+</li>
+<li>用来安装和更新国产软件</li>
+<li>独立版功能足够单纯</li>
+</ul>
+<h4 id="uninstall-tool">Uninstall Tool</h4>
+<ul>
+<li>下载地址：<a href="https://www.crystalidea.com/uninstall-tool/download">https://www.crystalidea.com/uninstall-tool/download</a>
+<ul>
+<li>付费软件（数码荔枝 <a href="https://item.taobao.com/item.htm?id=535686791775">单用户99</a>）</li>
+<li>Crack：<a href="https://www.appcgn.com/uninstall-tool.html">https://www.appcgn.com/uninstall-tool.html</a></li>
+</ul>
+</li>
+<li>用来卸载软件以及清理痕迹</li>
+</ul>
+<h3 id="通讯聊天">通讯聊天</h3>
+<h4 id="邮箱系统自带">邮箱（系统自带）</h4>
+<ul>
+<li>常用的邮箱客户端</li>
+</ul>
+<h4 id="foxmail">Foxmail</h4>
+<ul>
+<li>下载地址：<a href="https://www.foxmail.com/">https://www.foxmail.com/</a>
+<ul>
+<li>国内团队开发，更新频率适中</li>
+</ul>
+</li>
+<li>备用的邮箱客户端</li>
+</ul>
+<h4 id="腾讯qqtim">腾讯QQ/TIM</h4>
+<ul>
+<li>腾讯软件管家（独立版）中下载安装</li>
+</ul>
+<h4 id="微信">微信</h4>
+<ul>
+<li>腾讯软件管家（独立版）中下载安装</li>
+</ul>
+<h4 id="yy">YY</h4>
+<ul>
+<li>腾讯软件管家（独立版）中下载安装</li>
+</ul>
+<h4 id="telegram">Telegram</h4>
+<ul>
+<li>下载地址：<a href="https://telegram.org/">https://telegram.org/</a>
+<ul>
+<li>受到网络阻断</li>
+<li>全平台</li>
+</ul>
+</li>
+<li>上面有很多的Channel、Group，满足多类型的信息获取及讨论</li>
+</ul>
+<h3 id="系统工具">系统工具</h3>
+<h4 id="bandizip">Bandizip</h4>
+<ul>
+<li>下载地址：<a href="https://cn.bandisoft.com/bandizip/">https://cn.bandisoft.com/bandizip/</a>
+<ul>
+<li>请下载安装 v6 版本，v7 的免费版本存在广告</li>
+</ul>
+</li>
+<li>功能强大，界面现代化的压缩包管理软件</li>
+</ul>
+<h4 id="火绒安全软件">火绒安全软件</h4>
+<ul>
+<li>
+<p>下载地址：<a href="https://www.huorong.cn/person5.html">https://www.huorong.cn/person5.html</a></p>
+</li>
+<li>
+<p>里面的弹窗拦截工具挺好用的</p>
+</li>
+</ul>
+<h4 id="listary">Listary</h4>
+<ul>
+<li>
+<p>下载地址：<a href="https://www.listary.com/download">https://www.listary.com/download</a></p>
+<ul>
+<li>需要付费开启Pro功能（<a href="https://item.taobao.com/item.htm?id=535605099433">65/单用户</a>），版本区别：<a href="https://www.listary.com/pro">https://www.listary.com/pro</a></li>
+</ul>
+</li>
+<li>
+<p>一款系统目录索引软件，十分方便快捷，搜啥来啥，还带有很多小功能</p>
+<ul>
+<li>类似功能还有Everthing，但功能较为单一，项目地址：<a href="https://www.voidtools.com/zh-cn/">https://www.voidtools.com/zh-cn/</a></li>
+</ul>
+</li>
+</ul>
+<h4 id="rolan">Rolan</h4>
+<ul>
+<li>
+<p>下载地址：<a href="https://getrolan.com/">https://getrolan.com/</a></p>
+<ul>
+<li>可付费开启Pro功能（48/年/3设备）</li>
+</ul>
+</li>
+<li>
+<p>类似于快捷文件夹/工具栏，免费版足够使用，我常用来pin住常用工具以及分类</p>
+</li>
+<li>
+<p>保持桌面整洁</p>
+</li>
+</ul>
+<h4 id="quicker">Quicker</h4>
+<ul>
+<li>下载地址：<a href="https://www.getquicker.net/Download">https://www.getquicker.net/Download</a>
+<ul>
+<li>可付费开启专业版（48/年），建议开启，版本区别：<a href="https://www.getquicker.net/pricing">https://www.getquicker.net/pricing</a></li>
+</ul>
+</li>
+<li>功能类似于 iOS 上的 Shortcut，可以自行编写组合动作以实现一键完成多步/重复操作，十分简单易用</li>
+</ul>
+<h4 id="trafficmonitor">TrafficMonitor</h4>
+<ul>
+<li>
+<p>下载地址：<a href="https://github.com/zhongyang219/TrafficMonitor">https://github.com/zhongyang219/TrafficMonitor</a></p>
+</li>
+<li>
+<p>“一款用于Windows平台的网速监控悬浮窗软件，可以显示当前网速、CPU及内存利用率，支持嵌入到任务栏显示，支持更换皮肤、历史流量统计等功能。”</p>
+</li>
+</ul>
+<h4 id="cfosspeed">cFosSpeed</h4>
+<ul>
+<li>下载地址：<a href="https://www.cfos.de/zh-cn/cfosspeed/cfosspeed.htm">https://www.cfos.de/zh-cn/cfosspeed/cfosspeed.htm</a>
+<ul>
+<li>付费软件（<a href="https://www.cfos.de/zh-cn/order/cfosspeed-n.htm">45.9/设备</a>）</li>
+</ul>
+</li>
+<li>减缓本机网络拥塞现象（玄学）</li>
+</ul>
+<h4 id="windows-版-icloud">Windows 版 iCloud</h4>
+<ul>
+<li>
+<p>下载地址：<a href="https://support.apple.com/zh-cn/HT204283">https://support.apple.com/zh-cn/HT204283</a></p>
+</li>
+<li>
+<p>我用来在 Chrome (PC) 和 Safari (iOS) 之间同步浏览器书签</p>
+</li>
+<li>
+<p>同时支持 Firefox</p>
+<ul>
+<li>如果你手机使用 Chrome 和 Firefox 的话，当然也可以选择 Chrome 和 Firefox 自带的同步服务</li>
+</ul>
+</li>
+</ul>
+<h4 id="1password">1Password</h4>
+<ul>
+<li>下载地址：https://1password.com/zh-cn/
+<ul>
+<li>全平台支持</li>
+<li>合租价格：80/6m</li>
+</ul>
+</li>
+<li>“<strong>密码管理器</strong>、数字保险库、密码生成器、表单填充工具和安全数字钱包。 <em>1Password</em> 为您<strong>记住您的所有密码</strong>，并将它们保存在安全的地方”</li>
+<li>密码管理十分重要！</li>
+<li>相应有免费替代品：lastpass</li>
+</ul>
+<h4 id="powertoys">PowerToys</h4>
+<ul>
+<li>下载地址：<a href="https://github.com/microsoft/PowerToys/releases">https://github.com/microsoft/PowerToys/releases</a>
+<ul>
+<li>无汉化</li>
+</ul>
+</li>
+<li>提高生产力的小工具集，包含三个工具：FancyZones、Shortcut和PowerRename
+<ul>
+<li>我最常使用 FancyZones，快速对窗口进行分区</li>
+<li>其他使用说明请查看项目说明</li>
+</ul>
+</li>
+</ul>
+<h4 id="irfanview">IrfanView</h4>
+<ul>
+<li>下载地址：<a href="https://www.irfanview.com/64bit.htm">https://www.irfanview.com/64bit.htm</a></li>
+<li>图片浏览器</li>
+</ul>
+<h4 id="itunes">iTunes</h4>
+<ul>
+<li>下载地址：<a href="https://support.apple.com/zh-cn/HT210384">https://support.apple.com/zh-cn/HT210384</a></li>
+<li>iPhone用户必备</li>
+</ul>
+<h4 id="imazing">iMazing</h4>
+<ul>
+<li>下载地址：https://imazing.com/zh</li>
+<li>静默本地备份 Apple 设备，省去iCloud空间</li>
+<li>iOS 设备内容管理器</li>
+</ul>
+<h4 id="wiztree">WizTree</h4>
+<ul>
+<li>下载地址：https://antibody-software.com/web/software/software/wiztree-finds-the-files-and-folders-using-the-most-disk-space-on-your-hard-drive/</li>
+<li>快速找到在你的硬盘上占用最多空间的文件和文件夹</li>
+</ul>
+<h3 id="多媒体及娱乐">多媒体及娱乐</h3>
+<h4 id="steam">Steam</h4>
+<ul>
+<li>下载地址：<a href="https://store.steampowered.com/about/">https://store.steampowered.com/about/</a></li>
+<li>“Steam 是畅玩游戏、讨论游戏、创造游戏的终极目的地。”</li>
+<li>男孩的衣柜</li>
+</ul>
+<h4 id="epic">EPIC</h4>
+<ul>
+<li>下载地址：<a href="https://www.epicgames.com/store/zh-CN/download">https://www.epicgames.com/store/zh-CN/download</a></li>
+<li>男孩的 <sub>半</sub> 免费衣柜</li>
+</ul>
+<h4 id="wegame">WeGame</h4>
+<ul>
+<li>
+<p>下载地址：<a href="https://www.wegame.com.cn/client">https://www.wegame.com.cn/client</a></p>
+</li>
+<li>
+<p>英雄联盟快速启动器</p>
+</li>
+</ul>
+<h4 id="potplayer">PotPlayer</h4>
+<ul>
+<li>下载地址：http://potplayer.daum.net/?lang=zh_CN</li>
+<li>功能强大的音视频播放器</li>
+</ul>
+<h4 id="spotify">Spotify</h4>
+<h4 id="listen1">Listen1</h4>
+<ul>
+<li>下载地址：https://listen1.github.io/listen1/</li>
+<li>多平台音乐流媒体播放器</li>
+</ul>
+<h3 id="文本工具">文本工具</h3>
+<h4 id="visual-studio-code">Visual Studio Code</h4>
+<ul>
+<li>下载地址：https://code.visualstudio.com/</li>
+<li>一款具有众多插件的代码编辑器（我用来当文本编辑器用）</li>
+</ul>
+<h4 id="notepad">Notepad++</h4>
+<ul>
+<li>下载地址：https://notepad-plus-plus.org/downloads/</li>
+<li>一个免费的源代码编辑器和记事本的替代品，十分轻量，支持多种语言。</li>
+</ul>
+<h4 id="typora">Typora</h4>
+<ul>
+<li>下载地址：https://typora.io/</li>
+<li>一款 WYSIWYG 的 Markdown 写作工具，本文就是用它写的，我的课程笔记也是用他写的</li>
+</ul>
+<h4 id="office365">Office365</h4>
+<ul>
+<li>下载地址：https://www.office.com/</li>
+<li>Office套件想必不用多说，Office365与人合租只需 40/年</li>
+</ul>
+<h4 id="snipaste">Snipaste</h4>
+<ul>
+<li>下载地址：https://zh.snipaste.com/</li>
+<li>“Snipaste 是一个简单但强大的截图工具，也可以<strong>让你将截图贴回到屏幕上</strong>！”</li>
+<li>创作时的强大助手！</li>
+</ul>
+<h4 id="gridea">Gridea</h4>
+<ul>
+<li>下载地址：https://gridea.dev/</li>
+<li>“Gridea 是一个<strong>静态博客写作客户端</strong>，帮助你更容易地构建并管理博客或任何静态站点。<strong>可以，写博客的那个劲儿又回来了！</strong>”</li>
+</ul>
+<h4 id="adobe-acrobat-reader-dc">Adobe Acrobat Reader DC</h4>
+<ul>
+<li>
+<p>下载地址：https://get.adobe.com/cn/reader/otherversions/</p>
+</li>
+<li>
+<p>“Adobe Acrobat Reader DC 软件是可靠查看、打印和注释 <strong>PDF 文档</strong>的全球化免费标准。”</p>
+</li>
+</ul>
+<h3 id="视频录制">视频录制</h3>
+<h4 id="captura">Captura</h4>
+<ul>
+<li>下载地址：https://mathewsachin.github.io/Captura/
+<ul>
+<li>免费、开源、无广告、多语言</li>
+</ul>
+</li>
+<li>录制时可以显示键盘按键状态，十分方便</li>
+</ul>
+<h4 id="open-broadcaster-software-obs">Open Broadcaster Software (OBS)</h4>
+<ul>
+<li>下载地址：https://obsproject.com/</li>
+<li>免费、开源的视频录制和<strong>直播软件</strong></li>
+</ul>
+<h3 id="文件同步备份">文件同步备份</h3>
+<h4 id="onedrive">Onedrive</h4>
+<ul>
+<li>下载地址：https://onedrive.live.com/about/zh-cn/download/
+<ul>
+<li>Windows 10 系统自带</li>
+<li>与 Office365 共同订阅（也可以单独订阅）</li>
+<li>网页版受到网络阻断，客户端访问不受影响</li>
+</ul>
+</li>
+<li>具有相对较大的空间，也能够为方便的同步 PC 上的文件夹</li>
+</ul>
+<h4 id="坚果云">坚果云</h4>
+<ul>
+<li>下载地址：https://www.jianguoyun.com/
+<ul>
+<li>只为为文本文件同步免费版就足够了，各版本对比：https://www.jianguoyun.com/s/pricing</li>
+</ul>
+</li>
+<li>速度快，提供<strong>WebDAV服务</strong>（国内为数不多提供此服务的网盘），可以广泛地接入各种软件</li>
+</ul>
+<h2 id="末">末</h2>
+<p>最近买了个24’ 2K显示器，屏幕大了、分辨率高了，干啥都爽！</p>
+<p>由于最近疫情，在家又不能出门，真的无聊，只希望开学吧，上网课也好</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[教你利用MentoHUST在路由器上挂锐捷认证]]></title>
         <id>https://mijjj.github.io/post/jiao-ni-li-yong-mentohust-zai-lu-you-qi-shang-gua-rui-jie-ren-zheng</id>
@@ -1097,51 +1560,6 @@ caddy
 <h1 id="写在最后">写在最后</h1>
 <p>这个世界没有那么多的羊毛给你蓐，所谓的大学生福利也只是你步入茫茫社会前给你的小小甜头而已。</p>
 <p>还有，对于破解的Office套件，我不说太多，因为在普通小市民眼中，趋向于使用“免费的”付费软件似乎已经成为了“政治正确”。但希望在你有能力的时候尽快入正吧。对于Adobe系列亦是如此。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[教你更方便地连接学校FTP文件夹]]></title>
-        <id>https://mijjj.github.io/post/jiao-ni-geng-fang-bian-di-lian-jie-xue-xiao-ftp-wen-jian-jia</id>
-        <link href="https://mijjj.github.io/post/jiao-ni-geng-fang-bian-di-lian-jie-xue-xiao-ftp-wen-jian-jia">
-        </link>
-        <updated>2017-09-21T11:27:23.000Z</updated>
-        <content type="html"><![CDATA[<h1 id="起因">起因</h1>
-<p>今天上了大学的第一节大学计算机课，（<s>简称大机呵呵呵</s>）课中谈论到我们学校内网自建有各种FTP服务器以方便同学们更便捷地获取到上课所需的文件等内容。但是每次都要在地址栏打上FTP服务器的地址，不单止要记住地址，还要一个个输入，<s>你不觉得麻烦我还觉得麻烦</s>，因此我想起了我以往在 Windows 上访问我树莓派文件系统的方法。</p>
-<h1 id="正文">正文</h1>
-<h2 id="效果展示">效果展示</h2>
-<blockquote>
-<p>现在的大部分电脑都是 Win 7 或 Win 10 ，经过我的测试都是适用于我的方法的，至于 xp 我就没试过了。</p>
-</blockquote>
-<p>以下是最终的效果图，我们能在“我的电脑”中如进入本地硬盘一样直接访问FTP服务器。</p>
-<figure data-type="image" tabindex="1"><img src="http://upload-images.jianshu.io/upload_images/3463179-23cc71fe1d4b0368.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="http://upload-images.jianshu.io/upload_images/3463179-23cc71fe1d4b0368.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" loading="lazy"></figure>
-<figure data-type="image" tabindex="2"><img src="http://upload-images.jianshu.io/upload_images/3463179-8207ee410bffb59f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="http://upload-images.jianshu.io/upload_images/3463179-8207ee410bffb59f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" loading="lazy"></figure>
-<p>效果图2</p>
-<h2 id="第一步">第一步</h2>
-<p>获取FTP服务器地址</p>
-<p>我们都知道学校给予我们的FTP文件夹地址： &gt; ftp://share.jnu.edu.cn &gt; ftp://202.116.6.197</p>
-<p>这两个都是暨南大学FTP的两个地址，应该只有暨大的校园网能访问（可以匿名访问不需要用户名＆密码），第一个是普通的分享文件夹，第二个是我们大机的教学文件夹。</p>
-<h2 id="第二步">第二步</h2>
-<p>相信大家的老师都说过直接在地址栏输入就可以访问了，而我们的目的是不用输入就能访问文件系统。简单来说就是在“我的电脑”中创建一个FTP服务器的快捷方式。</p>
-<p>首先打开“我的电脑”界面，点击上方的“添加一个网络位置”</p>
-<figure data-type="image" tabindex="3"><img src="http://upload-images.jianshu.io/upload_images/3463179-4267cf521e5e803a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="http://upload-images.jianshu.io/upload_images/3463179-4267cf521e5e803a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" loading="lazy"></figure>
-<p>添加一个网络位置</p>
-<p>下一步 — 选择“自定义网络位置” — 下一步 — 填入FTP服务器的地址 — 下一步。。。</p>
-<figure data-type="image" tabindex="4"><img src="http://upload-images.jianshu.io/upload_images/3463179-486e02859d8f4e5a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="http://upload-images.jianshu.io/upload_images/3463179-486e02859d8f4e5a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" loading="lazy"></figure>
-<p>教程到此完成，最终的效果就是像文章开始的图一样。</p>
-<h2 id="btw">BTW</h2>
-<ol>
-<li>课上老师说的FlashFXP是一款FTP服务器管理软件，第三方代理商<a href="https://item.taobao.com/item.htm?id=535713940889">购买链接</a>，请支持正版软件。</li>
-<li>手机也可以直接访问FTP服务器，方法就是直接在浏览器地址栏上打链接就行了。手机上也有一些App可以<s>更美观地</s>访问FTP服务器，iOS 上有<a href="https://itunes.apple.com/us/app/documents-6-file-manager-pdf-reader-and-browser/id364901807?mt=8">Documents</a>，安卓上有<a href="https://www.coolapk.com/apk/com.estrongs.android.pop">ES文件浏览器</a>。也有能在线播放FTP服务器中视频的App，iOS上有 nplayer，infuse，avplayer，aceplayer等，安卓的我没接触过就不推介了。</li>
-</ol>
-<figure data-type="image" tabindex="5"><img src="http://upload-images.jianshu.io/upload_images/3463179-f38be07d53d81690.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="http://upload-images.jianshu.io/upload_images/3463179-f38be07d53d81690.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" loading="lazy"></figure>
-<p>nplayer在线播放1</p>
-<figure data-type="image" tabindex="6"><img src="http://upload-images.jianshu.io/upload_images/3463179-216dc1b49cad0c8e.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="http://upload-images.jianshu.io/upload_images/3463179-216dc1b49cad0c8e.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" loading="lazy"></figure>
-<p>nplayer在线播放2</p>
-<ol>
-<li>有的人想问，为什么FTP服务器上的文件要完全下载到本地上才能运行，是因为需要保持本地计算机的安全。</li>
-</ol>
-<h1 id="最后">最后</h1>
-<p>上面推荐的软件大多都是付费的，有的人或许会对付费软件厌恶，但我想说，只有付费才能让你喜爱的软件一直活下去，还有，不给钱人家喝西北风去啊？ ## 相关阅读 <a href="https://sspai.com/post/39514">有那么多免费盗版，你为什么还要花钱买正版？</a></p>
 ]]></content>
     </entry>
 </feed>
