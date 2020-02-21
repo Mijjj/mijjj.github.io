@@ -1,106 +1,117 @@
+
+<!DOCTYPE html>
 <html>
-<head>
-    <meta charset="utf-8"/>
-<meta name="description" content=""/>
-<meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <head>
+    
+<meta charset="utf-8" >
+
 <title>教你做一篇不一样的微信公众号推送 | MIJJJ‘s Blog</title>
-<link rel="shortcut icon" href="https://mijjj.github.io/favicon.ico?v=1582271935460">
-<link href="https://cdn.bootcss.com/font-awesome/5.11.2/css/all.css" rel="stylesheet">
+<meta name="description" content="">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://mijjj.github.io/favicon.ico?v=1582272990059">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://mijjj.github.io/styles/main.css">
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-
-<script src="https://cdn.bootcss.com/highlight.js/9.15.10/highlight.min.js"></script>
-<script src="https://cdn.bootcss.com/highlight.js/9.15.10/languages/dockerfile.min.js"></script>
-<script src="https://cdn.bootcss.com/highlight.js/9.15.10/languages/dart.min.js"></script>
-<script src="https://cdn.bootcss.com/highlight.js/9.15.10/languages/go.min.js"></script>
-<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
-<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-        crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-        crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-        crossorigin="anonymous"></script>
-
-<!-- DEMO JS -->
-<script src="media/scripts/index.js"></script>
 
 
+  
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css" />
+  
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
-</head>
-<body>
-<div class="main gt-bg-theme-color-first">
-    <nav class="navbar navbar-expand-lg">
-    <div class="navbar-brand">
-        <img class="user-avatar" src="/images/avatar.png" alt="头像">
-        <div class="site-name gt-c-content-color-first">
-            MIJJJ‘s Blog
-        </div>
+  
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-130395938-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-130395938-1');
+</script>
+
+
+  </head>
+  <body>
+    <div id="app" class="main">
+      <div class="site-header-container">
+  <div class="site-header">
+    <div class="left">
+      <a href="https://mijjj.github.io">
+        <img class="avatar" src="https://mijjj.github.io/images/avatar.png?v=1582272990059" alt="" width="32px" height="32px">
+      </a>
+      <a href="https://mijjj.github.io">
+        <h1 class="site-title">MIJJJ‘s Blog</h1>
+      </a>
     </div>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <i class="fas fa-bars gt-c-content-color-first" style="font-size: 18px"></i>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <div class="navbar-nav mr-auto" style="text-align: center">
-            
-                <div class="nav-item">
-                    
-                        <a href="/" class="menu gt-a-link">
-                            首页
-                        </a>
-                    
-                </div>
-            
-                <div class="nav-item">
-                    
-                        <a href="/archives" class="menu gt-a-link">
-                            归档
-                        </a>
-                    
-                </div>
-            
-                <div class="nav-item">
-                    
-                        <a href="/tags" class="menu gt-a-link">
-                            标签
-                        </a>
-                    
-                </div>
-            
-                <div class="nav-item">
-                    
-                        <a href="/post/about" class="menu gt-a-link">
-                            关于
-                        </a>
-                    
-                </div>
-            
-        </div>
+    <div class="right">
+      <transition name="fade">
+        <i class="icon" :class="{ 'icon-close-outline': menuVisible, 'icon-menu-outline': !menuVisible }" @click="menuVisible = !menuVisible"></i>
+      </transition>
     </div>
-</nav>
-    <div class="post-container">
-        <div class="post-detail gt-bg-theme-color-second">
-            <article class="gt-post-content">
-                <h2 class="post-title">
-                    教你做一篇不一样的微信公众号推送
-                </h2>
-                <div class="post-info">
-                    <time class="post-time gt-c-content-color-first">
-                        · 2018-06-10 ·
-                    </time>
+  </div>
+</div>
+
+<transition name="fade">
+  <div class="menu-container" style="display: none;" v-show="menuVisible">
+    <div class="menu-list">
+      
+        
+          <a href="/" class="menu purple-link">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="menu purple-link">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="menu purple-link">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="menu purple-link">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+</transition>
+
+
+      <div class="content-container">
+        <div class="post-detail">
+          
+          <h2 class="post-title">教你做一篇不一样的微信公众号推送</h2>
+          <div class="post-info post-detail-info">
+            <span><i class="icon-calendar-outline"></i> 2018-06-10</span>
+            
+              <span>
+                <i class="icon-pricetags-outline"></i>
+                
+                  <a href="https://mijjj.github.io/tag/3-8qImkrsy/">
+                    工具
                     
-                        <a href="https://mijjj.github.io/tag/3-8qImkrsy/" class="post-tags">
-                            # 工具
-                        </a>
-                    
-                </div>
-                <div class="post-content">
-                    <h1 id="引言">引言</h1>
+                  </a>
+                
+              </span>
+            
+          </div>
+          <div class="post-content">
+            <h1 id="引言">引言</h1>
 <p>最近由于实在挺忙的，就没有时间写东西，憋了好几个题材，打算在接下来的复习周学得无聊的时候就写写，这是第一个。（然而现在并没到复习周呵呵呵</p>
 <p>最初这些效果都是我从其他推送看来的，至于是哪篇推送我也忘记了哈哈哈哈哈哈哈… 先看效果： <a href="https://mp.weixin.qq.com/s/cKFbdOSN3QKjV8XMl0mXow">【群星闪耀】第五届SKY之星评选开始接受报名</a> <a href="https://mp.weixin.qq.com/s/bSc3LEdaMyy0VPAj2pwOGg">『迎接我们的18』2017-2018跨年留言征集活动</a></p>
 <p>你可以看到，在里头是包含两种效果的： 1. 图文渐显 2. 弹幕效果</p>
@@ -207,73 +218,94 @@
 <p>最后请不要忘记发到自己手机上预览一下效果，毕竟一天只有一次推。 # 最后 这些效果似乎都可以在 i排版 中实现，不过我看了看它的界面呵呵呵立马不想用了。可以这么说，所有的效果也都是建立在HTML上的，既然是HTML，那么代码也必然会暴露给别人，你也就可以很轻易地从中学习它效果的实现方法，看到感兴趣的，<code>右键-检查/查看源代码</code> 就行了。</p>
 <p>话说回来，大一里一年的院会干事时光就要结束了，可以说<s>被逼得</s>学到很多东西了，也过得很开心，不过说回来，大二的夜宵估计是没着落了呵呵呵呵呵呵呵呵…</p>
 
-                </div>
-            </article>
+          </div>
         </div>
 
         
-            <div class="next-post">
-                <div class="next gt-c-content-color-first">下一篇</div>
-                <a href="https://mijjj.github.io/post/li-yong-xue-xiao-de-edu-you-xiang-mian-fei-zhu-ce-jiao-yu-ban-office365/" class="post-title gt-a-link">
-                    利用学校的edu邮箱免费注册教育版Office365
-                </a>
-            </div>
+          <div class="next-post">
+            <a class="purple-link" href="https://mijjj.github.io/post/li-yong-xue-xiao-de-edu-you-xiang-mian-fei-zhu-ce-jiao-yu-ban-office365/">
+              <h3 class="post-title">
+                下一篇：利用学校的edu邮箱免费注册教育版Office365
+              </h3>
+            </a>
+          </div>
+          
+      </div>
+
+      
+        
+          <div id="gitalk-container"></div>
         
 
         
-            
-                <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
-<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+      
 
-<div id="gitalk-container"></div>
-
-<script>
-
-  var gitalk = new Gitalk({
-    clientID: '7a1b9ff1e930527f949c',
-    clientSecret: 'c3edaf03490512507f6bd3ef6489222ebf87b53d',
-    repo: 'Gtalk',
-    owner: 'mijjj',
-    admin: ['mijjj'],
-    id: location.pathname,      // Ensure uniqueness and length less than 50
-    distractionFreeMode: false  // Facebook-like distraction free mode
-  })
-
-  gitalk.render('gitalk-container')
-
-</script>
-
-            
-
-            
-        
-
-        <div class="site-footer gt-c-content-color-first">
-    <div class="slogan gt-c-content-color-first"></div>
-    <div class="social-container">
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-    </div>
-    Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a href="https://mijjj.github.io/atom.xml" target="_blank">RSS</a>
+      <div class="site-footer">
+  <div class="slogan"></div>
+  <div class="social-container">
+    
+      
+        <a href="https://github.com/mijjj" target="_blank">
+          <i class="fab fa-github"></i>
+        </a>
+      
+    
+      
+    
+      
+        <a href="https://weibo.com/dadadamijie" target="_blank">
+          <i class="fab fa-weibo"></i>
+        </a>
+      
+    
+      
+    
+      
+    
+  </div>
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://mijjj.github.io/atom.xml" target="_blank">RSS</a>
 </div>
-
-<script>
-    hljs.initHighlightingOnLoad()
-</script>
 
 
     </div>
-</div>
-</body>
+    <script type="application/javascript">
+
+hljs.initHighlightingOnLoad()
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+  
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <script>
+
+      var gitalk = new Gitalk({
+        clientID: '7a1b9ff1e930527f949c',
+        clientSecret: 'c3edaf03490512507f6bd3ef6489222ebf87b53d',
+        repo: 'Gtalk',
+        owner: 'mijjj',
+        admin: ['mijjj'],
+        id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+      })
+
+      gitalk.render('gitalk-container')
+
+    </script>
+  
+
+  
+
+
+
+
+  </body>
 </html>
