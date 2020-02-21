@@ -1,118 +1,110 @@
 <html>
-  <head>
-    <meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+<head>
+    <meta charset="utf-8"/>
+<meta name="description" content=""/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>NextCloud☁+ Transmission▶ 实现 PT下载机以及在线播放 | MIJJJ‘s Blog</title>
-<meta name="description" content="" />
-<link rel="shortcut icon" href="https://mijjj.github.io/favicon.ico?v=1582048135432">
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="shortcut icon" href="https://mijjj.github.io/favicon.ico?v=1582271935460">
+<link href="https://cdn.bootcss.com/font-awesome/5.11.2/css/all.css" rel="stylesheet">
 <link rel="stylesheet" href="https://mijjj.github.io/styles/main.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+<script src="https://cdn.bootcss.com/highlight.js/9.15.10/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.15.10/languages/dockerfile.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.15.10/languages/dart.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.15.10/languages/go.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
+<!-- DEMO JS -->
+<script src="media/scripts/index.js"></script>
 
 
-<script async src="https://www.googletagmanager.com/gtag/js?id= UA-130395938-1 "></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', ' UA-130395938-1 ');
-</script>
-
-
-  </head>
-  <body>
-    <div class="main">
-      <div class="main-content">
-        <div class="site-header">
-  <a href="https://mijjj.github.io">
-  <img class="avatar" src="https://mijjj.github.io/images/avatar.png?v=1582048135432" alt="">
-  </a>
-  <h1 class="site-title">
-    MIJJJ‘s Blog
-  </h1>
-  <p class="site-description">
-    
-  </p>
-  <div class="menu-container">
-    
-      
-        <a href="/" class="menu">
-          首页
-        </a>
-      
-    
-      
-        <a href="/archives" class="menu">
-          归档
-        </a>
-      
-    
-      
-        <a href="/tags" class="menu">
-          标签
-        </a>
-      
-    
-      
-        <a href="/post/about" class="menu">
-          关于
-        </a>
-      
-    
-  </div>
-  <div class="social-container">
-    
-      
-        <a href="https://github.com/mijjj" target="_blank">
-          <i class="fab fa-github"></i>
-        </a>
-      
-    
-      
-    
-      
-        <a href="https://weibo.com/dadadamijie" target="_blank">
-          <i class="fab fa-weibo"></i>
-        </a>
-      
-    
-      
-    
-      
-    
-  </div>
-</div>
-
-        <div class="post-detail">
-          <article class="post">
-            <h2 class="post-title">
-              NextCloud☁+ Transmission▶ 实现 PT下载机以及在线播放
-            </h2>
-            <div class="post-info">
-              <span>
-                2018-11-01
-              </span>
-              <span>
-                12 min read
-              </span>
-              
-                <a href="https://mijjj.github.io/tag/-WESQYAZy/" class="post-tag">
-                  # 网络
-                </a>
-              
-                <a href="https://mijjj.github.io/tag/3-8qImkrsy/" class="post-tag">
-                  # 工具
-                </a>
-              
-            </div>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+</head>
+<body>
+<div class="main gt-bg-theme-color-first">
+    <nav class="navbar navbar-expand-lg">
+    <div class="navbar-brand">
+        <img class="user-avatar" src="/images/avatar.png" alt="头像">
+        <div class="site-name gt-c-content-color-first">
+            MIJJJ‘s Blog
+        </div>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars gt-c-content-color-first" style="font-size: 18px"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="navbar-nav mr-auto" style="text-align: center">
             
-            <div class="post-content-wrapper">
-              <div class="post-content">
-                <h1 id="引">引</h1>
+                <div class="nav-item">
+                    
+                        <a href="/" class="menu gt-a-link">
+                            首页
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/archives" class="menu gt-a-link">
+                            归档
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/tags" class="menu gt-a-link">
+                            标签
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/post/about" class="menu gt-a-link">
+                            关于
+                        </a>
+                    
+                </div>
+            
+        </div>
+    </div>
+</nav>
+    <div class="post-container">
+        <div class="post-detail gt-bg-theme-color-second">
+            <article class="gt-post-content">
+                <h2 class="post-title">
+                    NextCloud☁+ Transmission▶ 实现 PT下载机以及在线播放
+                </h2>
+                <div class="post-info">
+                    <time class="post-time gt-c-content-color-first">
+                        · 2018-11-01 ·
+                    </time>
+                    
+                        <a href="https://mijjj.github.io/tag/-WESQYAZy/" class="post-tags">
+                            # 网络
+                        </a>
+                    
+                        <a href="https://mijjj.github.io/tag/3-8qImkrsy/" class="post-tags">
+                            # 工具
+                        </a>
+                    
+                </div>
+                <div class="post-content">
+                    <h1 id="引">引</h1>
 <p>有人问我何时产生了做这种东西的想法，其实很早就产生了，最初是在我刚开始接触入门级路由器（类似网件以及阿苏斯的入门级）的时候，梅林固件上面就有一些离线下载软件类似 Aria2、迅雷离线下载 Xware（已经停止服务），并且当时正值<s>郭佳</s>插手网盘行业引起一大批网盘服务关闭，出于<strong>对个人数据的敏感</strong>，便开始了解 个人/家庭NAS。</p>
 <p>经过一番了解后便止步于价格上呵呵呵……（群晖主流型号 DS218+ 价格2500左右）之后便转向更为经济的 VPS 自建网盘。</p>
 <hr>
@@ -403,44 +395,22 @@ service transmission-daemon start
 <p>话说真的会有人看到这里吗？</p>
 <p>不知道</p>
 
-              </div>
-              <div class="toc-container">
-                <ul class="markdownIt-TOC">
-<li><a href="#%E5%BC%95">引</a></li>
-<li><a href="#%E6%AD%A3%E6%96%87">正文</a></li>
-<li><a href="#%E5%86%85%E5%AE%B9%E7%AE%80%E8%BF%B0">内容简述</a>
-<ul>
-<li><a href="#%E5%BC%80%E5%90%AF-debian9-%E4%B8%AD%E7%9A%84-bbr">开启 Debian9 中的 BBR</a></li>
-<li><a href="#nextcloud-%E7%9A%84%E5%AE%89%E8%A3%85">NextCloud 的安装</a></li>
-<li><a href="#%E4%B8%BA-nextcloud-%E9%85%8D%E7%BD%AE-https-%E8%AF%81%E4%B9%A6">为 NextCloud 配置 HTTPS 证书</a></li>
-<li><a href="#%E5%AE%89%E8%A3%85-transmission">安装 Transmission</a></li>
-<li><a href="#%E5%9C%A8-nextcloud-%E4%B8%AD%E6%B7%BB%E5%8A%A0-transmission-%E7%9A%84%E4%B8%8B%E8%BD%BD%E6%96%87%E4%BB%B6%E5%A4%B9">在 NextCloud 中添加 Transmission 的下载文件夹</a></li>
-<li><a href="#%E4%BD%BF%E7%94%A8">使用</a></li>
-</ul>
-</li>
-<li><a href="#%E9%A2%98%E5%A4%96%E8%AF%9D">题外话</a></li>
-<li><a href="#%E7%8E%B0%E5%9C%A8%E5%8C%97%E4%BA%AC%E6%97%B6%E9%97%B4201811131352">现在北京时间2018.11.1——3:13:52</a></li>
-</ul>
-
-              </div>
-            </div>
-          </article>
+                </div>
+            </article>
         </div>
 
         
-          <div class="next-post">
-            <div class="next">下一篇</div>
-            <a href="https://mijjj.github.io/post/shu-mei-pai-dht22-wen-shi-du-chuan-gan-qi/">
-              <h3 class="post-title">
-                [树莓派] DHT22温湿度传感器
-              </h3>
-            </a>
-          </div>
+            <div class="next-post">
+                <div class="next gt-c-content-color-first">下一篇</div>
+                <a href="https://mijjj.github.io/post/shu-mei-pai-dht22-wen-shi-du-chuan-gan-qi/" class="post-title gt-a-link">
+                    [树莓派] DHT22温湿度传感器
+                </a>
+            </div>
         
 
         
-          
-            <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+            
+                <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
 <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
 
 <div id="gitalk-container"></div>
@@ -453,7 +423,7 @@ service transmission-daemon start
     repo: 'Gtalk',
     owner: 'mijjj',
     admin: ['mijjj'],
-    id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+    id: location.pathname,      // Ensure uniqueness and length less than 50
     distractionFreeMode: false  // Facebook-like distraction free mode
   })
 
@@ -461,58 +431,37 @@ service transmission-daemon start
 
 </script>
 
-          
+            
 
-          
+            
         
 
-        <div class="site-footer">
-  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | 
-  <a class="rss" href="https://mijjj.github.io/atom.xml" target="_blank">RSS</a>
+        <div class="site-footer gt-c-content-color-first">
+    <div class="slogan gt-c-content-color-first"></div>
+    <div class="social-container">
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+    </div>
+    Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a href="https://mijjj.github.io/atom.xml" target="_blank">RSS</a>
 </div>
 
 <script>
-  hljs.initHighlightingOnLoad()
-
-  let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
-
-  // This should probably be throttled.
-  // Especially because it triggers during smooth scrolling.
-  // https://lodash.com/docs/4.17.10#throttle
-  // You could do like...
-  // window.addEventListener("scroll", () => {
-  //    _.throttle(doThatStuff, 100);
-  // });
-  // Only not doing it here to keep this Pen dependency-free.
-
-  window.addEventListener("scroll", event => {
-    let fromTop = window.scrollY;
-
-    mainNavLinks.forEach((link, index) => {
-      let section = document.getElementById(decodeURI(link.hash).substring(1));
-      let nextSection = null
-      if (mainNavLinks[index + 1]) {
-        nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
-      }
-      if (section.offsetTop <= fromTop) {
-        if (nextSection) {
-          if (nextSection.offsetTop > fromTop) {
-            link.classList.add("current");
-          } else {
-            link.classList.remove("current");    
-          }
-        } else {
-          link.classList.add("current");
-        }
-      } else {
-        link.classList.remove("current");
-      }
-    });
-  });
-
+    hljs.initHighlightingOnLoad()
 </script>
 
-      </div>
+
     </div>
-  </body>
+</div>
+</body>
 </html>
