@@ -2,13 +2,120 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://mijjj.github.io</id>
     <title>MIJJJ‘s Blog</title>
-    <updated>2020-02-22T18:20:52.845Z</updated>
+    <updated>2020-03-01T15:07:17.193Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://mijjj.github.io"/>
     <link rel="self" href="https://mijjj.github.io/atom.xml"/>
     <logo>https://mijjj.github.io/images/avatar.png</logo>
     <icon>https://mijjj.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, MIJJJ‘s Blog</rights>
+    <entry>
+        <title type="html"><![CDATA[如何下载保存Bilibili视频]]></title>
+        <id>https://mijjj.github.io/post/download-bilibili-video/</id>
+        <link href="https://mijjj.github.io/post/download-bilibili-video/">
+        </link>
+        <updated>2020-03-01T15:00:27.000Z</updated>
+        <content type="html"><![CDATA[<p>鉴于三月初的一众事件，导致大家在B站的收藏夹都有一定程度损失，这里有介绍两种下载Bilibili视频的方法</p>
+<h2 id="利用b站的uwp应用下载">利用B站的UWP应用下载</h2>
+<p>此方法适用于使用 Windows10 的朋友</p>
+<ul>
+<li>
+<p>优点：最方便，下载质量最高（大会员可以下载最高质量），保存信息最全的一个方法（可以保存<strong>封面图、弹幕、作者</strong>以及视频简介等有关视频的各类信息），支持分p下载</p>
+</li>
+<li>
+<p>下载出来的是一个<strong>以AV号命名</strong>的文件夹，里面有：</p>
+<ul>
+<li>
+<p><code>cover.jpg</code> 封面图，但需要将后缀修改为 <code>png</code> 才能打开</p>
+</li>
+<li>
+<p><code>[AV号].dvi</code> 视频的基本信息，包括标题、AV号、Up主、视频简介等信息</p>
+</li>
+<li>
+<p><code>desktop.ini</code> 内含视频标题</p>
+</li>
+<li>
+<p>数字递增的多个文件夹，这个是该AV号下的多个分p。如果只有1个p则只有一个名为 <code>1</code> 的文件夹</p>
+<ul>
+<li>
+<p>分p文件夹内：</p>
+<p><code>[AV号].info</code> 包含视频基本信息</p>
+<p><code>[AV号 _ p数].xml</code> 包含弹幕信息</p>
+<p><code>[AV号_ p数_ 序号].flv</code> 视频文件，B站会把过大的视频文件分成约几十MB的<strong>多个片段</strong></p>
+<blockquote>
+<p>合并flv文件可以参考这篇文章：https://printempw.github.io/use-ffmpeg-to-concat-flv-videos-downloaded-by-bilibili-client/</p>
+<p>数量少的话直接用pr拼起来也行</p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ol>
+<li>点击下载安装哔哩哔哩动画UWP应用：https://www.microsoft.com/store/productId/9NBLGGH5Q5FV</li>
+<li>打开应用 -&gt; 点击个人中心 -&gt; 登陆</li>
+<li>右下角⚙设置 -&gt; 下载＆缓存 -&gt; 自定义本机视频下载路径 -&gt; 选择自己需要的存放路径</li>
+<li>搜索需要的视频（不需要进入播放界面） -&gt; 点击界面下方的下载按钮  选择清晰度即可下载<br>
+<img src="D:\vpx\OneDrive\markdown\IMG\如何下载保存Bilibili视频/image-20200301202826313.png" alt="image-20200301202826313" style="zoom:50%;" /></li>
+<li>点击此图标可以观看下载进度以及下载路径<br>
+<img src="D:\vpx\OneDrive\markdown\IMG\如何下载保存Bilibili视频/image-20200301202920005.png" alt="image-20200301202920005" style="zoom:50%;" /></li>
+</ol>
+<h2 id="利用you-get下载">利用you-get下载</h2>
+<p>项目地址：https://you-get.org/</p>
+<p>使用简单直接，适配众多网站（<a href="https://github.com/soimort/you-get#supported-sites">点此查看</a>），不过需要一些命令行知识，下载会较 UWP 的方法慢一点（大约1-5m/s），这里仅粗略介绍 Windows 系统下的安装使用（当然，macOS也差不多）</p>
+<ul>
+<li>
+<p>安装依赖</p>
+<ul>
+<li><strong><a href="https://www.python.org/downloads/">Python</a></strong> 3.2 或以上版本</li>
+<li><strong><a href="https://www.ffmpeg.org/">FFmpeg</a></strong> 1.0 或以上版本</li>
+</ul>
+</li>
+<li>
+<p>安装you-get</p>
+<ol>
+<li>
+<p>到这里下载最近的安装包（<code>.tar.gz</code> 后缀的压缩文件）：https://github.com/soimort/you-get/releases</p>
+</li>
+<li>
+<p>解压缩到某一个文件夹</p>
+</li>
+<li>
+<p>打开命令行：<code>win+R</code> 快捷键打开运行 -&gt; 输入<code>cmd</code> -&gt; 确定</p>
+</li>
+<li>
+<p>运行命令</p>
+<pre><code class="language-sh">#如果解压文件夹在C盘
+cd 文件夹路径
+#如果不在C盘
+cd /D 文件夹路径
+
+#安装
+python3 setup.py install
+</code></pre>
+<blockquote>
+<p>如何得到文件夹路径：点击直接复制即可</p>
+<img src="D:\vpx\OneDrive\markdown\IMG\如何下载保存Bilibili视频/image-20200301211216911.png" alt="image-20200301211216911" style="zoom:67%;" />
+</blockquote>
+</li>
+</ol>
+</li>
+<li>
+<p>开始下载，这里会将下载的片段自动拼成<strong>单个文件</strong>输出(也会下载弹幕信息)</p>
+<pre><code class="language-shell">#用cd命令移动到视频需要保存的路径，如果跨磁盘需要在路径前加入' /D '
+cd 视频保存路径
+#举例：这样就可以直接下载最高画质的视频了
+you-get https://www.bilibili.com/video/av92276340
+#可以加入参数自定义输出路径
+you-get -o 视频保存路径 https://www.bilibili.com/video/av92276340
+</code></pre>
+</li>
+</ul>
+<h2 id="带弹幕播放">带弹幕播放</h2>
+<p>将合并后的视频和 <code>.xml</code> 文件一起拖入 <a href="http://www.dandanplay.com/">弹弹 Play</a> 或 <a href="https://github.com/AncientLysine/BiliLocal">BiliLocal</a> 等弹幕播放器后就可以观看了</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[My Awesome Windows——我的PC软件记录]]></title>
         <id>https://mijjj.github.io/post/my-awesome-windows/</id>
@@ -1514,48 +1621,6 @@ caddy
 <p>注：在微信编辑器中就尽量不要对素材进行额外的编辑了，很多时候会出现一些奇奇怪怪的现象，对素材的编辑请回到相应的编辑器中进行。</p>
 <p>最后请不要忘记发到自己手机上预览一下效果，毕竟一天只有一次推。 # 最后 这些效果似乎都可以在 i排版 中实现，不过我看了看它的界面呵呵呵立马不想用了。可以这么说，所有的效果也都是建立在HTML上的，既然是HTML，那么代码也必然会暴露给别人，你也就可以很轻易地从中学习它效果的实现方法，看到感兴趣的，<code>右键-检查/查看源代码</code> 就行了。</p>
 <p>话说回来，大一里一年的院会干事时光就要结束了，可以说<s>被逼得</s>学到很多东西了，也过得很开心，不过说回来，大二的夜宵估计是没着落了呵呵呵呵呵呵呵呵…</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[利用学校的edu邮箱免费注册教育版Office365]]></title>
-        <id>https://mijjj.github.io/post/li-yong-xue-xiao-de-edu-you-xiang-mian-fei-zhu-ce-jiao-yu-ban-office365/</id>
-        <link href="https://mijjj.github.io/post/li-yong-xue-xiao-de-edu-you-xiang-mian-fei-zhu-ce-jiao-yu-ban-office365/">
-        </link>
-        <updated>2017-10-11T11:28:37.000Z</updated>
-        <content type="html"><![CDATA[<h1 id="起因">起因</h1>
-<p>很久之前我就知道edu域名邮箱的各种好处，最出名的就是AWS的学生优惠券，🍎 Music 的学生半价优惠，以及Office365教育版，因此梦寐以求地要上一所对现代数字生活向往的大学（因为有的大学不向学生派发edu邮箱）。进了暨大，了解到学校接入微信企业平台，支付宝充值饭卡，交续网费，以及数字暨大主页，极大的便利了老师和学生们的教育生活，我发现我当初的选择是正确的。（为暨大打call）</p>
-<p>入学之后同学们开始加入各种组织，于是就需要各种办公软件，Office套件自然在列。有的笔记本是会赠送Office套件的（一般都会在网页图文介绍或机箱＆笔记本上贴有Office的贴纸），然而有的笔记本是不赠送的，然而面对299一年的Office365个人版（包含1T的OneDrive储存），或399买断Office2016，都不是一项小数目。</p>
-<p>因此巨硬（误）就推出了教育版Office365（Web版Office套件以及免费的OneDrive储存）。虽说是Web版，但日常使用也是足够的，对于学生来说，关键是免费不是吗？ <em>不要跟我说WPS也免费，免费的就是最贵的。这个定律同样适用于Office365教育版。</em></p>
-<h1 id="正文">正文</h1>
-<h2 id="1准备edu邮箱">1.准备edu邮箱</h2>
-<p>对于暨大的学生，我们可以通过申请学子邮来获得个人的edu邮箱。通过我在暨南大学各种在线网页的摸索，发现并不需要向网络中心提交纸质申请，只需在网络上办理开通即可，整个过程轻松快捷。（再次打call）</p>
-<p>①首先登陆暨南大学的<a href="https://mynet.jnu.edu.cn/">“校园用户自助服务平台”</a>。 ps：账号是个人的学号，密码为身份证后六位数字。</p>
-<p><s>（在这想吐槽一下，在更改过原数字密码后，新密码与原密码都可以用来登陆在线平台，然而校园网认证则只能用新密码）</s></p>
-<p>②依次点击：左侧菜单的“业务办理” ===》展开栏下的“学子邮申请”</p>
-<p>③在右侧填写并确认自己的邮箱用户名，点下方确认即可。 ps：确认用户名的框内只需重复上面填过的用户名即可，无需整个邮箱地址填入。</p>
-<p><strong>现在就拥有属于自己的edu邮箱了hahahahahaha。</strong> <em>（这是我刚拿到邮箱的心情。。。（误））</em></p>
-<p>对于其他学校的学生你可以咨询一下你们的学长或致电你们学校的网络中心。</p>
-<figure data-type="image" tabindex="1"><img src="https://mijjj.github.io/post-images/1582385967460.png" alt="" loading="lazy"></figure>
-<p>暨南大学学子邮申请界面</p>
-<h2 id="2登陆邮箱">2.登陆邮箱</h2>
-<p>其实这个没什么好说的，只是我觉得邮箱登陆地址比较难找，<s>或者是我瞎？</s>，所以在这里我贴出暨南邮箱的登陆链接：<a href="https://mail.jnu.edu.cn/">暨南大学电子邮件系统</a></p>
-<p>登陆的时候记得选择学子邮以及正确选择入学年份。</p>
-<p>ps：至于edu邮箱的登陆方式，不同学校有着不同的方法。我有个中大岭院的同学，他的edu邮箱是在腾讯企业邮箱登录的……</p>
-<h2 id="3获取office365教育版">3.获取Office365教育版</h2>
-<p><a href="https://www.microsoft.com/zh-cn/education/products/office/default.aspx">获取地址</a></p>
-<p>进入获取页面，在邮箱填写处填写自己的edu邮箱地址即可，后续步骤可按照提示完成。</p>
-<figure data-type="image" tabindex="2"><img src="https://mijjj.github.io/post-images/1582385982455.png" alt="" loading="lazy"></figure>
-<p>获取页面</p>
-<p>一套流程下来后，我们便进入到Office365教育版的界面，即web版的Office套件，你无须下载整个Office套件软体到电脑本地，只需在网页上进行编辑，操作与软体版本区别不大，文件都会自动储存在你的OneDrive中，你可以随时在云端访问。</p>
-<p>下次继续访问的链接：<a href="https://www.office.com/">www.office.com</a></p>
-<p>你也可以通过安装<a href="https://chrome.google.com/webstore/detail/office-online/ndjpnladcallmjemlbaebfadecfhkepb?hl=zh-CN">Chrome扩展</a>来改善web版体验。 小技巧：在工作时按F11进行全屏使用体验更佳。</p>
-<figure data-type="image" tabindex="3"><img src="https://mijjj.github.io/post-images/1582385998428.png" alt="web版界面" loading="lazy"></figure>
-<figure data-type="image" tabindex="4"><img src="https://mijjj.github.io/post-images/1582386025229.png" alt="Excel界面" loading="lazy"></figure>
-<figure data-type="image" tabindex="5"><img src="https://mijjj.github.io/post-images/1582386045331.png" alt="Word界面" loading="lazy"></figure>
-<figure data-type="image" tabindex="6"><img src="https://mijjj.github.io/post-images/1582386065799.png" alt="PowerPoint界面" loading="lazy"></figure>
-<h1 id="写在最后">写在最后</h1>
-<p>这个世界没有那么多的羊毛给你蓐，所谓的大学生福利也只是你步入茫茫社会前给你的小小甜头而已。</p>
-<p>还有，对于破解的Office套件，我不说太多，因为在普通小市民眼中，趋向于使用“免费的”付费软件似乎已经成为了“政治正确”。但希望在你有能力的时候尽快入正吧。对于Adobe系列亦是如此。</p>
 ]]></content>
     </entry>
 </feed>

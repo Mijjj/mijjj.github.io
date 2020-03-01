@@ -1,0 +1,311 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    
+<meta charset="utf-8" >
+
+<title>如何下载保存Bilibili视频 | MIJJJ‘s Blog</title>
+<meta name="description" content="">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://mijjj.github.io/favicon.ico?v=1583075180938">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://mijjj.github.io/styles/main.css">
+
+
+  
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css" />
+  
+
+  
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-130395938-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-130395938-1');
+</script>
+
+
+  </head>
+  <body>
+    <div id="app" class="main">
+      <div class="site-header-container">
+  <div class="site-header">
+    <div class="left">
+      <a href="https://mijjj.github.io">
+        <img class="avatar" src="https://mijjj.github.io/images/avatar.png?v=1583075180938" alt="" width="32px" height="32px">
+      </a>
+      <a href="https://mijjj.github.io">
+        <h1 class="site-title">MIJJJ‘s Blog</h1>
+      </a>
+    </div>
+    <div class="right">
+      <transition name="fade">
+        <i class="icon" :class="{ 'icon-close-outline': menuVisible, 'icon-menu-outline': !menuVisible }" @click="menuVisible = !menuVisible"></i>
+      </transition>
+    </div>
+  </div>
+</div>
+
+<transition name="fade">
+  <div class="menu-container" style="display: none;" v-show="menuVisible">
+    <div class="menu-list">
+      
+        
+          <a href="/" class="menu purple-link">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="menu purple-link">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="menu purple-link">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="menu purple-link">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+</transition>
+
+
+      <div class="content-container">
+        <div class="post-detail">
+          
+          <h2 class="post-title">如何下载保存Bilibili视频</h2>
+          <div class="post-info post-detail-info">
+            <span><i class="icon-calendar-outline"></i> 2020-03-01</span>
+            
+              <span>
+                <i class="icon-pricetags-outline"></i>
+                
+                  <a href="https://mijjj.github.io/tag/-WESQYAZy/">
+                    网络
+                    
+                      ，
+                    
+                  </a>
+                
+                  <a href="https://mijjj.github.io/tag/3-8qImkrsy/">
+                    工具
+                    
+                  </a>
+                
+              </span>
+            
+          </div>
+          <div class="post-content">
+            <p>鉴于三月初的一众事件，导致大家在B站的收藏夹都有一定程度损失，这里有介绍两种下载Bilibili视频的方法</p>
+<h2 id="利用b站的uwp应用下载">利用B站的UWP应用下载</h2>
+<p>此方法适用于使用 Windows10 的朋友</p>
+<ul>
+<li>
+<p>优点：最方便，下载质量最高（大会员可以下载最高质量），保存信息最全的一个方法（可以保存<strong>封面图、弹幕、作者</strong>以及视频简介等有关视频的各类信息），支持分p下载</p>
+</li>
+<li>
+<p>下载出来的是一个<strong>以AV号命名</strong>的文件夹，里面有：</p>
+<ul>
+<li>
+<p><code>cover.jpg</code> 封面图，但需要将后缀修改为 <code>png</code> 才能打开</p>
+</li>
+<li>
+<p><code>[AV号].dvi</code> 视频的基本信息，包括标题、AV号、Up主、视频简介等信息</p>
+</li>
+<li>
+<p><code>desktop.ini</code> 内含视频标题</p>
+</li>
+<li>
+<p>数字递增的多个文件夹，这个是该AV号下的多个分p。如果只有1个p则只有一个名为 <code>1</code> 的文件夹</p>
+<ul>
+<li>
+<p>分p文件夹内：</p>
+<p><code>[AV号].info</code> 包含视频基本信息</p>
+<p><code>[AV号 _ p数].xml</code> 包含弹幕信息</p>
+<p><code>[AV号_ p数_ 序号].flv</code> 视频文件，B站会把过大的视频文件分成约几十MB的<strong>多个片段</strong></p>
+<blockquote>
+<p>合并flv文件可以参考这篇文章：https://printempw.github.io/use-ffmpeg-to-concat-flv-videos-downloaded-by-bilibili-client/</p>
+<p>数量少的话直接用pr拼起来也行</p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ol>
+<li>点击下载安装哔哩哔哩动画UWP应用：https://www.microsoft.com/store/productId/9NBLGGH5Q5FV</li>
+<li>打开应用 -&gt; 点击个人中心 -&gt; 登陆</li>
+<li>右下角⚙设置 -&gt; 下载＆缓存 -&gt; 自定义本机视频下载路径 -&gt; 选择自己需要的存放路径</li>
+<li>搜索需要的视频（不需要进入播放界面） -&gt; 点击界面下方的下载按钮  选择清晰度即可下载<br>
+<img src="D:\vpx\OneDrive\markdown\IMG\如何下载保存Bilibili视频/image-20200301202826313.png" alt="image-20200301202826313" style="zoom:50%;" /></li>
+<li>点击此图标可以观看下载进度以及下载路径<br>
+<img src="D:\vpx\OneDrive\markdown\IMG\如何下载保存Bilibili视频/image-20200301202920005.png" alt="image-20200301202920005" style="zoom:50%;" /></li>
+</ol>
+<h2 id="利用you-get下载">利用you-get下载</h2>
+<p>项目地址：https://you-get.org/</p>
+<p>使用简单直接，适配众多网站（<a href="https://github.com/soimort/you-get#supported-sites">点此查看</a>），不过需要一些命令行知识，下载会较 UWP 的方法慢一点（大约1-5m/s），这里仅粗略介绍 Windows 系统下的安装使用（当然，macOS也差不多）</p>
+<ul>
+<li>
+<p>安装依赖</p>
+<ul>
+<li><strong><a href="https://www.python.org/downloads/">Python</a></strong> 3.2 或以上版本</li>
+<li><strong><a href="https://www.ffmpeg.org/">FFmpeg</a></strong> 1.0 或以上版本</li>
+</ul>
+</li>
+<li>
+<p>安装you-get</p>
+<ol>
+<li>
+<p>到这里下载最近的安装包（<code>.tar.gz</code> 后缀的压缩文件）：https://github.com/soimort/you-get/releases</p>
+</li>
+<li>
+<p>解压缩到某一个文件夹</p>
+</li>
+<li>
+<p>打开命令行：<code>win+R</code> 快捷键打开运行 -&gt; 输入<code>cmd</code> -&gt; 确定</p>
+</li>
+<li>
+<p>运行命令</p>
+<pre><code class="language-sh">#如果解压文件夹在C盘
+cd 文件夹路径
+#如果不在C盘
+cd /D 文件夹路径
+
+#安装
+python3 setup.py install
+</code></pre>
+<blockquote>
+<p>如何得到文件夹路径：点击直接复制即可</p>
+<img src="D:\vpx\OneDrive\markdown\IMG\如何下载保存Bilibili视频/image-20200301211216911.png" alt="image-20200301211216911" style="zoom:67%;" />
+</blockquote>
+</li>
+</ol>
+</li>
+<li>
+<p>开始下载，这里会将下载的片段自动拼成<strong>单个文件</strong>输出(也会下载弹幕信息)</p>
+<pre><code class="language-shell">#用cd命令移动到视频需要保存的路径，如果跨磁盘需要在路径前加入' /D '
+cd 视频保存路径
+#举例：这样就可以直接下载最高画质的视频了
+you-get https://www.bilibili.com/video/av92276340
+#可以加入参数自定义输出路径
+you-get -o 视频保存路径 https://www.bilibili.com/video/av92276340
+</code></pre>
+</li>
+</ul>
+<h2 id="带弹幕播放">带弹幕播放</h2>
+<p>将合并后的视频和 <code>.xml</code> 文件一起拖入 <a href="http://www.dandanplay.com/">弹弹 Play</a> 或 <a href="https://github.com/AncientLysine/BiliLocal">BiliLocal</a> 等弹幕播放器后就可以观看了</p>
+
+          </div>
+        </div>
+
+        
+          <div class="next-post">
+            <a class="purple-link" href="https://mijjj.github.io/post/my-awesome-windows/">
+              <h3 class="post-title">
+                下一篇：My Awesome Windows——我的PC软件记录
+              </h3>
+            </a>
+          </div>
+          
+      </div>
+
+      
+        
+          <div id="gitalk-container"></div>
+        
+
+        
+      
+
+      <div class="site-footer">
+  <div class="slogan"></div>
+  <div class="social-container">
+    
+      
+        <a href="https://github.com/mijjj" target="_blank">
+          <i class="fab fa-github"></i>
+        </a>
+      
+    
+      
+    
+      
+        <a href="https://weibo.com/dadadamijie" target="_blank">
+          <i class="fab fa-weibo"></i>
+        </a>
+      
+    
+      
+    
+      
+    
+  </div>
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://mijjj.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+
+    </div>
+    <script type="application/javascript">
+
+hljs.initHighlightingOnLoad()
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+  
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <script>
+
+      var gitalk = new Gitalk({
+        clientID: '7a1b9ff1e930527f949c',
+        clientSecret: 'c3edaf03490512507f6bd3ef6489222ebf87b53d',
+        repo: 'Gtalk',
+        owner: 'mijjj',
+        admin: ['mijjj'],
+        id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+      })
+
+      gitalk.render('gitalk-container')
+
+    </script>
+  
+
+  
+
+
+
+
+  </body>
+</html>

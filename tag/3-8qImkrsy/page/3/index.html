@@ -5,7 +5,7 @@
     
 <meta charset="utf-8" >
 
-<title>教你通过软件创建HTTP代理并连接 | MIJJJ‘s Blog</title>
+<title>工具 | MIJJJ‘s Blog</title>
 <meta name="description" content="">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -16,12 +16,6 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://mijjj.github.io/styles/main.css">
 
-
-  
-    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css" />
-  
-
-  
 
 
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
@@ -93,32 +87,21 @@
 
 
       <div class="content-container">
-        <div class="post-detail">
-          
-          <h2 class="post-title">教你通过软件创建HTTP代理并连接</h2>
-          <div class="post-info post-detail-info">
-            <span><i class="icon-calendar-outline"></i> 2016-11-19</span>
-            
-              <span>
-                <i class="icon-pricetags-outline"></i>
-                
-                  <a href="https://mijjj.github.io/tag/-WESQYAZy/">
-                    网络
-                    
-                      ，
-                    
-                  </a>
-                
-                  <a href="https://mijjj.github.io/tag/3-8qImkrsy/">
-                    工具
-                    
-                  </a>
-                
-              </span>
-            
-          </div>
-          <div class="post-content">
-            <p>2018.11.10 打算写 Clash ，最近吧（想起来再写2020.1.12）</p>
+
+        <div class="current-tag-container">
+          <h2 class="title">
+            <i class="icon icon-pricetags-outline"></i> 工具
+          </h2> 
+        </div>
+
+        
+<section class="post-item">
+    <div class="content">
+      <a href="https://mijjj.github.io/post/jiao-ni-tong-guo-ruan-jian-chuang-jian-http-dai-li-bing-lian-jie/">
+        <h2 class="post-title">教你通过软件创建HTTP代理并连接</h2>
+      </a>
+      <div class="post-abstract">
+        <p>2018.11.10 打算写 Clash ，最近吧（想起来再写2020.1.12）</p>
 <h1 id="简要">简要</h1>
 <p>本文章教你利用软件创建HTTP代理并使其他设备连接代理服务。教程包含Surge2＆3、Quantumult、Shadowrocket和某R的HTTP代理创建，以及iOS、Win10和Nintendo Switch的HTTP代理连接设置。 # 创建HTTP代理服务 下面会列举几个能够创建HTTP代理服务的软件使用方法。包含Surge2＆3、Quantumult、Shadowrocket、某R（电脑端）、某RR（安卓端）。（其中除了某R和某RR外，其余均为iOS中的app，且在中区均下载/购买不到）</p>
 <h2 id="surge3">Surge3</h2>
@@ -178,78 +161,43 @@
 <figure data-type="image" tabindex="10"><img src="https://mijjj.github.io/post-images/1582386569140.jpg" alt="" loading="lazy"></figure>
 <h2 id="surge2">Surge2</h2>
 <p>Surge2 作者是 Yachen Liu [https://itunes.apple.com/us/app/surge-legacy-support/id1040100637?mt=8](https://itunes.apple.com/us/app/surge-legacy-support/id1040100637?mt=8</p>
-<!-- more -->
-<p>)</p>
-<ol>
-<li>打开Surge，进入到“Config”配置界面</li>
-</ol>
-<figure data-type="image" tabindex="11"><img src="https://mijjj.github.io/post-images/1582386581284.jpg" alt="" loading="lazy"></figure>
-<ol start="2">
-<li>进入Edit界面后，拖到下面点击“Advance”。</li>
-</ol>
-<figure data-type="image" tabindex="12"><img src="https://mijjj.github.io/post-images/1582386591376.jpg" alt="" loading="lazy"></figure>
-<ol start="3">
-<li>点开开关</li>
-</ol>
-<figure data-type="image" tabindex="13"><img src="https://mijjj.github.io/post-images/1582386602267.jpg" alt="" loading="lazy"></figure>
-<ol start="4">
-<li>来到text Edit mode（即Configuration下面那个），找到［port = xxxx］字段，其中的“xxxx”几个数字便是端口，若实在找不到，软件默认设置为6152</li>
-</ol>
-<figure data-type="image" tabindex="14"><img src="https://mijjj.github.io/post-images/1582386615592.jpg" alt="" loading="lazy"></figure>
-<ol start="5">
-<li>Surge的「代理地址」就是开着Surge的设备的内网IP</li>
-</ol>
-<h2 id="某rr安卓端">某RR（安卓端）</h2>
-<p><a href="https://github.com/shadowsocksrr/shadowsocksr-android/releases">https://github.com/shadowsocksrr/shadowsocksr-android/releases</a></p>
-<ol>
-<li>打开软件，在默认首屏滚到下方找到「前置代理」</li>
-</ol>
-<h2 id="某r电脑端的某rr过程类似">某R（电脑端的某RR过程类似）</h2>
-<ol>
-<li>右键托盘上的小飞机，点击“选项设置”</li>
-</ol>
-<figure data-type="image" tabindex="15"><img src="https://mijjj.github.io/post-images/1582386627841.png" alt="" loading="lazy"></figure>
-<ol start="2">
-<li>如图</li>
-</ol>
-<figure data-type="image" tabindex="16"><img src="https://mijjj.github.io/post-images/1582386638383.jpg" alt="" loading="lazy"></figure>
-<ol start="3">
-<li>其「代理地址」为此电脑在内网中的IP地址</li>
-</ol>
-<h2 id="http代理的连接">HTTP代理的连接</h2>
-<p>前面我们记下了代理服务器的地址以及端口，下面就谈在连接端的设置。由于设备有限，这里只讲iOS、Win10以及Nintendo Switch的设置。 ### iOS 进入无线局域网的设置界面，点击正在连接的Wifi右侧的“i”字样图标，然后如图设置即可。其中“鉴定”开关一般关闭</p>
-<figure data-type="image" tabindex="17"><img src="https://mijjj.github.io/post-images/1582386649583.jpg" alt="" loading="lazy"></figure>
-<p>效果如图</p>
-<figure data-type="image" tabindex="18"><img src="https://mijjj.github.io/post-images/1582386660633.jpg" alt="" loading="lazy"></figure>
-<h2 id="win10">Win10</h2>
-<ol>
-<li>右键点击“开始”图标，选择“网络连接”</li>
-<li>在弹出窗口的左侧菜单栏中选择“代理”</li>
-<li>如图设置，最后保存即可</li>
-</ol>
-<figure data-type="image" tabindex="19"><img src="https://mijjj.github.io/post-images/1582386670774.jpg" alt="" loading="lazy"></figure>
-<h2 id="nintendo-switch">Nintendo Switch</h2>
-<p>如图设置</p>
-<figure data-type="image" tabindex="20"><img src="https://mijjj.github.io/post-images/1582386681803.jpg" alt="" loading="lazy"></figure>
-<h1 id="最后">最后</h1>
-<p>如果在上述的设置过后，你仍然无法翻越墙壁，先检查你的代理服务有无配置正确，再检查自己上述操作有无问题。（一般是没有的）</p>
-<p>ps：提供代理服务的设备必须时刻内网中，若此设备脱离了内网（离开了Wifi环境），就必须要关闭其他设备的HTTP代理，否则无法上网。</p>
-<p>本文图片用到的编辑工具： App：This、annotable、Pinpoint pc截图应用：Snipaste</p>
-<figure data-type="image" tabindex="21"><img src="https://mijjj.github.io/post-images/1582386694152.jpg" alt="" loading="lazy"></figure>
 
-          </div>
-        </div>
-
+      </div>
+      <div class="post-info">
+        <span><i class="icon icon-calendar-outline"></i> 2016-11-19</span>
+        
+          <span>
+            <i class="icon icon-pricetags-outline"></i>
+            
+              <a href="https://mijjj.github.io/tag/-WESQYAZy/">
+                网络
+                
+                  ，
+                
+              </a>
+            
+              <a href="https://mijjj.github.io/tag/3-8qImkrsy/">
+                工具
+                
+              </a>
+            
+          </span>
         
       </div>
+    </div>
+    
+  </section>
 
-      
-        
-          <div id="gitalk-container"></div>
-        
 
-        
-      
+<div class="pagination-container">
+  
+    <a href="https://mijjj.github.io/tag/3-8qImkrsy/page/2/" class="prev"><i class="icon-arrow-ios-back-outline"></i> 上一页</a>
+  
+  
+</div>
+
+
+      </div>
 
       <div class="site-footer">
   <div class="slogan"></div>
@@ -291,29 +239,6 @@ var app = new Vue({
 })
 
 </script>
-
-
-
-  
-    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
-    <script>
-
-      var gitalk = new Gitalk({
-        clientID: '7a1b9ff1e930527f949c',
-        clientSecret: 'c3edaf03490512507f6bd3ef6489222ebf87b53d',
-        repo: 'Gtalk',
-        owner: 'mijjj',
-        admin: ['mijjj'],
-        id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
-        distractionFreeMode: false  // Facebook-like distraction free mode
-      })
-
-      gitalk.render('gitalk-container')
-
-    </script>
-  
-
-  
 
 
 
