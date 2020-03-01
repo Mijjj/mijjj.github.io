@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://mijjj.github.io</id>
+    <id>https://blog.mijjj.com</id>
     <title>MIJJJ‘s Blog</title>
-    <updated>2020-03-01T15:07:49.963Z</updated>
+    <updated>2020-03-01T15:09:55.992Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="https://mijjj.github.io"/>
-    <link rel="self" href="https://mijjj.github.io/atom.xml"/>
-    <logo>https://mijjj.github.io/images/avatar.png</logo>
-    <icon>https://mijjj.github.io/favicon.ico</icon>
+    <link rel="alternate" href="https://blog.mijjj.com"/>
+    <link rel="self" href="https://blog.mijjj.com/atom.xml"/>
+    <logo>https://blog.mijjj.com/images/avatar.png</logo>
+    <icon>https://blog.mijjj.com/favicon.ico</icon>
     <rights>All rights reserved 2020, MIJJJ‘s Blog</rights>
     <entry>
         <title type="html"><![CDATA[如何下载保存Bilibili视频]]></title>
-        <id>https://mijjj.github.io/post/download-bilibili-video/</id>
-        <link href="https://mijjj.github.io/post/download-bilibili-video/">
+        <id>https://blog.mijjj.com/post/download-bilibili-video/</id>
+        <link href="https://blog.mijjj.com/post/download-bilibili-video/">
         </link>
         <updated>2020-03-01T15:00:27.000Z</updated>
         <content type="html"><![CDATA[<p>鉴于三月初的一众事件，导致大家在B站的收藏夹都有一定程度损失，这里有介绍两种下载Bilibili视频的方法</p>
@@ -118,8 +118,8 @@ you-get -o 视频保存路径 https://www.bilibili.com/video/av92276340
     </entry>
     <entry>
         <title type="html"><![CDATA[My Awesome Windows——我的PC软件记录]]></title>
-        <id>https://mijjj.github.io/post/my-awesome-windows/</id>
-        <link href="https://mijjj.github.io/post/my-awesome-windows/">
+        <id>https://blog.mijjj.com/post/my-awesome-windows/</id>
+        <link href="https://blog.mijjj.com/post/my-awesome-windows/">
         </link>
         <updated>2020-02-18T17:35:05.000Z</updated>
         <content type="html"><![CDATA[<h1 id="my-awesome-windows">My Awesome Windows</h1>
@@ -581,8 +581,8 @@ you-get -o 视频保存路径 https://www.bilibili.com/video/av92276340
     </entry>
     <entry>
         <title type="html"><![CDATA[教你利用MentoHUST在路由器上挂锐捷认证]]></title>
-        <id>https://mijjj.github.io/post/jiao-ni-li-yong-mentohust-zai-lu-you-qi-shang-gua-rui-jie-ren-zheng/</id>
-        <link href="https://mijjj.github.io/post/jiao-ni-li-yong-mentohust-zai-lu-you-qi-shang-gua-rui-jie-ren-zheng/">
+        <id>https://blog.mijjj.com/post/jiao-ni-li-yong-mentohust-zai-lu-you-qi-shang-gua-rui-jie-ren-zheng/</id>
+        <link href="https://blog.mijjj.com/post/jiao-ni-li-yong-mentohust-zai-lu-you-qi-shang-gua-rui-jie-ren-zheng/">
         </link>
         <updated>2020-01-12T11:30:39.000Z</updated>
         <content type="html"><![CDATA[<p>2020.1.12<br>
@@ -611,7 +611,7 @@ you-get -o 视频保存路径 https://www.bilibili.com/video/av92276340
 <li>点击固件更新，勾选“固件”，文件选择你之前下载的固件文件，点击上传等进度条走完，然后等待一两分钟，电脑浏览器访问 192.168.2.1 就可以进入新的路由管理界面了，若提示输入账号密码，则账号密码都为 admin。</li>
 </ol>
 <p>ps：上述过程不需要拔出电源</p>
-<figure data-type="image" tabindex="1"><img src="https://mijjj.github.io/post-images/1582385630511.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="1"><img src="https://blog.mijjj.com/post-images/1582385630511.png" alt="" loading="lazy"></figure>
 <h2 id="三-mentohust的设置">三、MentoHUST的设置</h2>
 <p>MentoHUST是我们在路由器上进行校园网认证的工具。</p>
 <p>还有其他的工具就是minieap，<strong>但这个我没测试</strong>，项目地址： https://github.com/updateing/minieap minieap需要用到交叉编译，这里有一个同学交叉编译好了适用于K2的文件： <a href="http://www.right.com.cn/forum/forum.php%EF%BC%9Fmod=viewthread&amp;tid=214234">http://www.right.com.cn/forum/forum.php？mod=viewthread&amp;tid=214234</a></p>
@@ -627,7 +627,7 @@ you-get -o 视频保存路径 https://www.bilibili.com/video/av92276340
 <h2 id="不看被网管拉黑名单就不要怪我了">不看被网管拉黑名单就不要怪我了！</h2>
 <p>我用路由认证主要目的是规避虚拟网卡的检测，通过此方法也可以让无线路由器共享出WiFi让手机连接上网。<strong>需要注意的是，不要让iOS和Android的手机都连接这个WiFi</strong>，多个iOS系统的手机<strong>应该、大概</strong>是可以的，我在被拉黑名单之前就是只有让拿iPhone的同学连，经过一天的测试，没有发现异常。等我让一个拿Android手机的同学连上之后，当天中午就被系统拉黑名单了，网络中心的同学来我这里登陆后台管理后，我瞄到一眼，发现系统识别到的终端只有两个，而我同时连接的手机数量在当时并不止两个，再看到备注，写到“Android与iOS同时在线”，我就略知一二了。在此特意提醒，希望大家不要走我的老路…最后还是建议如果你一定要共享WiFi（<s>校园的WiFi真的屎…要不是我还用着小5s…呵呵呵…</s>），那么还是留着自己一台手机用吧，毕竟“<s>闷声发大财</s>”不是吗？</p>
 <p>ps：当你被拉黑名单后，通过正常软件认证是认证不了的，他会提示“FOUND”字样。这种情况，普通打电话到网络中心或到科学楼202室刷新账号是解决不了问题的，需要到207室（工程系）找到更高一级的“工程师”才能帮你移除黑名单，而且他们还会问这问那，详细的就不说了…都是泪啊…</p>
-<figure data-type="image" tabindex="2"><img src="https://mijjj.github.io/post-images/1582385694572.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="2"><img src="https://blog.mijjj.com/post-images/1582385694572.png" alt="" loading="lazy"></figure>
 <h1 id="最后">最后</h1>
 <p>三句话</p>
 <blockquote>
@@ -643,8 +643,8 @@ you-get -o 视频保存路径 https://www.bilibili.com/video/av92276340
     </entry>
     <entry>
         <title type="html"><![CDATA[通过代理实现在校园外使用校园网内的服务]]></title>
-        <id>https://mijjj.github.io/post/tong-guo-dai-li-shi-xian-zai-xiao-yuan-wai-shi-yong-xiao-yuan-wang-nei-de-fu-wu/</id>
-        <link href="https://mijjj.github.io/post/tong-guo-dai-li-shi-xian-zai-xiao-yuan-wai-shi-yong-xiao-yuan-wang-nei-de-fu-wu/">
+        <id>https://blog.mijjj.com/post/tong-guo-dai-li-shi-xian-zai-xiao-yuan-wai-shi-yong-xiao-yuan-wang-nei-de-fu-wu/</id>
+        <link href="https://blog.mijjj.com/post/tong-guo-dai-li-shi-xian-zai-xiao-yuan-wai-shi-yong-xiao-yuan-wang-nei-de-fu-wu/">
         </link>
         <updated>2020-01-12T01:46:17.000Z</updated>
         <content type="html"><![CDATA[<p>2020.1.12<br>
@@ -753,8 +753,8 @@ nano /etc/issue
 <p>启动 frpc 时遇到黄字 <code>connect failed: No route to host</code> 这有可能是防火墙的问题，请检查你的树莓派以及VPS的防火墙设置，开放相应ip以及端口的访问权限，请自行搜索 iptables 相关命令。 #使用 与你们熟知的R的使用方法一致，只不过不具备「科学」的效果，因为你的树莓派在国内。R客户端的服务器IP填公网服务器IP，端口填写frpc.ini文件中[ssr]的 remote_port_number 即可。 另外说明，你的网站访问数据都是需要经过公网主机以及内网主机的，是需要消耗vps流量的。 #最终效果</p>
 </li>
 </ul>
-<figure data-type="image" tabindex="1"><img src="https://mijjj.github.io/post-images/1582385742492.jpg" alt="" loading="lazy"></figure>
-<figure data-type="image" tabindex="2"><img src="https://mijjj.github.io/post-images/1582385794215.jpg" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="1"><img src="https://blog.mijjj.com/post-images/1582385742492.jpg" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="2"><img src="https://blog.mijjj.com/post-images/1582385794215.jpg" alt="" loading="lazy"></figure>
 <h2 id="参考资料">参考资料</h2>
 <p><a href="https://segmentfault.com/a/1190000012004693">借助 frp 随时随地访问自己的树莓派</a> <a href="https://medium.com/@moreless/%E5%9C%A8-raspberry-pi-%E4%B8%8A%E5%AE%89%E8%A3%85shadowsocks-f008b15991b0">在 Raspberry Pi 上安装s*</a> <a href="https://www.chuantou.org/49.html">【frp配置教程】frp内网穿透服务端frps.ini各配置参数详解</a> <a href="https://www.chuantou.org/47.html">【frp配置教程】frp内网穿透客户端frpc.ini各配置参数详解</a></p>
 <h1 id="后记">后记</h1>
@@ -763,13 +763,13 @@ nano /etc/issue
     </entry>
     <entry>
         <title type="html"><![CDATA[在 Debian x64 上搭建 Teamspeak Server]]></title>
-        <id>https://mijjj.github.io/post/zai-debian-x64-shang-da-jian-teamspeak-server/</id>
-        <link href="https://mijjj.github.io/post/zai-debian-x64-shang-da-jian-teamspeak-server/">
+        <id>https://blog.mijjj.com/post/zai-debian-x64-shang-da-jian-teamspeak-server/</id>
+        <link href="https://blog.mijjj.com/post/zai-debian-x64-shang-da-jian-teamspeak-server/">
         </link>
         <updated>2019-06-07T12:34:21.000Z</updated>
         <content type="html"><![CDATA[<h1 id="引">引</h1>
 <p>又到了一年一度的暑假，多人游戏想必是内容之一，多年来受够了 YY 的摧残，想寻找一个新的团队语音软件。本来想着用 Discord ，但在去年还是今年初就被墙了我也是无语（不受审查的服务都有极大的被封锁风险），不过 Discord 也没有大陆服务器，连接不稳定也是料想之中，所以弃用之。还有，我是在 Discord 首页上发现 Teamspeak 的。</p>
-<figure data-type="image" tabindex="1"><img src="https://mijjj.github.io/post-images/1578832504680.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="1"><img src="https://blog.mijjj.com/post-images/1578832504680.png" alt="" loading="lazy"></figure>
 <h1 id="正文">正文</h1>
 <p>为什么我会选择 Teamspeak，最大的原因还是他没有被国内封锁（可自搭建服务器保证了这一点），而且功能强大，UI 简洁</p>
 <h2 id="大概流程">大概流程</h2>
@@ -839,13 +839,13 @@ sudo iptables-save
 <p>服务器第一次被连接需要输入token，确定频道拥有人</p>
 </li>
 </ol>
-<figure data-type="image" tabindex="2"><img src="https://mijjj.github.io/post-images/1578832514877.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="2"><img src="https://blog.mijjj.com/post-images/1578832514877.png" alt="" loading="lazy"></figure>
 ]]></content>
     </entry>
     <entry>
         <title type="html"><![CDATA[对一篇扫描文本进行粗翻译的流程]]></title>
-        <id>https://mijjj.github.io/post/dui-yi-pian-sao-miao-wen-ben-jin-xing-cu-fan-yi-de-liu-cheng/</id>
-        <link href="https://mijjj.github.io/post/dui-yi-pian-sao-miao-wen-ben-jin-xing-cu-fan-yi-de-liu-cheng/">
+        <id>https://blog.mijjj.com/post/dui-yi-pian-sao-miao-wen-ben-jin-xing-cu-fan-yi-de-liu-cheng/</id>
+        <link href="https://blog.mijjj.com/post/dui-yi-pian-sao-miao-wen-ben-jin-xing-cu-fan-yi-de-liu-cheng/">
         </link>
         <updated>2019-06-07T12:05:11.000Z</updated>
         <content type="html"><![CDATA[<h1 id="引">引</h1>
@@ -853,7 +853,7 @@ sudo iptables-save
 <h1 id="正文">正文</h1>
 <p>我得到的材料是一篇图片扫描的 PDF 文档（纯图片，无法选中文字），语言为英语（夹杂西语字符）。现在的目的是转为大概能让人看得懂的中文文本。</p>
 <p>例如：</p>
-<figure data-type="image" tabindex="1"><img src="https://mijjj.github.io/post-images/1578831904675.gif" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="1"><img src="https://blog.mijjj.com/post-images/1578831904675.gif" alt="" loading="lazy"></figure>
 <h2 id="我这次用到的软件服务有">我这次用到的软件/服务有：</h2>
 <ul>
 <li>
@@ -898,16 +898,16 @@ sudo iptables-save
 <li>导出 PDF 或 Word 文件（建议导出 PDF 便于在不同的设备、软件中都有相同的排版）</li>
 </ol>
 <p>最后的效果：</p>
-<figure data-type="image" tabindex="2"><img src="https://mijjj.github.io/post-images/1578832054477.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="2"><img src="https://blog.mijjj.com/post-images/1578832054477.png" alt="" loading="lazy"></figure>
 <h2 id="详细">详细</h2>
 <h3 id="ilovepdf">iLovePDF</h3>
 <p>在这里我们主要用到 iLovePDF 中的<a href="https://www.ilovepdf.com/zh-cn/pdf_to_word">「PDF 转为 Doc」服务。</a>在点击「转换至 Word」前，请点击网页右上方的「➕」，点选「OCR」。这里虽然他会提示需要「高级账户」，但只要你能够点选，就可以进行转换了。但这种操作是有次数限制的，似乎一段时间只能用一次（&gt;=1天）。当然如果你觉得好用而且日常经常需要的话开个会员也是很划算的：6USD/M or 48USD/Y （价格会根据 IP 所在地区稍有变动）</p>
 <p>iLovePDF 的 OCR 转换会保留页面尺寸和排版，但文段的格式十分的奇怪，这会直接影响接下来的校对步骤，你必须十分小心才能够维持原来的排版。可是由于排版保留了，你能更快的找到对应的位置，校对工作会相对方便。</p>
-<figure data-type="image" tabindex="3"><img src="https://mijjj.github.io/post-images/1578832067721.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="3"><img src="https://blog.mijjj.com/post-images/1578832067721.png" alt="" loading="lazy"></figure>
 <h3 id="单词校对">单词校对</h3>
 <p>鉴于扫描的质量，我们需要对扫描后获得的文档进行校对。（用心感受一下）</p>
 <p>OCR的效果对比（前/后）：</p>
-<figure data-type="image" tabindex="4"><img src="https://mijjj.github.io/post-images/1578832072639.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="4"><img src="https://blog.mijjj.com/post-images/1578832072639.png" alt="" loading="lazy"></figure>
 <p>单词校对的工作应该是整个流程里<strong>花费时间最多</strong>的步骤了，它需要你的耐心与眼力，这里我会使用 <a href="https://support.office.com/zh-cn/article/%e9%92%88%e5%af%b9%e5%a4%a7%e5%86%99%e3%80%81%e6%8b%bc%e5%86%99%e5%92%8c%e7%ac%a6%e5%8f%b7%e9%80%89%e6%8b%a9-%e8%87%aa%e5%8a%a8%e6%9b%b4%e6%ad%a3-%e9%80%89%e9%a1%b9-e7433b94-f3de-4532-9dc8-b29063a96e1f?omkt=zh-CN&amp;ui=zh-CN&amp;rs=zh-CN&amp;ad=CN">Word 自带的单词校正</a>，通常单词错误会以红色波浪线标出，语法错误会以蓝色波浪线标出，右键点击相应位置可以查看修改建议。当然，如果修改建议与原文不符的话还是建议遵从原文。</p>
 <p>这里有一款 Chrome 插件「Grammarly」，用来进行单词校正也是极好的，不过它并没有提供 Office 插件，你可以在 Google Doc 中使用它。</p>
 <h3 id="搜狗翻译">搜狗翻译</h3>
@@ -931,7 +931,7 @@ sudo iptables-save
 </blockquote>
 <p>我更喜欢搜狗的翻译，因此我选择搜狗，与此同时百度也是不错的，相较之下谷歌应该是最差的。</p>
 <p>在搜狗翻译的界面中，点击上传文档来上传以段落分好的纯文字 Word 文件，然后进入以下界面。在这里我们可以方便地将原文以及译文相对比（但不知为何不能手动调整）。</p>
-<figure data-type="image" tabindex="5"><img src="https://mijjj.github.io/post-images/1578832079603.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="5"><img src="https://blog.mijjj.com/post-images/1578832079603.png" alt="" loading="lazy"></figure>
 <h3 id="后">后</h3>
 <p>如果你只有自己阅读的需求，到上面应该就可以结束了，如果你还有给别人阅读的需求的话，点击下载译文（右上角）就可以下载到 Word 或 PDF 文档了，一般我分享给他人会以段落为界用「中-英-中-英...」的格式排版，这样在阅读译文遇到困惑时，更利于随时与原文进行比对，毕竟是机翻的中文，难免会碰到人类读不懂的行文。在与他人分享时建议分享 PDF 格式的文件，当然，也应该附上 Word 文件，便于他人（自己）进行更改。</p>
 <h1 id="最后">最后</h1>
@@ -941,13 +941,13 @@ sudo iptables-save
     </entry>
     <entry>
         <title type="html"><![CDATA[Transmission + Caddy 创建轻量化WebDAV服务器📺]]></title>
-        <id>https://mijjj.github.io/post/transmission-caddy-chuang-jian-qing-liang-hua-webdav-fu-wu-qi/</id>
-        <link href="https://mijjj.github.io/post/transmission-caddy-chuang-jian-qing-liang-hua-webdav-fu-wu-qi/">
+        <id>https://blog.mijjj.com/post/transmission-caddy-chuang-jian-qing-liang-hua-webdav-fu-wu-qi/</id>
+        <link href="https://blog.mijjj.com/post/transmission-caddy-chuang-jian-qing-liang-hua-webdav-fu-wu-qi/">
         </link>
         <updated>2019-04-08T11:57:40.000Z</updated>
         <content type="html"><![CDATA[<h1 id="引">引</h1>
 <p>如果你看到我之前的文章：<a href="https://www.notion.so/mijjj/NextCloud-Transmission-PT-bc66d31061df472f8b3fedcee461445f">NextCloud☁+ Transmission▶ 实现 PT下载机以及在线播放</a>，就会知道我之前用 Nextcloud 来进行网盘文件管理以及搭建 WebDAV 服务。但在某一天它突然失灵了，缺乏后端经验的我感到无从下手，遂决定放弃 Nextcloud 。</p>
-<figure data-type="image" tabindex="1"><img src="https://mijjj.github.io/post-images/1578830655243.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="1"><img src="https://blog.mijjj.com/post-images/1578830655243.png" alt="" loading="lazy"></figure>
 <p>经过这一段时间的自建网盘使用后，重新审视一番自己的需求，发现自己的主要需求是 WebDAV ，我会用这项功能将网盘挂载到各种软件上，播放通过PT下载的视频。搭建 WebDAV 服务器的方法有很多，传统的有 Nginx ，但我觉得它还是太复杂了，我选择了更为轻量化的 Caddy。</p>
 <h1 id="正文">正文</h1>
 <p>什么是 Caddy？</p>
@@ -1118,7 +1118,7 @@ Caddy自动申请SSL证书位置：
 </code></pre>
 <h2 id="访问你刚搭建的-webdav">访问你刚搭建的 WebDAV</h2>
 <p>在移动端我通常使用 nPlayer，在PC端我使用 Kodi，如果使用 PotPlayer 也行，使用方法大同小异，这里只介绍 PotPlayer 的添加方法，他们最主要的差异在于如何加载字幕。在 nPlayer 和 Kodi 里加载 WebDAV 中的字幕文件更加方便，而 PotPlayer 就比较麻烦，不过 PotPlayer  加载本地字幕文件则较为方便（直接拖到正在播放的视频中）；而我习惯将字幕文件同视频一起保存到 vps 上。</p>
-<figure data-type="image" tabindex="2"><img src="https://mijjj.github.io/post-images/1578830673127.jpg" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="2"><img src="https://blog.mijjj.com/post-images/1578830673127.jpg" alt="" loading="lazy"></figure>
 <p>经过主观体验，由于服务器负担减小，进度条和文件列表加载都比 NextCloud 呢！😊</p>
 <h1 id="末">末</h1>
 <p>没有输入就没有输出，最近没有学习东西，也就没有东西好写了。</p>
@@ -1126,8 +1126,8 @@ Caddy自动申请SSL证书位置：
     </entry>
     <entry>
         <title type="html"><![CDATA[NextCloud☁+ Transmission▶ 实现 PT下载机以及在线播放]]></title>
-        <id>https://mijjj.github.io/post/nextcloud-transmissiongreater-shi-xian-pt-xia-zai-ji-yi-ji-zai-xian-bo-fang/</id>
-        <link href="https://mijjj.github.io/post/nextcloud-transmissiongreater-shi-xian-pt-xia-zai-ji-yi-ji-zai-xian-bo-fang/">
+        <id>https://blog.mijjj.com/post/nextcloud-transmissiongreater-shi-xian-pt-xia-zai-ji-yi-ji-zai-xian-bo-fang/</id>
+        <link href="https://blog.mijjj.com/post/nextcloud-transmissiongreater-shi-xian-pt-xia-zai-ji-yi-ji-zai-xian-bo-fang/">
         </link>
         <updated>2018-11-01T11:54:01.000Z</updated>
         <content type="html"><![CDATA[<h1 id="引">引</h1>
@@ -1287,7 +1287,7 @@ a2ensite nextcloud
 <li>NextCloud 数据库以及管理员账户配置</li>
 </ol>
 <p>在浏览器输入你服务器的公网 ip 地址就可以访问你刚刚搭建好的 NextCloud 了，初次访问需要配置 admin 账号以及数据库访问密码，其他照填就行。<br>
-<img src="https://mijjj.github.io/post-images/1578830129894.jpg" alt="" loading="lazy"></p>
+<img src="https://blog.mijjj.com/post-images/1578830129894.jpg" alt="" loading="lazy"></p>
 <h2 id="为-nextcloud-配置-https-证书">为 NextCloud 配置 HTTPS 证书</h2>
 <p>参考文章：<a href="https://www.digitalocean.com/community/tutorials/how-to-secure-apache-with-let-s-encrypt-on-debian-9#step-1-%E2%80%94-installing-certbot">How To Secure Apache with Let's Encrypt on Debian 9</a></p>
 <p>这里你需要有一个自己注册的域名，你可以去 <a href="http://www.name.com">www.name.com</a> 买，或者注册一个免费但需要隔一段时间就要验证的 <a href="http://www.freenom.com/zh/index.html">www.freenom.com</a> ；购买后将域名解析到 VPS 的公网地址。</p>
@@ -1424,14 +1424,14 @@ service transmission-daemon start
     </entry>
     <entry>
         <title type="html"><![CDATA[[树莓派] DHT22温湿度传感器]]></title>
-        <id>https://mijjj.github.io/post/shu-mei-pai-dht22-wen-shi-du-chuan-gan-qi/</id>
-        <link href="https://mijjj.github.io/post/shu-mei-pai-dht22-wen-shi-du-chuan-gan-qi/">
+        <id>https://blog.mijjj.com/post/shu-mei-pai-dht22-wen-shi-du-chuan-gan-qi/</id>
+        <link href="https://blog.mijjj.com/post/shu-mei-pai-dht22-wen-shi-du-chuan-gan-qi/">
         </link>
         <updated>2018-10-02T11:52:08.000Z</updated>
         <content type="html"><![CDATA[<h1 id="前">前</h1>
 <p>想起来自己的树莓派从高考前一天买回来已经好久了（呵呵呵大家不要学我，高考的时候还在惦记着这些有的没的），这么久一直在捣鼓软件相关的东西，想来GPIO这么有用的东西也没有怎么动，所以在国庆前一晚深夜时分买了个DHT22温湿度传感器，想着来度过国庆这几天的发霉时光，没想到结果一个下午就搞定了……其实还是主要看了一个大佬的项目，才搞得这么快，不过在使用的过程中也遇到了一些坑，这里也顺便做一些记录，给后来的人指一下路。</p>
 <p>话不多说，先上个图。</p>
-<figure data-type="image" tabindex="1"><img src="https://mijjj.github.io/post-images/1582385863395.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="1"><img src="https://blog.mijjj.com/post-images/1582385863395.png" alt="" loading="lazy"></figure>
 <p>Demo：http://mijjj.cf:8081</p>
 <h1 id="正文">正文</h1>
 <h2 id="教程内容">教程内容</h2>
@@ -1446,11 +1446,11 @@ service transmission-daemon start
 <p>需要材料： 树莓派、面包板、面包线（母对母、公对公多条）、袖珍面包板、10KΩ电阻一个、DHT22温湿度传感器</p>
 <p>传感器连接方式：</p>
 <p>我的连接方式：</p>
-<figure data-type="image" tabindex="2"><img src="https://mijjj.github.io/post-images/1582385880573.png" alt="" loading="lazy"></figure>
-<figure data-type="image" tabindex="3"><img src="https://mijjj.github.io/post-images/1582385896037.jpg" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="2"><img src="https://blog.mijjj.com/post-images/1582385880573.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="3"><img src="https://blog.mijjj.com/post-images/1582385896037.jpg" alt="" loading="lazy"></figure>
 <p>细心的人或许会发现不同，电路图上的传感器是四个脚的，而我的或者你买的都是三个脚的，这里我们只要按照GPIO以及传感器脚对应来连接即可： &gt; VCC(+) 连接 <code>DC power 5V</code>（亮红色） &gt; DATA(out) 连接 <code>GPIO#</code>（绿色任意并请记住序号，我用的是 GPIO04） &gt; GND(-) 连接 <code>GND</code>（黑色） &gt; 10KΩ电阻并联在 DATA 与 VCC 之间（这里就要用到面包板了，具体操作看我的实物图）</p>
 <h2 id="传感器信息的采集">传感器信息的采集</h2>
-<figure data-type="image" tabindex="4"><img src="https://mijjj.github.io/post-images/1582385924483.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="4"><img src="https://blog.mijjj.com/post-images/1582385924483.png" alt="" loading="lazy"></figure>
 <p>这里我们主要依赖到一个python库 <strong><a href="https://github.com/adafruit/Adafruit_Python_DHT">Adafruit_Python_DHT</a></strong></p>
 <h2 id="依赖的安装">依赖的安装</h2>
 <pre><code>#安装方法源于 rpi-TempRuntime
@@ -1511,8 +1511,8 @@ caddy
     </entry>
     <entry>
         <title type="html"><![CDATA[教你做一篇不一样的微信公众号推送]]></title>
-        <id>https://mijjj.github.io/post/jiao-ni-zuo-yi-pian-bu-yi-yang-de-wei-xin-gong-zhong-hao-tui-song/</id>
-        <link href="https://mijjj.github.io/post/jiao-ni-zuo-yi-pian-bu-yi-yang-de-wei-xin-gong-zhong-hao-tui-song/">
+        <id>https://blog.mijjj.com/post/jiao-ni-zuo-yi-pian-bu-yi-yang-de-wei-xin-gong-zhong-hao-tui-song/</id>
+        <link href="https://blog.mijjj.com/post/jiao-ni-zuo-yi-pian-bu-yi-yang-de-wei-xin-gong-zhong-hao-tui-song/">
         </link>
         <updated>2018-06-10T11:50:56.000Z</updated>
         <content type="html"><![CDATA[<h1 id="引言">引言</h1>
