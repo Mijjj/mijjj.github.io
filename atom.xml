@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://blog.mijjj.com</id>
     <title>MIJJJ‘s Blog</title>
-    <updated>2020-03-01T15:09:55.992Z</updated>
+    <updated>2020-03-01T15:11:54.389Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://blog.mijjj.com"/>
     <link rel="self" href="https://blog.mijjj.com/atom.xml"/>
@@ -57,9 +57,9 @@
 <li>打开应用 -&gt; 点击个人中心 -&gt; 登陆</li>
 <li>右下角⚙设置 -&gt; 下载＆缓存 -&gt; 自定义本机视频下载路径 -&gt; 选择自己需要的存放路径</li>
 <li>搜索需要的视频（不需要进入播放界面） -&gt; 点击界面下方的下载按钮  选择清晰度即可下载<br>
-<img src="D:\vpx\OneDrive\markdown\IMG\如何下载保存Bilibili视频/image-20200301202826313.png" alt="image-20200301202826313" style="zoom:50%;" /></li>
+<img src="https://blog.mijjj.com/post-images/1583075483638.png" alt="" loading="lazy"></li>
 <li>点击此图标可以观看下载进度以及下载路径<br>
-<img src="D:\vpx\OneDrive\markdown\IMG\如何下载保存Bilibili视频/image-20200301202920005.png" alt="image-20200301202920005" style="zoom:50%;" /></li>
+<img src="https://blog.mijjj.com/post-images/1583075489461.png" alt="" loading="lazy"></li>
 </ol>
 <h2 id="利用you-get下载">利用you-get下载</h2>
 <p>项目地址：https://you-get.org/</p>
@@ -96,7 +96,7 @@ python3 setup.py install
 </code></pre>
 <blockquote>
 <p>如何得到文件夹路径：点击直接复制即可</p>
-<img src="D:\vpx\OneDrive\markdown\IMG\如何下载保存Bilibili视频/image-20200301211216911.png" alt="image-20200301211216911" style="zoom:67%;" />
+<figure data-type="image" tabindex="1"><img src="https://blog.mijjj.com/post-images/1583075504187.png" alt="" loading="lazy"></figure>
 </blockquote>
 </li>
 </ol>
