@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://blog.mijjj.com</id>
     <title>MIJJJ‘s Blog</title>
-    <updated>2020-03-01T15:11:54.389Z</updated>
+    <updated>2020-03-01T15:24:55.324Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://blog.mijjj.com"/>
     <link rel="self" href="https://blog.mijjj.com/atom.xml"/>
@@ -53,7 +53,7 @@
 </li>
 </ul>
 <ol>
-<li>点击下载安装哔哩哔哩动画UWP应用：https://www.microsoft.com/store/productId/9NBLGGH5Q5FV</li>
+<li>点击下载安装哔哩哔哩动画UWP应用：<a href="https://www.microsoft.com/store/productId/9NBLGGH5Q5FV">https://www.microsoft.com/store/productId/9NBLGGH5Q5FV</a></li>
 <li>打开应用 -&gt; 点击个人中心 -&gt; 登陆</li>
 <li>右下角⚙设置 -&gt; 下载＆缓存 -&gt; 自定义本机视频下载路径 -&gt; 选择自己需要的存放路径</li>
 <li>搜索需要的视频（不需要进入播放界面） -&gt; 点击界面下方的下载按钮  选择清晰度即可下载<br>
@@ -62,7 +62,7 @@
 <img src="https://blog.mijjj.com/post-images/1583075489461.png" alt="" loading="lazy"></li>
 </ol>
 <h2 id="利用you-get下载">利用you-get下载</h2>
-<p>项目地址：https://you-get.org/</p>
+<p>项目地址：<a href="https://you-get.org/">https://you-get.org/</a></p>
 <p>使用简单直接，适配众多网站（<a href="https://github.com/soimort/you-get#supported-sites">点此查看</a>），不过需要一些命令行知识，下载会较 UWP 的方法慢一点（大约1-5m/s），这里仅粗略介绍 Windows 系统下的安装使用（当然，macOS也差不多）</p>
 <ul>
 <li>
@@ -76,7 +76,7 @@
 <p>安装you-get</p>
 <ol>
 <li>
-<p>到这里下载最近的安装包（<code>.tar.gz</code> 后缀的压缩文件）：https://github.com/soimort/you-get/releases</p>
+<p>到这里下载最近的安装包（<code>.tar.gz</code> 后缀的压缩文件）：<a href="https://github.com/soimort/you-get/releases">https://github.com/soimort/you-get/releases</a></p>
 </li>
 <li>
 <p>解压缩到某一个文件夹</p>
