@@ -5,14 +5,14 @@
     
 <meta charset="utf-8" >
 
-<title>如何下载保存Bilibili视频 | MIJJJ‘s Blog</title>
+<title>如何下载保存 Bilibili 视频 | MIJJJ‘s Blog</title>
 <meta name="description" content="">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://blog.mijjj.com/favicon.ico?v=1583076291903">
+<link rel="shortcut icon" href="https://blog.mijjj.com/favicon.ico?v=1583227487881">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://blog.mijjj.com/styles/main.css">
 
@@ -45,7 +45,7 @@
   <div class="site-header">
     <div class="left">
       <a href="https://blog.mijjj.com">
-        <img class="avatar" src="https://blog.mijjj.com/images/avatar.png?v=1583076291903" alt="" width="32px" height="32px">
+        <img class="avatar" src="https://blog.mijjj.com/images/avatar.png?v=1583227487881" alt="" width="32px" height="32px">
       </a>
       <a href="https://blog.mijjj.com">
         <h1 class="site-title">MIJJJ‘s Blog</h1>
@@ -95,7 +95,7 @@
       <div class="content-container">
         <div class="post-detail">
           
-          <h2 class="post-title">如何下载保存Bilibili视频</h2>
+          <h2 class="post-title">如何下载保存 Bilibili 视频</h2>
           <div class="post-info post-detail-info">
             <span><i class="icon-calendar-outline"></i> 2020-03-01</span>
             
@@ -118,7 +118,35 @@
             
           </div>
           <div class="post-content">
-            <p>鉴于三月初的一众事件，导致大家在B站的收藏夹都有一定程度损失，这里有介绍两种下载Bilibili视频的方法</p>
+            <p>2020.3.3 更新 Bilibili-Evolved 方法</p>
+<p>鉴于三月初的一众事件，导致大家在B站的收藏夹都有一定程度损失，这里有介绍三种下载 Bilibili 视频的方法</p>
+<h2 id="bilibili-evolved-方法">Bilibili-Evolved 方法</h2>
+<p>此方法普遍适用，只需要电脑浏览器，需要浏览器安装 <a href="https://tampermonkey.net/">Tampermonkey</a> 插件即可</p>
+<blockquote>
+<p>插件支持：<strong>Chrome、Microsoft Edge、Safari</strong>、Firefox、Opera、Next、Dolphin Browser、UC Browser</p>
+</blockquote>
+<ul>
+<li>Bilibili-Evolved 主页：<a href="https://github.com/the1812/Bilibili-Evolved">https://github.com/the1812/Bilibili-Evolved</a></li>
+</ul>
+<ol>
+<li>
+<p>浏览器安装 <a href="https://tampermonkey.net/">Tampermonkey</a> 插件：<a href="https://tampermonkey.net/">https://tampermonkey.net/</a></p>
+</li>
+<li>
+<p>点击安装 Bilibili-Evolved 脚本：<a href="https://cdn.jsdelivr.net/gh/the1812/Bilibili-Evolved@master/bilibili-evolved.user.js">正式版</a></p>
+<blockquote>
+<p>使用过程中脚本管理器可能会提示&quot;脚本试图访问跨域资源&quot;, 请选择&quot;始终允许&quot;</p>
+</blockquote>
+</li>
+<li>
+<p>进入视频播放界面，点击浏览器窗口左边缘的第一个按钮，选择下载视频即可（下载得到的是分段视频文件）。另外可以下载ASS格式的弹幕，可以直接拖入视频播放。</p>
+<blockquote>
+<p>提供 ffmpeg 的分段列表导出，届时使用ffmpeg可以直接引用合并视频片段</p>
+<p>合并 flv 文件可以参考这篇文章：https://printempw.github.io/use-ffmpeg-to-concat-flv-videos-downloaded-by-bilibili-client/</p>
+<p>数量少的话直接用 Pr 拼起来也行</p>
+</blockquote>
+</li>
+</ol>
 <h2 id="利用b站的uwp应用下载">利用B站的UWP应用下载</h2>
 <p>此方法适用于使用 Windows10 的朋友</p>
 <ul>
@@ -146,7 +174,7 @@
 <p><code>[AV号 _ p数].xml</code> 包含弹幕信息</p>
 <p><code>[AV号_ p数_ 序号].flv</code> 视频文件，B站会把过大的视频文件分成约几十MB的<strong>多个片段</strong></p>
 <blockquote>
-<p>合并flv文件可以参考这篇文章：https://printempw.github.io/use-ffmpeg-to-concat-flv-videos-downloaded-by-bilibili-client/</p>
+<p>合并flv文件可以参考这篇文章：<a href="https://printempw.github.io/use-ffmpeg-to-concat-flv-videos-downloaded-by-bilibili-client/">https://printempw.github.io/use-ffmpeg-to-concat-flv-videos-downloaded-by-bilibili-client/</a></p>
 <p>数量少的话直接用pr拼起来也行</p>
 </blockquote>
 </li>

@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://blog.mijjj.com</id>
     <title>MIJJJ‘s Blog</title>
-    <updated>2020-03-01T15:24:55.324Z</updated>
+    <updated>2020-03-03T09:24:52.935Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://blog.mijjj.com"/>
     <link rel="self" href="https://blog.mijjj.com/atom.xml"/>
@@ -10,12 +10,40 @@
     <icon>https://blog.mijjj.com/favicon.ico</icon>
     <rights>All rights reserved 2020, MIJJJ‘s Blog</rights>
     <entry>
-        <title type="html"><![CDATA[如何下载保存Bilibili视频]]></title>
+        <title type="html"><![CDATA[如何下载保存 Bilibili 视频]]></title>
         <id>https://blog.mijjj.com/post/download-bilibili-video/</id>
         <link href="https://blog.mijjj.com/post/download-bilibili-video/">
         </link>
         <updated>2020-03-01T15:00:27.000Z</updated>
-        <content type="html"><![CDATA[<p>鉴于三月初的一众事件，导致大家在B站的收藏夹都有一定程度损失，这里有介绍两种下载Bilibili视频的方法</p>
+        <content type="html"><![CDATA[<p>2020.3.3 更新 Bilibili-Evolved 方法</p>
+<p>鉴于三月初的一众事件，导致大家在B站的收藏夹都有一定程度损失，这里有介绍三种下载 Bilibili 视频的方法</p>
+<h2 id="bilibili-evolved-方法">Bilibili-Evolved 方法</h2>
+<p>此方法普遍适用，只需要电脑浏览器，需要浏览器安装 <a href="https://tampermonkey.net/">Tampermonkey</a> 插件即可</p>
+<blockquote>
+<p>插件支持：<strong>Chrome、Microsoft Edge、Safari</strong>、Firefox、Opera、Next、Dolphin Browser、UC Browser</p>
+</blockquote>
+<ul>
+<li>Bilibili-Evolved 主页：<a href="https://github.com/the1812/Bilibili-Evolved">https://github.com/the1812/Bilibili-Evolved</a></li>
+</ul>
+<ol>
+<li>
+<p>浏览器安装 <a href="https://tampermonkey.net/">Tampermonkey</a> 插件：<a href="https://tampermonkey.net/">https://tampermonkey.net/</a></p>
+</li>
+<li>
+<p>点击安装 Bilibili-Evolved 脚本：<a href="https://cdn.jsdelivr.net/gh/the1812/Bilibili-Evolved@master/bilibili-evolved.user.js">正式版</a></p>
+<blockquote>
+<p>使用过程中脚本管理器可能会提示&quot;脚本试图访问跨域资源&quot;, 请选择&quot;始终允许&quot;</p>
+</blockquote>
+</li>
+<li>
+<p>进入视频播放界面，点击浏览器窗口左边缘的第一个按钮，选择下载视频即可（下载得到的是分段视频文件）。另外可以下载ASS格式的弹幕，可以直接拖入视频播放。</p>
+<blockquote>
+<p>提供 ffmpeg 的分段列表导出，届时使用ffmpeg可以直接引用合并视频片段</p>
+<p>合并 flv 文件可以参考这篇文章：https://printempw.github.io/use-ffmpeg-to-concat-flv-videos-downloaded-by-bilibili-client/</p>
+<p>数量少的话直接用 Pr 拼起来也行</p>
+</blockquote>
+</li>
+</ol>
 <h2 id="利用b站的uwp应用下载">利用B站的UWP应用下载</h2>
 <p>此方法适用于使用 Windows10 的朋友</p>
 <ul>
@@ -43,7 +71,7 @@
 <p><code>[AV号 _ p数].xml</code> 包含弹幕信息</p>
 <p><code>[AV号_ p数_ 序号].flv</code> 视频文件，B站会把过大的视频文件分成约几十MB的<strong>多个片段</strong></p>
 <blockquote>
-<p>合并flv文件可以参考这篇文章：https://printempw.github.io/use-ffmpeg-to-concat-flv-videos-downloaded-by-bilibili-client/</p>
+<p>合并flv文件可以参考这篇文章：<a href="https://printempw.github.io/use-ffmpeg-to-concat-flv-videos-downloaded-by-bilibili-client/">https://printempw.github.io/use-ffmpeg-to-concat-flv-videos-downloaded-by-bilibili-client/</a></p>
 <p>数量少的话直接用pr拼起来也行</p>
 </blockquote>
 </li>
