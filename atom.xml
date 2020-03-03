@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://blog.mijjj.com</id>
     <title>MIJJJ‘s Blog</title>
-    <updated>2020-03-03T09:24:52.935Z</updated>
+    <updated>2020-03-03T09:26:17.766Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://blog.mijjj.com"/>
     <link rel="self" href="https://blog.mijjj.com/atom.xml"/>
@@ -18,7 +18,7 @@
         <content type="html"><![CDATA[<p>2020.3.3 更新 Bilibili-Evolved 方法</p>
 <p>鉴于三月初的一众事件，导致大家在B站的收藏夹都有一定程度损失，这里有介绍三种下载 Bilibili 视频的方法</p>
 <h2 id="bilibili-evolved-方法">Bilibili-Evolved 方法</h2>
-<p>此方法普遍适用，只需要电脑浏览器，需要浏览器安装 <a href="https://tampermonkey.net/">Tampermonkey</a> 插件即可</p>
+<p>此方法普遍适用，而且下载速度蛮快的，只需要电脑浏览器，需要浏览器安装 <a href="https://tampermonkey.net/">Tampermonkey</a> 插件即可</p>
 <blockquote>
 <p>插件支持：<strong>Chrome、Microsoft Edge、Safari</strong>、Firefox、Opera、Next、Dolphin Browser、UC Browser</p>
 </blockquote>
