@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://blog.mijjj.com</id>
     <title>MIJJJ‘s Blog</title>
-    <updated>2020-03-03T09:26:17.766Z</updated>
+    <updated>2020-03-06T19:00:48.634Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://blog.mijjj.com"/>
     <link rel="self" href="https://blog.mijjj.com/atom.xml"/>
@@ -15,7 +15,8 @@
         <link href="https://blog.mijjj.com/post/download-bilibili-video/">
         </link>
         <updated>2020-03-01T15:00:27.000Z</updated>
-        <content type="html"><![CDATA[<p>2020.3.3 更新 Bilibili-Evolved 方法</p>
+        <content type="html"><![CDATA[<p>2020.3.7 更新更方便的flv片段合并方法<br>
+2020.3.3 更新 Bilibili-Evolved 方法</p>
 <p>鉴于三月初的一众事件，导致大家在B站的收藏夹都有一定程度损失，这里有介绍三种下载 Bilibili 视频的方法</p>
 <h2 id="bilibili-evolved-方法">Bilibili-Evolved 方法</h2>
 <p>此方法普遍适用，而且下载速度蛮快的，只需要电脑浏览器，需要浏览器安装 <a href="https://tampermonkey.net/">Tampermonkey</a> 插件即可</p>
@@ -38,9 +39,9 @@
 <li>
 <p>进入视频播放界面，点击浏览器窗口左边缘的第一个按钮，选择下载视频即可（下载得到的是分段视频文件）。另外可以下载ASS格式的弹幕，可以直接拖入视频播放。</p>
 <blockquote>
-<p>提供 ffmpeg 的分段列表导出，届时使用ffmpeg可以直接引用合并视频片段</p>
-<p>合并 flv 文件可以参考这篇文章：https://printempw.github.io/use-ffmpeg-to-concat-flv-videos-downloaded-by-bilibili-client/</p>
-<p>数量少的话直接用 Pr 拼起来也行</p>
+<p>提供 ffmpeg 的分段列表导出，届时使用ffmpeg可以直接引用合并视频片段<br>
+合并可以使用这个服务：<a href="https://csser.top/bilibili/merge.html">https://csser.top/bilibili/merge.html</a><br>
+将下载得来的 <code>*.txt</code> 后缀改为 <code>*.flv</code> 即可</p>
 </blockquote>
 </li>
 </ol>
@@ -70,14 +71,14 @@
 <p><code>[AV号].info</code> 包含视频基本信息</p>
 <p><code>[AV号 _ p数].xml</code> 包含弹幕信息</p>
 <p><code>[AV号_ p数_ 序号].flv</code> 视频文件，B站会把过大的视频文件分成约几十MB的<strong>多个片段</strong></p>
+</li>
+</ul>
+</li>
+</ul>
 <blockquote>
-<p>合并flv文件可以参考这篇文章：<a href="https://printempw.github.io/use-ffmpeg-to-concat-flv-videos-downloaded-by-bilibili-client/">https://printempw.github.io/use-ffmpeg-to-concat-flv-videos-downloaded-by-bilibili-client/</a></p>
-<p>数量少的话直接用pr拼起来也行</p>
+<p>合并可以使用这个服务：<a href="https://csser.top/bilibili/merge.html">https://csser.top/bilibili/merge.html</a><br>
+将下载得来的 <code>*.txt</code> 后缀改为 <code>*.flv</code> 即可</p>
 </blockquote>
-</li>
-</ul>
-</li>
-</ul>
 </li>
 </ul>
 <ol>
